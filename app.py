@@ -1,5 +1,6 @@
 
 import os
+import json
 import asyncio
 from collections import deque
 from datetime import datetime, timezone, timedelta
@@ -18,9 +19,18 @@ FEED_TOKEN = os.environ["FEED_TOKEN"]
 MAX_ITEMS = int(os.getenv("MAX_ITEMS", "5000"))
 BACKFILL_PER_CHANNEL = int(os.getenv("BACKFILL_PER_CHANNEL", "100"))
 
+# Sanitized, external-safe recent-feed snapshot. Written to disk so it can be
+# consumed by external tooling (e.g. ChatGPT) for market-trend analysis
+# without ever exposing credentials.
+SNAPSHOT_PATH = os.getenv("SNAPSHOT_PATH", "snapshot.json")
+SNAPSHOT_MAX_ITEMS = int(os.getenv("SNAPSHOT_MAX_ITEMS", "500"))
+
 feed = deque(maxlen=MAX_ITEMS)
 client = TelegramClient(StringSession(SESSION_STRING), API_ID, API_HASH)
 app = FastAPI(title="Telegram Market Feed")
+
+message_count = 0
+status = "initializing"
 
 def msg_to_dict(chat, msg):
     username = getattr(chat, "username", None)
@@ -38,7 +48,54 @@ def msg_to_dict(chat, msg):
         "url": url,
     }
 
+# The exact set of fields that are ever allowed to leave the process via the
+# snapshot file. This is an explicit allow-list so that no credential or
+# internal field can accidentally leak into external-facing output.
+SNAPSHOT_SAFE_FIELDS = (
+    "message_id",
+    "channel_id",
+    "channel_name",
+    "channel_username",
+    "date_utc",
+    "message",
+    "url",
+)
+
+def sanitize_item(item):
+    """Return a copy of item containing only the whitelisted safe fields.
+
+    This guarantees that no secrets (API_ID, API_HASH, SESSION_STRING,
+    tokens, etc.) can ever end up in the snapshot, regardless of what other
+    fields might exist on the source item.
+    """
+    return {field: item.get(field, "") for field in SNAPSHOT_SAFE_FIELDS}
+
+def write_snapshot():
+    """Atomically write a sanitized snapshot of the most recent messages.
+
+    The snapshot is safe to expose externally (e.g. for ChatGPT analysis)
+    because it only ever contains the whitelisted safe fields and no
+    credentials or internal configuration.
+    """
+    try:
+        recent_items = list(feed)[-SNAPSHOT_MAX_ITEMS:]
+        sanitized_items = [sanitize_item(item) for item in recent_items]
+        snapshot = {
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "message_count": message_count,
+            "status": status,
+            "snapshot_items_count": len(sanitized_items),
+            "items": sanitized_items,
+        }
+        tmp_path = f"{SNAPSHOT_PATH}.tmp"
+        with open(tmp_path, "w", encoding="utf-8") as f:
+            json.dump(snapshot, f, ensure_ascii=False)
+        os.replace(tmp_path, SNAPSHOT_PATH)
+    except Exception:
+        pass
+
 async def backfill():
+    global message_count, status
     dialogs = await client.get_dialogs()
     channels = [d.entity for d in dialogs if isinstance(d.entity, Channel)]
     items = []
@@ -56,14 +113,21 @@ async def backfill():
         if key not in seen:
             seen.add(key)
             feed.append(item)
+            message_count += 1
+    status = "backfilled"
+    write_snapshot()
 
 @client.on(events.NewMessage)
 async def on_new_message(event):
+    global message_count, status
     try:
         chat = await event.get_chat()
         if isinstance(chat, Channel):
             item = msg_to_dict(chat, event.message)
             feed.append(item)
+            message_count += 1
+            status = "running"
+            write_snapshot()
     except Exception:
         pass
 
