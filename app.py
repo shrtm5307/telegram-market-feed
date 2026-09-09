@@ -1,4 +1,3 @@
-
 import os
 import json
 import asyncio
@@ -6,6 +5,7 @@ from collections import deque
 from datetime import datetime, timezone, timedelta
 
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.responses import JSONResponse
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import Channel
@@ -133,6 +133,52 @@ async def startup():
 @app.get("/")
 async def root():
     return {"ok": True, "service": "telegram-market-feed", "items": len(feed)}
+
+@app.get("/snapshot")
+def get_snapshot():
+    """Expose only validated public fields from the last atomic snapshot."""
+    headers = {"Cache-Control": "no-store"}
+    unavailable = {"timestamp": None, "count": 0, "status": "unavailable", "items": []}
+    try:
+        with open(SNAPSHOT_PATH, encoding="utf-8") as f:
+            data = json.load(f)
+        if not isinstance(data, dict):
+            raise ValueError("Invalid snapshot")
+        timestamp = data.get("timestamp")
+        if not isinstance(timestamp, str):
+            raise ValueError("Invalid timestamp")
+        datetime.fromisoformat(timestamp)
+        if data.get("status") not in ("initializing", "backfilled", "running"):
+            raise ValueError("Invalid status")
+        if not isinstance(data.get("items"), list):
+            raise ValueError("Invalid items")
+        items = []
+        fields = ("message_id", "channel_id", "channel_name", "channel_username",
+                  "date_utc", "message", "url")
+        for item in data["items"]:
+            if not isinstance(item, dict):
+                raise ValueError("Invalid item")
+            public_item = {}
+            for key in fields:
+                value = item.get(key)
+                allowed = (int, type(None)) if key.endswith("_id") else (str, type(None))
+                if type(value) not in allowed:
+                    raise ValueError("Invalid field")
+                public_item[key] = value
+            items.append(public_item)
+        result = {"timestamp": timestamp, "count": len(items),
+                  "status": data["status"], "items": items}
+        # Fail closed even if a configured credential occurs inside message text.
+        public_values = [timestamp, result["status"]]
+        public_values.extend(str(value) for item in items for value in item.values()
+                             if value is not None)
+        if any(secret and any(secret in value for value in public_values)
+               for secret in (str(API_ID), API_HASH, SESSION_STRING, FEED_TOKEN)):
+            raise ValueError("Sensitive snapshot")
+        return JSONResponse(result, headers=headers)
+    except (OSError, ValueError, TypeError, RecursionError):
+        return JSONResponse(unavailable, status_code=503, headers=headers)
+
 
 @app.get("/feed")
 async def get_feed(
