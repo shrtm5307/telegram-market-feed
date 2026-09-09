@@ -1,5 +1,6 @@
 
 import os
+import json
 import asyncio
 from collections import deque
 from datetime import datetime, timezone, timedelta
@@ -18,9 +19,49 @@ FEED_TOKEN = os.environ["FEED_TOKEN"]
 MAX_ITEMS = int(os.getenv("MAX_ITEMS", "5000"))
 BACKFILL_PER_CHANNEL = int(os.getenv("BACKFILL_PER_CHANNEL", "100"))
 
+SNAPSHOT_PATH = "/app/feed_snapshot.json"
+
 feed = deque(maxlen=MAX_ITEMS)
 client = TelegramClient(StringSession(SESSION_STRING), API_ID, API_HASH)
 app = FastAPI(title="Telegram Market Feed")
+
+message_count = 0
+last_message_id = None
+last_message_time = None
+
+
+def write_snapshot(status: str):
+    """Write a sanitized, atomic snapshot of the current feed state.
+
+    Only non-sensitive feed metadata is included. No credentials, tokens,
+    API keys, or connection strings are ever written to this file.
+    """
+    try:
+        recent_items = []
+        for item in list(feed)[-10:]:
+            recent_items.append({
+                "id": f"{item.get('channel_id')}:{item.get('message_id')}",
+                "message_id": item.get("message_id"),
+                "feed_timestamp": item.get("date_utc"),
+                "source": item.get("channel_username") or item.get("channel_name") or "",
+                "title": (item.get("message") or "")[:200],
+            })
+
+        snapshot = {
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "message_count": message_count,
+            "last_message_id": last_message_id,
+            "last_message_time": last_message_time,
+            "recent_items": recent_items,
+            "status": status,
+        }
+
+        tmp_path = f"{SNAPSHOT_PATH}.tmp"
+        with open(tmp_path, "w") as f:
+            json.dump(snapshot, f)
+        os.replace(tmp_path, SNAPSHOT_PATH)
+    except Exception:
+        pass
 
 def msg_to_dict(chat, msg):
     username = getattr(chat, "username", None)
@@ -59,20 +100,33 @@ async def backfill():
 
 @client.on(events.NewMessage)
 async def on_new_message(event):
+    global message_count, last_message_id, last_message_time
     try:
         chat = await event.get_chat()
         if isinstance(chat, Channel):
             item = msg_to_dict(chat, event.message)
             feed.append(item)
+            message_count += 1
+            last_message_id = item.get("message_id")
+            last_message_time = item.get("date_utc")
+            write_snapshot("running")
     except Exception:
         pass
 
 @app.on_event("startup")
 async def startup():
+    global message_count, last_message_id, last_message_time
+    write_snapshot("initializing")
     await client.connect()
     if not await client.is_user_authorized():
         raise RuntimeError("Telegram session string is not authorized.")
     await backfill()
+    message_count = len(feed)
+    if feed:
+        last_item = feed[-1]
+        last_message_id = last_item.get("message_id")
+        last_message_time = last_item.get("date_utc")
+    write_snapshot("backfilled")
     asyncio.create_task(client.run_until_disconnected())
 
 @app.get("/")
