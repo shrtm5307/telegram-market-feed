@@ -18,6 +18,7 @@ FEED_TOKEN = os.environ["FEED_TOKEN"]
 
 MAX_ITEMS = int(os.getenv("MAX_ITEMS", "5000"))
 BACKFILL_PER_CHANNEL = int(os.getenv("BACKFILL_PER_CHANNEL", "100"))
+SNAPSHOT_MAX_ITEMS = int(os.getenv("SNAPSHOT_MAX_ITEMS", "500"))
 
 SNAPSHOT_PATH = "/app/feed_snapshot.json"
 
@@ -37,23 +38,23 @@ def write_snapshot(status: str):
     API keys, or connection strings are ever written to this file.
     """
     try:
-        recent_items = []
-        for item in list(feed)[-10:]:
-            recent_items.append({
-                "id": f"{item.get('channel_id')}:{item.get('message_id')}",
+        items = []
+        for item in list(feed)[-SNAPSHOT_MAX_ITEMS:]:
+            items.append({
                 "message_id": item.get("message_id"),
-                "feed_timestamp": item.get("date_utc"),
-                "source": item.get("channel_username") or item.get("channel_name") or "",
-                "title": (item.get("message") or "")[:200],
+                "channel_id": item.get("channel_id"),
+                "channel_name": item.get("channel_name") or "",
+                "channel_username": item.get("channel_username") or "",
+                "date_utc": item.get("date_utc"),
+                "message": item.get("message") or "",
+                "url": item.get("url") or "",
             })
 
         snapshot = {
             "timestamp": datetime.now(timezone.utc).isoformat(),
-            "message_count": message_count,
-            "last_message_id": last_message_id,
-            "last_message_time": last_message_time,
-            "recent_items": recent_items,
+            "count": len(items),
             "status": status,
+            "items": items,
         }
 
         tmp_path = f"{SNAPSHOT_PATH}.tmp"
