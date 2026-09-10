@@ -1,0 +1,18 @@
+{
+  "saveticker": {
+    "enabled": false,
+    "automated_collection_permitted": false,
+    "public_redistribution_permitted": false,
+    "policy_evidence_url": null,
+    "public_json_url": null,
+    "reason": "Public listing renders in browser; detail requires login. HTTP 403, robots unavailable. No supported public JSON contract or redistribution permission verified."
+  },
+  "options": {
+    "enabled": false,
+    "automated_collection_permitted": false,
+    "public_redistribution_permitted": false,
+    "policy_evidence_url": null,
+    "public_json_urls": {},
+    "reason": "No no-key source with all required fields and public GitHub redistribution permission verified. See MARKET_HUB.md."
+  }
+}
