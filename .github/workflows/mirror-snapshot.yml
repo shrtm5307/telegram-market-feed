@@ -1,0 +1,101 @@
+name: Mirror Telegram snapshot
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror-telegram-snapshot
+  cancel-in-progress: true
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout snapshot branch
+        uses: actions/checkout@v4
+        with:
+          ref: snapshot-data
+          fetch-depth: 0
+
+      - name: Download snapshot
+        run: |
+          curl --fail --silent --show-error --location \
+            --retry 3 --retry-delay 5 \
+            "https://telegram-collector-github-production.up.railway.app/snapshot" \
+            -o latest_snapshot.tmp.json
+
+      - name: Validate snapshot
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          src = Path("latest_snapshot.tmp.json")
+          data = json.loads(src.read_text(encoding="utf-8"))
+
+          required = {"timestamp", "count", "status", "items"}
+
+          if set(data.keys()) != required:
+              raise SystemExit("Unexpected top-level fields")
+
+          if not isinstance(data["timestamp"], str):
+              raise SystemExit("Invalid timestamp")
+
+          if data["status"] not in {"initializing", "backfilled", "running"}:
+              raise SystemExit("Invalid status")
+
+          if not isinstance(data["items"], list):
+              raise SystemExit("Invalid items")
+
+          if data["count"] != len(data["items"]):
+              raise SystemExit("Count mismatch")
+
+          allowed_fields = {
+              "message_id",
+              "channel_id",
+              "channel_name",
+              "channel_username",
+              "date_utc",
+              "message",
+              "url",
+          }
+
+          for item in data["items"]:
+              if not isinstance(item, dict):
+                  raise SystemExit("Invalid item")
+
+              if set(item.keys()) - allowed_fields:
+                  raise SystemExit("Unexpected item field")
+
+          Path("latest_snapshot.json").write_text(
+              json.dumps(
+                  data,
+                  ensure_ascii=False,
+                  separators=(",", ":")
+              ),
+              encoding="utf-8"
+          )
+          PY
+
+          rm latest_snapshot.tmp.json
+
+      - name: Commit latest snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add latest_snapshot.json
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git commit -m "chore: update Telegram snapshot"
+          git push origin HEAD:snapshot-data
