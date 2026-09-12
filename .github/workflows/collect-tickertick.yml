@@ -1,0 +1,15 @@
+name: Collect TickerTick news
+on:
+  schedule:
+    - cron: '7,37 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: market-data-writer
+  cancel-in-progress: false
+jobs:
+  collect:
+    uses: ./.github/workflows/market-data-job.yml
+    with:
+      command: tickertick

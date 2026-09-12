@@ -1,0 +1,62 @@
+name: Market data writer
+on:
+  workflow_call:
+    inputs:
+      command:
+        required: true
+        type: string
+permissions:
+  contents: write
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: code
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: snapshot-data
+          path: state
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Collect or build
+        id: collect
+        env:
+          COMMAND: ${{ inputs.command }}
+        shell: bash
+        run: |
+          case "$COMMAND" in tickertick|options|market) ;; *) exit 1 ;; esac
+          set +e
+          python code/market_hub.py "$COMMAND" --root state --config code/market_sources.json
+          result=$?
+          set -e
+          echo "result=$result" >> "$GITHUB_OUTPUT"
+          python code/market_hub.py scan --root state/data
+          echo "Collection/build exit code: $result (2 means unavailable/degraded; no fabricated data)." >> "$GITHUB_STEP_SUMMARY"
+      - name: Publish data only, with bounded conflict retry
+        working-directory: state
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if [ ! -d data ]; then exit 0; fi
+          git add -- data/
+          if git diff --cached --quiet; then echo 'No data change'; exit 0; fi
+          git commit -m 'Update market snapshots and source health'
+          for attempt in 1 2 3; do
+            git fetch origin snapshot-data
+            git rebase origin/snapshot-data || { git rebase --abort; exit 1; }
+            if git push origin HEAD:snapshot-data; then exit 0; fi
+            sleep 3
+          done
+          exit 1
+      - name: Report collection failure after retaining diagnostics
+        if: steps.collect.outputs.result != '0'
+        run: |
+          echo '::error::Source unavailable or snapshot degraded. Review source health; no successful live collection is claimed.'
+          exit 1
