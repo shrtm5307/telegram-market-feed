@@ -1,10 +1,5 @@
-"""Public market snapshots. Standard library only; no login/cookie scraping.
-
-Live providers are deliberately disabled until collection AND public redistribution
-rights are documented in market_sources.json. Fixture data never enters data/.
-"""
+"""Public market snapshots. Standard library only; no login/cookie scraping."""
 import argparse
-from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 import hashlib
 import json
@@ -13,13 +8,21 @@ import os
 from pathlib import Path
 import re
 import sys
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import urlencode, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
-from urllib.robotparser import RobotFileParser
 
 UTC = timezone.utc
 SYMBOLS = ("NVDA", "MU", "AVGO", "AMD", "TSM", "SMH", "SOXX")
+NEWS_SYMBOLS = ("NVDA", "MU", "AVGO", "AMD", "TSM", "SMH", "SOXX", "SKHY", "SNDK", "WDC", "STX")
+TICKERTICK_QUERIES = (
+    ("watchlist", "(or " + " ".join(f"tt:{symbol.lower()}" for symbol in NEWS_SYMBOLS) + ")"),
+    ("market", "T:market"),
+    ("analysis", "T:analysis"),
+    ("earnings", "T:earning"),
+    ("sec", "T:sec"),
+)
+TICKERTICK_HOST = "api.tickertick.com"
 SIGNALS = ("ai_semiconductor", "memory_hbm", "optical_networking", "power_infrastructure", "macro_rates_risk")
 MAX_BYTES = 8_000_000
 
@@ -131,35 +134,49 @@ def write_json(path, data):
     return True
 
 
-def parse_saveticker(data, clock, hours=48):
-    """Normalize the documented interchange schema, NOT a guessed internal API."""
-    if not isinstance(data, dict) or not isinstance(data.get("items"), list):
+def parse_tickertick(data, clock, hours=24):
+    """Normalize TickerTick responses while retaining only recent link metadata."""
+    if not isinstance(data, list):
         raise DataError("news_schema_changed")
-    fresh(data.get("timestamp"), clock, 2)
     result, seen_id, seen_url, seen_story = [], set(), set(), set()
-    for item in data["items"]:
+    for item in data:
         if not isinstance(item, dict):
             raise DataError("invalid_news_item")
         title = safe_text(item.get("title"))
-        published = timestamp(item.get("published_at"))
+        millis = number(item.get("time"))
+        try:
+            published = datetime.fromtimestamp(millis / 1000, UTC)
+        except (OverflowError, OSError, ValueError):
+            raise DataError("invalid_timestamp") from None
         if published > clock + timedelta(minutes=5):
             raise DataError("future_news")
         if published < clock - timedelta(hours=hours):
             continue
-        url = public_url(item.get("url"))
-        if urlsplit(url).hostname not in {"saveticker.com", "www.saveticker.com"}:
-            raise DataError("unexpected_news_host")
-        news_id = safe_text(item.get("news_id"), 100)
-        source = safe_text(item.get("source"), 100)
+        # Remove all query parameters and fragments before publishing. They are not
+        # needed for attribution and can carry tracking or signed values.
+        raw_url = item.get("url")
+        if not isinstance(raw_url, str):
+            raise DataError("invalid_url")
+        parsed = urlsplit(raw_url)
+        if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
+            raise DataError("invalid_url")
+        url = urlunsplit(("https", parsed.netloc.lower(), parsed.path.rstrip("/"), "", ""))
+        if item.get("id") is None:
+            raise DataError("invalid_news_id")
+        news_id = safe_text(str(item["id"]), 100)
+        source = safe_text(item.get("site"), 100)
         story = hashlib.sha256((source.casefold() + title.casefold()).encode()).hexdigest()
         if news_id in seen_id or url in seen_url or story in seen_story:
             continue
-        tickers = item.get("tickers", [])
-        if not isinstance(tickers, list) or any(not isinstance(t, str) or not re.fullmatch(r"[A-Z][A-Z0-9.-]{0,9}", t) for t in tickers):
+        raw_tickers = item.get("tickers", item.get("tags", []))
+        if not isinstance(raw_tickers, list):
             raise DataError("invalid_tickers")
+        tickers = sorted({ticker.upper() for ticker in raw_tickers
+                          if isinstance(ticker, str) and re.fullmatch(r"[A-Za-z][A-Za-z0-9.-]{0,9}", ticker)})
         result.append({"news_id": news_id, "title": title, "published_at": iso(published),
-                       "source": source, "category": item.get("category") if isinstance(item.get("category"), str) else None,
-                       "tickers": sorted(set(tickers)), "summary": None, "url": url, "fetched_at": iso(clock)})
+                       "source": source,
+                       "category": item.get("_category") if item.get("_category") in {q[0] for q in TICKERTICK_QUERIES} else None,
+                       "tickers": tickers, "summary": None, "url": url, "fetched_at": iso(clock)})
         seen_id.add(news_id)
         seen_url.add(url)
         seen_story.add(story)
@@ -167,11 +184,36 @@ def parse_saveticker(data, clock, hours=48):
         raise DataError("empty_recent_news")
     result.sort(key=lambda item: (item["published_at"], item["news_id"]), reverse=True)
     return {"timestamp": iso(clock), "status": "ok", "window_hours": hours,
-            "source_timestamp": iso(timestamp(data["timestamp"])), "count": len(result), "items": result}
+            "source": "TickerTick", "count": len(result), "items": result}
 
 
-def fetch_news_detail(*_args, **_kwargs):
-    raise DataError("detail_requires_login_not_supported")
+def fetch_tickertick():
+    """Fetch documented public feeds. No API key, cookie or article body is used."""
+    items = []
+    for category, query in TICKERTICK_QUERIES:
+        url = "https://" + TICKERTICK_HOST + "/feed?" + urlencode({"q": query, "n": 200})
+        try:
+            with urlopen(Request(url, headers={"User-Agent": "telegram-market-feed/1.0", "Accept": "application/json"}), timeout=30) as response:
+                redirected = urlsplit(response.geturl())
+                if redirected.scheme != "https" or redirected.hostname != TICKERTICK_HOST or redirected.path != "/feed":
+                    raise DataError("redirect_not_approved")
+                raw = response.read(MAX_BYTES + 1)
+                if len(raw) > MAX_BYTES:
+                    raise DataError("oversized_response")
+                decoded = json.loads(raw)
+        except (HTTPError, URLError, UnicodeError, json.JSONDecodeError):
+            raise DataError("source_http_or_json_error") from None
+        if isinstance(decoded, dict):
+            decoded = decoded.get("stories", decoded.get("items"))
+        if not isinstance(decoded, list):
+            raise DataError("news_schema_changed")
+        for item in decoded:
+            if not isinstance(item, dict):
+                raise DataError("invalid_news_item")
+            item = dict(item)
+            item["_category"] = category
+            items.append(item)
+    return items
 
 
 def normalize_options(data, symbol, clock):
@@ -266,9 +308,9 @@ def build_market(root, clock):
     result = {"timestamp": iso(clock), "status": "ok", "signals": dict.fromkeys(SIGNALS)}
     errors = []
     for name, path, hours in (("telegram", "latest_snapshot.json", 48),
-                              ("saveticker", "data/saveticker/latest_saveticker.json", 48)):
+                              ("news", "data/news/latest_news.json", 24)):
         try:
-            if name == "saveticker" and read_json(root / "data/health/saveticker.json").get("status") != "ok":
+            if name == "news" and read_json(root / "data/health/tickertick.json").get("status") != "ok":
                 raise DataError("last_collection_failed")
             data = read_json(root / path)
             if data.get("status") not in {"ok", "running", "backfilled"}:
@@ -309,17 +351,8 @@ def get_public_json(url):
     url = public_url(url)
     # Explicit HTTPS, no URL credentials/query secrets, bounded response, no cookies.
     host = urlsplit(url).hostname
-    if host not in {"raw.githubusercontent.com", "saveticker.com", "www.saveticker.com"}:
+    if host != "raw.githubusercontent.com":
         raise DataError("unapproved_source_host")
-    if host.endswith("saveticker.com"):
-        robot = RobotFileParser()
-        try:
-            with urlopen(Request("https://" + host + "/robots.txt", headers={"User-Agent": "MarketSnapshotBot/1.0"}), timeout=20) as r:
-                robot.parse(r.read(100_000).decode("utf-8").splitlines())
-        except Exception:
-            raise DataError("robots_unavailable") from None
-        if not robot.can_fetch("MarketSnapshotBot", url):
-            raise DataError("robots_disallowed")
     try:
         with urlopen(Request(url, headers={"User-Agent": "MarketSnapshotBot/1.0", "Accept": "application/json"}), timeout=30) as response:
             if response.geturl() != url:
@@ -339,9 +372,9 @@ def collect(kind, root, config, clock):
     try:
         if not permitted:
             raise DataError("source_not_authorized")
-        if kind == "saveticker":
-            result = parse_saveticker(get_public_json(cfg["public_json_url"]), clock)
-            write_json(Path(root) / "data/saveticker/latest_saveticker.json", result)
+        if kind == "tickertick":
+            result = parse_tickertick(fetch_tickertick(), clock, hours=24)
+            write_json(Path(root) / "data/news/latest_news.json", result)
         else:
             summaries, chains = {}, {}
             for symbol in SYMBOLS:
@@ -367,7 +400,7 @@ def collect(kind, root, config, clock):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("command", choices=["saveticker", "options", "market", "scan"])
+    parser.add_argument("command", choices=["tickertick", "options", "market", "scan"])
     parser.add_argument("--root", default=".")
     parser.add_argument("--config", default="market_sources.json")
     args = parser.parse_args()

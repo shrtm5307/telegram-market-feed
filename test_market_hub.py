@@ -18,10 +18,9 @@ class MarketTests(unittest.TestCase):
         self.root = Path(self.tmp.name)
 
     def news(self):
-        return {"timestamp": hub.iso(self.clock), "items": [{
-            "news_id": "n1", "title": "Memory demand", "source": "Example",
-            "published_at": hub.iso(self.clock), "tickers": ["MU"],
-            "url": "https://saveticker.com/news/n1"}]}
+        return [{"id": "n1", "title": "Memory demand", "site": "Example",
+                 "time": int(self.clock.timestamp() * 1000), "tickers": ["mu"],
+                 "url": "https://example.com/news/n1?utm_source=test", "_category": "watchlist"}]
 
     def chain(self):
         return {"symbol": "MU", "as_of": hub.iso(self.clock), "spot_price": 100,
@@ -33,22 +32,35 @@ class MarketTests(unittest.TestCase):
 
     def test_news_dedup_id_url_and_story(self):
         data = self.news()
-        duplicate = copy.deepcopy(data["items"][0])
-        duplicate.update(news_id="n2", url="https://saveticker.com/news/n2")
-        data["items"] += [copy.deepcopy(data["items"][0]), duplicate]
-        result = hub.parse_saveticker(data, self.clock)
+        duplicate = copy.deepcopy(data[0])
+        duplicate.update(id="n2", url="https://example.com/news/n2")
+        data += [copy.deepcopy(data[0]), duplicate]
+        result = hub.parse_tickertick(data, self.clock)
         self.assertEqual(result["count"], 1)
+        self.assertEqual(result["window_hours"], 24)
+        self.assertEqual(result["items"][0]["tickers"], ["MU"])
+        self.assertNotIn("?", result["items"][0]["url"])
         self.assertIsNone(result["items"][0]["summary"])
 
     def test_news_bad_schema_empty_stale_timezone(self):
-        for mutation in (lambda x: x.update(items=[]),
-                         lambda x: x.update(timestamp="2020-01-01T00:00:00Z"),
-                         lambda x: x["items"][0].update(published_at="2026-09-10T14:00:00"),
-                         lambda x: x["items"][0].update(news_id=None)):
+        for mutation in (lambda x: x.clear(),
+                         lambda x: x[0].update(time="bad"),
+                         lambda x: x[0].update(url="http://example.com/news/n1"),
+                         lambda x: x[0].update(id=None)):
             data = self.news()
             mutation(data)
             with self.assertRaises(hub.DataError):
-                hub.parse_saveticker(data, self.clock)
+                hub.parse_tickertick(data, self.clock)
+
+    def test_news_retains_only_latest_24_hours(self):
+        data = self.news()
+        old = copy.deepcopy(data[0])
+        old.update(id="old", title="Old story", url="https://example.com/news/old",
+                   time=int((self.clock - timedelta(hours=24, seconds=1)).timestamp() * 1000))
+        data.append(old)
+        result = hub.parse_tickertick(data, self.clock)
+        self.assertEqual(result["count"], 1)
+        self.assertEqual(result["items"][0]["news_id"], "n1")
 
     def test_options_calculations(self):
         summary = hub.summarize_options(hub.normalize_options(self.chain(), "MU", self.clock), self.clock)
@@ -76,13 +88,27 @@ class MarketTests(unittest.TestCase):
                 hub.normalize_options(data, "MU", self.clock)
 
     def test_unavailable_preserves_previous_data_and_fails(self):
-        path = self.root / "data/saveticker/latest_saveticker.json"
-        hub.write_json(path, hub.parse_saveticker(self.news(), self.clock))
+        path = self.root / "data/news/latest_news.json"
+        hub.write_json(path, hub.parse_tickertick(self.news(), self.clock))
         original = path.read_bytes()
-        result = hub.collect("saveticker", self.root, {"saveticker": {"enabled": False}}, self.clock)
+        result = hub.collect("tickertick", self.root, {"tickertick": {"enabled": False}}, self.clock)
         self.assertEqual(result, 2)
         self.assertEqual(path.read_bytes(), original)
-        self.assertEqual(hub.build_market(self.root, self.clock)["saveticker"]["status"], "unavailable")
+        self.assertEqual(hub.build_market(self.root, self.clock)["news"]["status"], "unavailable")
+
+    @patch("market_hub.fetch_tickertick")
+    def test_authorized_collection_writes_24_hour_snapshot(self, fetch):
+        fetch.return_value = self.news()
+        config = {"tickertick": {
+            "enabled": True,
+            "automated_collection_permitted": True,
+            "public_redistribution_permitted": True,
+            "policy_evidence_url": "https://github.com/hczhu/TickerTick-API#terms-of-use"}}
+        self.assertEqual(hub.collect("tickertick", self.root, config, self.clock), 0)
+        data = hub.read_json(self.root / "data/news/latest_news.json")
+        self.assertEqual(data["window_hours"], 24)
+        self.assertEqual(data["count"], 1)
+        self.assertEqual(hub.read_json(self.root / "data/health/tickertick.json")["status"], "ok")
 
     def test_builder_telegram_and_degraded_sources(self):
         hub.write_json(self.root / "latest_snapshot.json", {
