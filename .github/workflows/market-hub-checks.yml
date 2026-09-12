@@ -48,6 +48,9 @@ jobs:
           news = json.loads(Path('validation/data/news/latest_news.json').read_text())
           assert news['window_hours'] == 24
           assert news['count'] == len(news['items']) > 0
+          assert news['freshness_status'] in {'ok', 'delayed', 'stale'}
+          assert news['source_lag_minutes'] >= 0
+          assert news['latest_published_at'] == news['items'][0]['published_at']
           PY
           echo 'Telegram and live 24-hour TickerTick news checked. Options remain unavailable.' >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
