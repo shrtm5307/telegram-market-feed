@@ -17,10 +17,9 @@ SYMBOLS = ("NVDA", "MU", "AVGO", "AMD", "TSM", "SMH", "SOXX")
 NEWS_SYMBOLS = ("NVDA", "MU", "AVGO", "AMD", "TSM", "SMH", "SOXX", "SKHY", "SNDK", "WDC", "STX")
 TICKERTICK_QUERIES = (
     ("watchlist", "(or " + " ".join(f"tt:{symbol.lower()}" for symbol in NEWS_SYMBOLS) + ")"),
-    ("market", "T:market"),
+    ("curated_market", "(or T:curated T:market T:trade T:industry)"),
     ("analysis", "T:analysis"),
-    ("earnings", "T:earning"),
-    ("sec", "T:sec"),
+    ("disclosures", "(or T:earning T:sec)"),
 )
 TICKERTICK_HOST = "api.tickertick.com"
 SIGNALS = ("ai_semiconductor", "memory_hbm", "optical_networking", "power_infrastructure", "macro_rates_risk")
@@ -183,8 +182,18 @@ def parse_tickertick(data, clock, hours=24):
     if not result:
         raise DataError("empty_recent_news")
     result.sort(key=lambda item: (item["published_at"], item["news_id"]), reverse=True)
+    latest = timestamp(result[0]["published_at"])
+    source_lag_minutes = max(0, int((clock - latest).total_seconds() // 60))
+    if source_lag_minutes <= 15:
+        freshness_status = "ok"
+    elif source_lag_minutes <= 60:
+        freshness_status = "delayed"
+    else:
+        freshness_status = "stale"
     return {"timestamp": iso(clock), "status": "ok", "window_hours": hours,
-            "source": "TickerTick", "count": len(result), "items": result}
+            "source": "TickerTick", "freshness_status": freshness_status,
+            "source_lag_minutes": source_lag_minutes,
+            "latest_published_at": iso(latest), "count": len(result), "items": result}
 
 
 def fetch_tickertick():
@@ -375,6 +384,9 @@ def collect(kind, root, config, clock):
         if kind == "tickertick":
             result = parse_tickertick(fetch_tickertick(), clock, hours=24)
             write_json(Path(root) / "data/news/latest_news.json", result)
+            status.update(freshness_status=result["freshness_status"],
+                          source_lag_minutes=result["source_lag_minutes"],
+                          latest_published_at=result["latest_published_at"])
         else:
             summaries, chains = {}, {}
             for symbol in SYMBOLS:
@@ -395,6 +407,9 @@ def collect(kind, root, config, clock):
     if status["status"] != "ok":
         print(f"::warning::{kind}: {status['reason']}; previous data retained, health is unavailable")
         return 2
+    if status.get("freshness_status") in {"delayed", "stale"}:
+        print(f"::warning::{kind}: provider freshness is {status['freshness_status']} "
+              f"({status['source_lag_minutes']} minutes behind)")
     return 0
 
 

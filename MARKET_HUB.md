@@ -20,8 +20,10 @@ authentication and snapshot mirroring are unchanged.
 TickerTick requests are built from hard-coded documented queries. No cookie,
 login, secret or article-detail route is used. The watchlist is NVDA, MU, AVGO,
 AMD, TSM, SMH, SOXX, SKHY, SNDK, WDC and STX. Separate market, analysis,
-earnings and SEC feeds improve coverage. Each query requests at most 200 items,
-remaining below the provider's published rate limit.
+earnings and SEC feeds improve coverage. Curated, market, trade and industry
+stories are combined into one request, and earnings and SEC stories into another.
+The collector makes four requests per run, remaining below the provider's limit
+of no more than five requests in any 30-second window.
 
 ## News normalization
 
@@ -37,8 +39,11 @@ Output:
 - `data/health/tickertick.json`
 
 The news snapshot includes `timestamp`, `status`, `source`, `window_hours: 24`,
-`count` and `items`. A failed fetch preserves the last good snapshot and writes an
-unavailable health record.
+`freshness_status`, `source_lag_minutes`, `latest_published_at`, `count` and
+`items`. Freshness is `ok` through 15 minutes, `delayed` through 60 minutes and
+`stale` beyond 60 minutes. A delayed provider is reported as a warning while its
+valid 24-hour data remains available. A failed fetch preserves the last good
+snapshot and writes an unavailable health record.
 
 ## Options calculations
 
@@ -62,7 +67,8 @@ generated `data/` commits only.
 
 ## Schedule and validation
 
-- TickerTick runs every 30 minutes.
+- TickerTick runs every 5 minutes. GitHub may delay scheduled workflow starts;
+  source lag is measured from the newest provider timestamp rather than the job time.
 - The combined snapshot builds hourly at minute 27.
 - Options schedules remain gated by `MARKET_HUB_ENABLE_OPTIONS=true`.
 - Pull requests run unit tests, validate the public Telegram snapshot, perform a
