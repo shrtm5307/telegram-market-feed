@@ -38,6 +38,8 @@ class MarketTests(unittest.TestCase):
         result = hub.parse_tickertick(data, self.clock)
         self.assertEqual(result["count"], 1)
         self.assertEqual(result["window_hours"], 24)
+        self.assertEqual(result["freshness_status"], "ok")
+        self.assertEqual(result["source_lag_minutes"], 0)
         self.assertEqual(result["items"][0]["tickers"], ["MU"])
         self.assertNotIn("?", result["items"][0]["url"])
         self.assertIsNone(result["items"][0]["summary"])
@@ -61,6 +63,23 @@ class MarketTests(unittest.TestCase):
         result = hub.parse_tickertick(data, self.clock)
         self.assertEqual(result["count"], 1)
         self.assertEqual(result["items"][0]["news_id"], "n1")
+
+    def test_news_freshness_delayed_and_stale(self):
+        delayed = self.news()
+        delayed[0]["time"] = int((self.clock - timedelta(minutes=30)).timestamp() * 1000)
+        self.assertEqual(hub.parse_tickertick(delayed, self.clock)["freshness_status"], "delayed")
+        stale = self.news()
+        stale[0]["time"] = int((self.clock - timedelta(hours=2)).timestamp() * 1000)
+        result = hub.parse_tickertick(stale, self.clock)
+        self.assertEqual(result["freshness_status"], "stale")
+        self.assertEqual(result["source_lag_minutes"], 120)
+
+    def test_queries_cover_realtime_categories_within_rate_limit(self):
+        query_text = " ".join(query for _, query in hub.TICKERTICK_QUERIES)
+        self.assertLessEqual(len(hub.TICKERTICK_QUERIES), 5)
+        for term in ("T:curated", "T:market", "T:trade", "T:industry",
+                     "T:analysis", "T:earning", "T:sec"):
+            self.assertIn(term, query_text)
 
     def test_options_calculations(self):
         summary = hub.summarize_options(hub.normalize_options(self.chain(), "MU", self.clock), self.clock)
@@ -108,7 +127,9 @@ class MarketTests(unittest.TestCase):
         data = hub.read_json(self.root / "data/news/latest_news.json")
         self.assertEqual(data["window_hours"], 24)
         self.assertEqual(data["count"], 1)
-        self.assertEqual(hub.read_json(self.root / "data/health/tickertick.json")["status"], "ok")
+        health = hub.read_json(self.root / "data/health/tickertick.json")
+        self.assertEqual(health["status"], "ok")
+        self.assertEqual(health["freshness_status"], "ok")
 
     def test_builder_telegram_and_degraded_sources(self):
         hub.write_json(self.root / "latest_snapshot.json", {
