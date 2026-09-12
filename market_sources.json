@@ -1,0 +1,17 @@
+{
+  "tickertick": {
+    "enabled": true,
+    "automated_collection_permitted": true,
+    "public_redistribution_permitted": true,
+    "policy_evidence_url": "https://github.com/hczhu/TickerTick-API#terms-of-use",
+    "reason": "Documented no-key API permits commercial and non-commercial use. Only link metadata is retained for 24 hours; article bodies are not copied."
+  },
+  "options": {
+    "enabled": false,
+    "automated_collection_permitted": false,
+    "public_redistribution_permitted": false,
+    "policy_evidence_url": null,
+    "public_json_urls": {},
+    "reason": "No no-key source with all required fields and public GitHub redistribution permission verified. See MARKET_HUB.md."
+  }
+}

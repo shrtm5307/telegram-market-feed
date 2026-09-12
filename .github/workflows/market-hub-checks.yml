@@ -1,0 +1,57 @@
+name: Market hub checks
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: market-checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt httpx
+      - run: python -m unittest test_snapshot test_market_hub -v
+      - name: Inspect real Telegram and TickerTick snapshots
+        shell: bash
+        run: |
+          mkdir -p validation
+          curl --fail --silent --show-error --location --max-time 60 --retry 2 https://raw.githubusercontent.com/shrtm5307/telegram-market-feed/snapshot-data/latest_snapshot.json -o validation/latest_snapshot.json
+          set +e
+          python market_hub.py tickertick --root validation
+          news_status=$?
+          python market_hub.py options --root validation
+          options_status=$?
+          python market_hub.py market --root validation
+          market_status=$?
+          set -e
+          test "$news_status" -eq 0
+          test "$options_status" -eq 2
+          test "$market_status" -eq 2
+          python market_hub.py scan --root validation
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('validation/data/market/market_snapshot.json').read_text())
+          assert data['telegram']['status'] == 'ok', 'Telegram snapshot missing, stale or malformed'
+          assert data['news']['status'] == 'ok'
+          assert data['status'] == 'degraded'
+          assert set(data['unavailable_sources']) == {'options'}
+          news = json.loads(Path('validation/data/news/latest_news.json').read_text())
+          assert news['window_hours'] == 24
+          assert news['count'] == len(news['items']) > 0
+          PY
+          echo 'Telegram and live 24-hour TickerTick news checked. Options remain unavailable.' >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: market-hub-validation
+          path: validation/data/
+          retention-days: 7
