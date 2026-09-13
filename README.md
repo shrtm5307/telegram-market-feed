@@ -26,6 +26,17 @@ Railway에서 24시간 실행되는 Telegram 뉴스 수집기입니다.
 - 설정된 비밀값이 일반 메시지나 숫자와 우연히 일치해도 공개를 차단합니다.
 - 기존 `/feed?token=...` 인증과 조회 동작은 유지합니다.
 
+경량 공개 피드:
+- GitHub Actions가 15분마다 `snapshot-data` 브랜치에 아래 파일을 갱신합니다.
+- `data/telegram/latest_6h.json`
+- `data/telegram/latest_24h.json`
+- 각 파일은 `generated_utc`, `window_hours`, `freshness_status`,
+  `latest_message_at`, `count`, `items`를 포함합니다.
+- 각 아이템은 `channel_name`, `published_at`, `message`, `url`만 포함하며
+  최신 게시물부터 정렬됩니다.
+- `freshness_status`는 정상 실행 중이고 원본 스냅샷이 45분 이내면 `ok`,
+  더 오래됐으면 `stale`, 초기화 중이면 `unavailable`입니다.
+
 테스트 (실제 Telegram 접속이나 인증정보 불필요):
 ```sh
 pip install -r requirements.txt httpx==0.28.1

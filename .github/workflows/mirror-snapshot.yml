@@ -74,28 +74,33 @@ jobs:
                   raise SystemExit("Unexpected item field")
 
           Path("latest_snapshot.json").write_text(
-              json.dumps(
-                  data,
-                  ensure_ascii=False,
-                  separators=(",", ":")
-              ),
+              json.dumps(data, ensure_ascii=False, separators=(",", ":")),
               encoding="utf-8"
           )
           PY
 
           rm latest_snapshot.tmp.json
 
-      - name: Commit latest snapshot
+      - name: Build lightweight feed windows
+        run: |
+          git fetch origin main
+          git show FETCH_HEAD:build_feed_windows.py > "$RUNNER_TEMP/build_feed_windows.py"
+          python "$RUNNER_TEMP/build_feed_windows.py" \
+            latest_snapshot.json data/telegram
+
+      - name: Commit latest snapshots
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add latest_snapshot.json
+          git add latest_snapshot.json \
+            data/telegram/latest_6h.json \
+            data/telegram/latest_24h.json
 
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
 
-          git commit -m "chore: update Telegram snapshot"
+          git commit -m "chore: update Telegram snapshots"
           git push origin HEAD:snapshot-data
