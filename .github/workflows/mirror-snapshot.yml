@@ -1,6 +1,12 @@
 name: Mirror Telegram snapshot
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - build_feed_windows.py
+      - .github/workflows/mirror-snapshot.yml
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
