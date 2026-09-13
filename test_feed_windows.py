@@ -57,6 +57,13 @@ class FeedWindowTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             build_window(snapshot, 24, NOW)
 
+    def test_omits_items_without_text(self):
+        snapshot = self.snapshot()
+        snapshot["items"][1]["message"] = "   "
+        result = build_window(snapshot, 6, NOW)
+        self.assertEqual(result["count"], 1)
+        self.assertEqual(result["items"][0]["channel_name"], "latest")
+
 
 if __name__ == "__main__":
     unittest.main()

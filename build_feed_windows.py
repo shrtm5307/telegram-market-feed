@@ -52,11 +52,14 @@ def build_window(snapshot: dict, hours: int, now: datetime | None = None) -> dic
         for field in ("channel_name", "message", "url"):
             if not isinstance(item.get(field), (str, type(None))):
                 raise ValueError(f"invalid {field}")
+        message = item.get("message") or ""
+        if not message.strip():
+            continue
         if cutoff <= published <= generated + FUTURE_TOLERANCE:
             selected.append((published, {
                 "channel_name": item.get("channel_name") or "",
                 "published_at": iso_utc(published),
-                "message": item.get("message") or "",
+                "message": message,
                 "url": item.get("url") or "",
             }))
 
