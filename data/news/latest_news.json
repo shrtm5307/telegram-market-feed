@@ -1,13 +1,134 @@
 {
-  "timestamp": "2026-09-15T07:48:50.193712+00:00",
+  "timestamp": "2026-09-15T08:04:03.148855+00:00",
   "status": "ok",
   "window_hours": 24,
   "source": "TickerTick",
   "freshness_status": "delayed",
-  "source_lag_minutes": 19,
-  "latest_published_at": "2026-09-15T07:29:34+00:00",
+  "source_lag_minutes": 16,
+  "latest_published_at": "2026-09-15T07:47:04+00:00",
   "count": 505,
   "items": [
+    {
+      "news_id": "-8805866937765245263",
+      "title": "One Stop Systems: Repeat Production Orders To Drive Upside | $OSS",
+      "published_at": "2026-09-15T07:47:04+00:00",
+      "source": "seekingalpha.com",
+      "category": "analysis",
+      "tickers": [],
+      "summary": null,
+      "url": "https://seekingalpha.com/article/4946321-one-stop-systems-repeat-production-orders-to-drive-upside",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "2274558047123000615",
+      "title": "Trump Dismisses AI Fears, UK Surprise Jobs Fall, More",
+      "published_at": "2026-09-15T07:45:24+00:00",
+      "source": "bloomberg.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.bloomberg.com/news/audio/2026-09-15/trump-dismisses-ai-fears-uk-surprise-jobs-fall-more",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "2175546148267051082",
+      "title": "Russia’s Nornickel Seeks New Partner to Process Copper in China",
+      "published_at": "2026-09-15T07:44:11+00:00",
+      "source": "bloomberg.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.bloomberg.com/news/articles/2026-09-15/russia-s-nornickel-seeks-new-partner-to-process-copper-in-china",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "1288291359766699114",
+      "title": "Global PMI Hint At Stubborn Inflation Amid Energy And Supply Chain Pressures | $AFMC $AFSM $ARKK $AVUV $BAPR",
+      "published_at": "2026-09-15T07:40:00+00:00",
+      "source": "seekingalpha.com",
+      "category": "analysis",
+      "tickers": [],
+      "summary": null,
+      "url": "https://seekingalpha.com/article/4946335-global-pmi-hint-at-stubborn-inflation-amid-energy-supply-chain-pressures",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "109225555877231664",
+      "title": "A DeepSeek engineer's viral post on talent, power, and humanity is a rare snapshot of work at China's frontier AI labs",
+      "published_at": "2026-09-15T07:39:51+00:00",
+      "source": "businessinsider.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.businessinsider.com/deepseek-engineer-viral-post-inside-china-ai-race-2026-9",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "1614033544510461983",
+      "title": "Corning: The AI Opportunity Is Huge, But So Is The Valuation | $GLW",
+      "published_at": "2026-09-15T07:36:24+00:00",
+      "source": "seekingalpha.com",
+      "category": "analysis",
+      "tickers": [],
+      "summary": null,
+      "url": "https://seekingalpha.com/article/4946319-corning-the-ai-opportunity-is-huge-but-so-is-the-valuation",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "-1589156354951893378",
+      "title": "Telefónica to Pay Streamer DAZN €1.65 Billion for LaLiga Matches",
+      "published_at": "2026-09-15T07:33:41+00:00",
+      "source": "bloomberg.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.bloomberg.com/news/articles/2026-09-15/telefonica-to-pay-streamer-dazn-1-65-billion-for-laliga-matches",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "-4040841960407436152",
+      "title": "Challenger Gold Limited (CLLEF) Shareholder/Analyst Call Transcript | $CLLEF",
+      "published_at": "2026-09-15T07:32:56+00:00",
+      "source": "seekingalpha.com",
+      "category": "analysis",
+      "tickers": [],
+      "summary": null,
+      "url": "https://seekingalpha.com/article/4946288-challenger-gold-limited-cllef-shareholder-analyst-call-transcript",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "9182503278684346076",
+      "title": "Singapore’s Air Quality Reaches Worst Since 2019",
+      "published_at": "2026-09-15T07:31:13+00:00",
+      "source": "bloomberg.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.bloomberg.com/news/videos/2026-09-15/singapore-s-air-quality-reaches-worst-since-2019-video",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "-2796286918422356654",
+      "title": "Cisco patches Secure Email Gateway zero-day exploited in attacks",
+      "published_at": "2026-09-15T07:31:09+00:00",
+      "source": "bleepingcomputer.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.bleepingcomputer.com/news/security/new-cisco-secure-email-zero-day-exploited-to-execute-commands-as-root",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "4079350196326270625",
+      "title": "Money Market Funds And CDs: Americans Pile On Low-Risk Investments Despite So-So Yields And Higher Inflation | $SHY $LMBS $FTSD $SPTS $SCHO",
+      "published_at": "2026-09-15T07:30:00+00:00",
+      "source": "seekingalpha.com",
+      "category": "analysis",
+      "tickers": [],
+      "summary": null,
+      "url": "https://seekingalpha.com/article/4946314-money-market-funds-cds-americans-pile-on-low-risk-investments-despite-so-so-yields-higher-inflation",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
     {
       "news_id": "-3995420496295138777",
       "title": "Meta Platforms, Inc. $META Shares Sold by TrinityBridge Ltd",
@@ -17,7 +138,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-meta-platforms-inc-meta-shares-sold-by-trinitybridge-ltd-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2020191487554112382",
@@ -28,7 +149,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-meta-platforms-inc-meta-stake-reduced-by-mystic-asset-management-inc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-265720796051763629",
@@ -39,7 +160,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-meta-platforms-inc-meta-is-silvant-capital-management-llcs-9th-largest-position-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4022470326678216010",
@@ -50,7 +171,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-21026-shares-in-meta-platforms-inc-meta-acquired-by-sycale-advisors-ny-llc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2610829341739960904",
@@ -61,7 +182,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-portfolio-design-labs-llc-trims-stock-position-in-meta-platforms-inc-meta-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-9056774967429999355",
@@ -72,7 +193,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-fairtree-asset-management-pty-ltd-acquires-2939-shares-of-meta-platforms-inc-meta-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "271309659526861904",
@@ -83,7 +204,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-oriental-harbor-investment-master-fund-has-136000-stock-holdings-in-meta-platforms-inc-meta-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7279630992062281808",
@@ -94,7 +215,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-vise-technologies-inc-raises-stake-in-meta-platforms-inc-meta-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5091629248959745972",
@@ -105,7 +226,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-crescent-grove-advisors-llc-cuts-stock-position-in-jpmorgan-chase-co-jpm-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "959001808416661378",
@@ -116,7 +237,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-jpmorgan-chase-co-jpm-shares-bought-by-mmbg-investment-advisors-co-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-986110586321952416",
@@ -127,7 +248,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-mmbg-investment-advisors-co-takes-position-in-amazoncom-inc-amzn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1020851173550942066",
@@ -138,7 +259,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-west-family-investments-inc-purchases-3955-shares-of-jpmorgan-chase-co-jpm-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6540830766452046887",
@@ -149,7 +270,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-newedge-wealth-llc-takes-position-in-amazoncom-inc-amzn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2259759056586268798",
@@ -160,7 +281,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-newedge-wealth-llc-purchases-7232-shares-of-jpmorgan-chase-co-jpm-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-857909961235314954",
@@ -171,7 +292,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-rockbridge-asset-management-llc-invests-1462-million-in-amazoncom-inc-amzn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4541798736329485369",
@@ -182,7 +303,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-monetta-financial-services-inc-takes-1108-million-position-in-amazoncom-inc-amzn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8373715043324457037",
@@ -193,7 +314,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-dala-group-llc-acquires-shares-of-8175-amazoncom-inc-amzn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4997036904433019932",
@@ -204,7 +325,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-flossbach-von-storch-se-acquires-new-position-in-amazoncom-inc-amzn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "608994862302594806",
@@ -215,7 +336,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-18878-shares-in-amazoncom-inc-amzn-bought-by-empirical-asset-management-llc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3096228973301434476",
@@ -226,7 +347,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-tpg-financial-advisors-llc-invests-744000-in-amazoncom-inc-amzn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2860933895063158734",
@@ -237,7 +358,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-35492-shares-in-amazoncom-inc-amzn-purchased-by-palmer-knight-co-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2617108207624706952",
@@ -248,7 +369,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-jpmorgan-chase-co-jpm-stock-position-lifted-by-palmer-knight-co-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5189152420037674478",
@@ -259,7 +380,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-jpmorgan-chase-co-jpm-is-great-lakes-advisors-llcs-4th-largest-position-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7458882985391669558",
@@ -270,7 +391,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-vista-cima-wealth-management-llc-purchases-shares-of-6650-amazoncom-inc-amzn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "473094053251726053",
@@ -281,7 +402,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-great-lakes-advisors-llc-buys-shares-of-2187677-amazoncom-inc-amzn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1671324921858445147",
@@ -292,7 +413,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-stevens-capital-partners-boosts-stock-position-in-jpmorgan-chase-co-jpm-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7308336634406487977",
@@ -303,7 +424,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-pacific-sun-financial-corp-invests-203-million-in-amazoncom-inc-amzn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "526959292102723874",
@@ -314,7 +435,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-jpmorgan-chase-co-jpm-shares-sold-by-danica-pension-livsforsikringsaktieselskab-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3481755084757525860",
@@ -325,7 +446,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-13346-shares-in-amazoncom-inc-amzn-bought-by-stevens-capital-partners-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1918910813406987780",
@@ -336,7 +457,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-danske-bank-a-s-increases-stock-position-in-jpmorgan-chase-co-jpm-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6219721324901865404",
@@ -347,7 +468,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-jpmorgan-chase-co-jpm-stock-position-increased-by-diversify-advisory-services-llc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7449929135728756512",
@@ -358,7 +479,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-wealth-effects-llc-makes-new-2295-million-investment-in-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7436195315430016490",
@@ -369,7 +490,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-uniting-wealth-partners-llc-purchases-shares-of-20038-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7062294500461371286",
@@ -380,7 +501,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-19311-shares-in-apple-inc-aapl-acquired-by-wealthspan-partners-llc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2768532559481104003",
@@ -391,7 +512,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-99152-shares-in-apple-inc-aapl-acquired-by-trivium-point-advisory-llc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7648170558645408711",
@@ -402,7 +523,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-three-arch-wealth-management-llc-purchases-new-stake-in-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2681998938901573117",
@@ -413,7 +534,29 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-new-advisory-services-llc-takes-position-in-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "95981132310948052",
+      "title": "VGIT: Eyes On Inflation Mandate With Readings Still Hot | $VGIT",
+      "published_at": "2026-09-15T07:29:13+00:00",
+      "source": "seekingalpha.com",
+      "category": "analysis",
+      "tickers": [],
+      "summary": null,
+      "url": "https://seekingalpha.com/article/4946318-vgit-eyes-on-inflation-mandate-with-readings-still-hot",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "1869920726219464460",
+      "title": "U.S. Has Deployed Weapons in Space, Air Force Secretary Says",
+      "published_at": "2026-09-15T07:29:13+00:00",
+      "source": "nytimes.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.nytimes.com/2026/09/15/us/politics/space-weapon-air-force-secretary.html",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6633109438486766427",
@@ -424,7 +567,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-tulsa-wealth-advisors-inc-makes-new-1688-million-investment-in-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4934657056563362501",
@@ -435,7 +578,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-hbk-sorce-advisory-llc-makes-new-investment-in-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-295487778001939778",
@@ -446,7 +589,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-german-american-bancorp-inc-invests-5325-million-in-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-159431848829788105",
@@ -457,7 +600,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-omc-financial-services-ltd-buys-shares-of-104952-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4073086887855480278",
@@ -468,7 +611,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-9478-shares-in-apple-inc-aapl-bought-by-johnson-wealth-management-llc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2333573734281998893",
@@ -479,7 +622,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-tillman-hartley-llc-acquires-shares-of-7145-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6811292510962038704",
@@ -490,7 +633,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-nippon-life-global-investors-americas-inc-makes-new-12493-million-investment-in-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5987093006195146007",
@@ -501,7 +644,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-northstar-financial-companies-inc-takes-position-in-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8191474334647875183",
@@ -512,7 +655,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-horizon-investment-services-llc-buys-new-position-in-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2067447720773098160",
@@ -523,7 +666,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-private-wealth-advisors-llc-takes-341-million-position-in-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1744996864682556791",
@@ -534,7 +677,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-flputnam-investment-management-co-makes-new-investment-in-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2631058293770714795",
@@ -545,7 +688,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-global-retirement-partners-llc-buys-shares-of-580699-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5958634115957735461",
@@ -556,7 +699,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-titiun-yejiel-acquires-shares-of-32111-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1076251807371100409",
@@ -569,7 +712,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-nvidia-corporation-nvda-shares-purchased-by-hoertkorn-richard-charles-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7551512263250499851",
@@ -582,7 +725,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-nvidia-corporation-nvda-is-urban-wealth-management-llcs-4th-largest-position-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4315521989079553952",
@@ -595,7 +738,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-forum-financial-management-lp-buys-14205-shares-of-nvidia-corporation-nvda-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7411307542259356766",
@@ -606,7 +749,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-bank-of-america-corp-de-buys-new-position-in-public-service-enterprise-group-incorporated-peg-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1709375410997381476",
@@ -619,7 +762,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-etesian-wealth-advisors-inc-increases-position-in-nvidia-corporation-nvda-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-990452375472907984",
@@ -630,7 +773,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-has-57498-million-stake-in-texas-capital-bancshares-inc-tcbi-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5063861515273496441",
@@ -641,7 +784,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-liberty-media-corporation-liberty-live-series-c-llyvk-shares-purchased-by-california-state-teachers-retirement-system-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8856879362937535358",
@@ -652,7 +795,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-purchases-6697233-shares-of-weatherford-international-plc-wfrd-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1409910188809611396",
@@ -663,7 +806,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-axos-financial-inc-ax-holdings-raised-by-california-state-teachers-retirement-system-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7644360629441457339",
@@ -674,7 +817,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-carlyle-group-inc-cg-stock-holdings-lifted-by-california-state-teachers-retirement-system-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6983769299218811916",
@@ -685,7 +828,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-acquires-5867354-shares-of-ufp-industries-inc-ufpi-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "996861548289984942",
@@ -696,7 +839,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-ichor-holdings-ltd-ichr-shares-bought-by-california-state-teachers-retirement-system-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8911496315561295288",
@@ -707,7 +850,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-has-508-million-position-in-cabot-corporation-cbt-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4371432405032925512",
@@ -718,7 +861,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-buys-1252527-shares-of-preformed-line-products-company-plpc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2748042143501251736",
@@ -729,7 +872,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-purchases-6190596-shares-of-frontdoor-inc-ftdr-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5723739195989708418",
@@ -740,7 +883,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-nnn-reit-inc-nnn-shares-purchased-by-california-state-teachers-retirement-system-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5325087977583464094",
@@ -751,7 +894,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-raises-stock-position-in-futu-holdings-limited-sponsored-adr-futu-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-101245493213635012",
@@ -762,7 +905,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-acquires-2846494-shares-of-rogers-corporation-rog-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4889370865410632778",
@@ -773,7 +916,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-corient-private-wealth-lp-acquires-391765-shares-of-huntington-bancshares-incorporated-hban-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2685266987346995747",
@@ -784,7 +927,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-corient-private-wealth-lp-trims-position-in-nuveen-churchill-direct-lending-corp-ncdl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-750684209555345441",
@@ -795,7 +938,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-corient-private-wealth-lp-increases-stock-position-in-verisign-inc-vrsn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5481990814005108956",
@@ -806,7 +949,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-corient-private-wealth-lp-has-1986-million-holdings-in-public-storage-psa-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7033064519395377886",
@@ -819,7 +962,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-nvidia-corporation-nvda-is-pfg-investments-llcs-3rd-largest-position-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2225073955251121381",
@@ -832,7 +975,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-wealth-architects-llc-has-601-million-holdings-in-nvidia-corporation-nvda-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1210135190906224013",
@@ -845,7 +988,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-johnson-investment-counsel-inc-raises-stock-position-in-nvidia-corporation-nvda-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8074426031112903020",
@@ -856,7 +999,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-rydar-equities-inc-boosts-stock-holdings-in-microsoft-corporation-msft-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6733473155140004860",
@@ -869,7 +1012,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-j-m-brown-associates-inc-makes-new-investment-in-nvidia-corporation-nvda-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5483556418341498536",
@@ -882,7 +1025,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-new-harbor-financial-group-llc-acquires-4895-shares-of-nvidia-corporation-nvda-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2172449780515717810",
@@ -893,7 +1036,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-microsoft-corporation-msft-is-cottage-street-advisors-llcs-8th-largest-position-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1014003625564515353",
@@ -904,7 +1047,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-sound-income-strategies-llc-has-1364-million-position-in-microsoft-corporation-msft-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5487492281915946857",
@@ -915,7 +1058,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-ifp-advisors-inc-has-6732-million-position-in-microsoft-corporation-msft-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5616997269302559279",
@@ -926,7 +1069,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-hamilton-capital-partners-llc-increases-stock-holdings-in-microsoft-corporation-msft-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4568763007567308639",
@@ -937,7 +1080,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-first-pacific-financial-raises-stock-position-in-microsoft-corporation-msft-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8430348333485908170",
@@ -948,7 +1091,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-interchange-capital-partners-llc-has-1211-million-holdings-in-microsoft-corporation-msft-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6839638659650614626",
@@ -959,7 +1102,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-microsoft-corporation-msft-stake-trimmed-by-gateway-investment-advisers-llc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-174920126023270966",
@@ -970,7 +1113,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-microsoft-corporation-msft-is-kavar-capital-partners-group-llcs-9th-largest-position-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "9169816644526023874",
@@ -981,7 +1124,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-hansen-associates-financial-group-inc-buys-1366-shares-of-microsoft-corporation-msft-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6777365563412280345",
@@ -992,7 +1135,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-corient-private-wealth-lp-boosts-stock-position-in-nnn-reit-inc-nnn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1215010635442857428",
@@ -1003,7 +1146,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-corient-private-wealth-lp-acquires-59109-shares-of-avery-dennison-corporation-avy-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5524902888530709480",
@@ -1014,7 +1157,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-corient-private-wealth-lp-has-2072-million-stock-holdings-in-crown-holdings-inc-cck-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2305770674379610218",
@@ -1025,7 +1168,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-cognex-corporation-cgnx-shares-acquired-by-corient-private-wealth-lp-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2795227291010335220",
@@ -1036,7 +1179,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-corient-private-wealth-lp-has-2107-million-stock-position-in-consolidated-edison-inc-ed-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-841444964548292930",
@@ -1047,7 +1190,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-corient-private-wealth-lp-reduces-position-in-eog-resources-inc-eog-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8405251777559263586",
@@ -1058,7 +1201,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-has-51673-million-holdings-in-mp-materials-corp-mp-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-407416285777654067",
@@ -1069,7 +1212,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-boosts-holdings-in-ceco-environmental-corp-ceco-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8897110138756590637",
@@ -1080,7 +1223,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-buys-8894384-shares-of-commerce-bancshares-inc-cbsh-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6759527295233969143",
@@ -1091,7 +1234,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-has-54592-million-stock-holdings-in-costar-group-inc-csgp-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4198263669930000258",
@@ -1102,7 +1245,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-raises-holdings-in-darling-ingredients-inc-dar-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2572577344940444607",
@@ -1113,7 +1256,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-pjt-partners-inc-pjt-shares-bought-by-california-state-teachers-retirement-system-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3788983093241954436",
@@ -1124,7 +1267,18 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-california-state-teachers-retirement-system-buys-3551548-shares-of-morningstar-inc-morn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "-6771358998578212158",
+      "title": "China steps up safeguards against AI losing human control",
+      "published_at": "2026-09-15T07:28:16+00:00",
+      "source": "seekingalpha.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://seekingalpha.com/news/4642732-china-steps-up-safeguards-against-ai-losing-human-control",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1516532375104996257",
@@ -1135,7 +1289,18 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946316-schd-my-mid-year-update-on-schwabs-111-billion-flagship-dividend-etf",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "-2902347002465079555",
+      "title": "Indonesia Ex-Finance Minister Purbaya Says Staff Reshuffle Helped Trigger Ouster",
+      "published_at": "2026-09-15T07:24:23+00:00",
+      "source": "bloomberg.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.bloomberg.com/news/articles/2026-09-15/indonesia-ex-finance-minister-purbaya-says-staff-reshuffle-helped-trigger-ouster",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "103127767264344945",
@@ -1146,7 +1311,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946315-pg-and-ampe-the-wildfire-risk-is-manageable",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8513570371715782608",
@@ -1157,7 +1322,29 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-09-15/bofa-sees-chance-of-150-oil-on-critical-infrastructure-risk",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "5080176538091817231",
+      "title": "Japan’s Cabinet Approves Temporary Food Sales Tax Cut to 1%",
+      "published_at": "2026-09-15T07:22:24+00:00",
+      "source": "bloomberg.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.bloomberg.com/news/articles/2026-09-15/japan-s-cabinet-approves-temporary-food-sales-tax-cut-to-1",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "-7738150581998698252",
+      "title": "What is the triple lock and how much is the state pension worth?",
+      "published_at": "2026-09-15T07:20:55+00:00",
+      "source": "bbc.co.uk",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.bbc.co.uk/news/articles/cq6m03ld7nvo",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3789298008412914190",
@@ -1168,7 +1355,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-09-15/bullish-treasuries-view-is-contrarian-3-minutes-mliv-video",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8127003443920979744",
@@ -1179,7 +1366,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946328-manufacturing-growth-sustained-globally-by-reviving-expansions-in-asia-europe",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5400304339367419736",
@@ -1190,7 +1377,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/newsletters/2026-09-15/uk-labour-market-downturn-accelerates-ahead-of-boe-decision-burnham-s-budget",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7745886138592176459",
@@ -1201,7 +1388,29 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/news/4642735-waymo-aims-to-launch-robotaxi-service-in-tokyo-in-2027",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "-1505137019173203333",
+      "title": "AI Prompts That Help With The Coexistence Of Mindfulness And Mindlessness",
+      "published_at": "2026-09-15T07:15:00+00:00",
+      "source": "forbes.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.forbes.com/sites/lanceeliot/2026/09/15/ai-prompts-that-help-with-the-coexistence-of-mindfulness-and-mindlessness",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "8204603430787653891",
+      "title": "Lutnick Shares Kennedy Center Ceiling Collapse Video Amid Push To Close Building",
+      "published_at": "2026-09-15T07:14:56+00:00",
+      "source": "forbes.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.forbes.com/sites/siladityaray/2026/09/15/lutnick-shares-kennedy-center-ceiling-collapse-video-amid-push-to-close-building",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5317675129929053801",
@@ -1212,7 +1421,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/news/4642740-us-10-year-treasury-yield-climbs-to-highest-level-since-2007-ahead-of-fed-decision",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7032141501003136782",
@@ -1223,7 +1432,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.eetimes.com/india-hardens-its-cyber-defenses",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2438614618878919917",
@@ -1234,7 +1443,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-09-15/daybreak-europe-9-15-2026-video",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "885390223611771871",
@@ -1245,7 +1454,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-baird-financial-group-inc-sells-46679-shares-of-kratos-defense-security-solutions-inc-ktos-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4859003974540366560",
@@ -1256,7 +1465,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-baird-financial-group-inc-has-511-million-stock-position-in-paycom-software-inc-payc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2880528393564968230",
@@ -1267,7 +1476,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-baird-financial-group-inc-has-551-million-position-in-mp-materials-corp-mp-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "741554735556602642",
@@ -1278,7 +1487,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-baird-financial-group-inc-acquires-75817-shares-of-robert-half-inc-rhi-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6040282584379722185",
@@ -1289,7 +1498,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-garmin-ltd-grmn-position-raised-by-baird-financial-group-inc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6485195422731456015",
@@ -1300,7 +1509,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-baird-financial-group-inc-trims-position-in-vistra-corp-vst-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4903966292279513759",
@@ -1311,7 +1520,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-wabtec-wab-stake-increased-by-baird-financial-group-inc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-9222864886438387239",
@@ -1322,7 +1531,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.cnbc.com/2026/09/15/us-attorney-crypto-tether-iran-china-.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5071301747076582255",
@@ -1333,7 +1542,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-avaii-wealth-management-llc-sells-23498-shares-of-jpmorgan-chase-co-jpm-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3623303785607779778",
@@ -1344,7 +1553,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-7468-shares-in-amazoncom-inc-amzn-bought-by-avaii-wealth-management-llc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1383787984779113800",
@@ -1355,7 +1564,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-alphabet-inc-googl-shares-sold-by-b-metzler-seel-sohn-co-ag-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2148607802812622128",
@@ -1366,7 +1575,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-arrowroot-family-office-llc-makes-new-432-million-investment-in-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3310894856420308275",
@@ -1377,7 +1586,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-arizona-state-retirement-system-invests-158-million-in-victorias-secret-co-vsxy-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "333093037620736303",
@@ -1390,7 +1599,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-arizona-state-retirement-system-buys-4555-shares-of-micron-technology-inc-mu-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7456958592698573273",
@@ -1401,7 +1610,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-arizona-state-retirement-system-grows-stake-in-costco-wholesale-corporation-cost-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "405228784813805978",
@@ -1414,7 +1623,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-broadcom-inc-avgo-stock-holdings-boosted-by-angeles-wealth-management-llc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4303736997165199608",
@@ -1425,7 +1634,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-angeles-wealth-management-llc-grows-stake-in-tesla-inc-tsla-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "527512348621294824",
@@ -1436,7 +1645,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946324-us-leads-developed-economy-growth-to-fastest-rate-for-over-4-years",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6218310334699496272",
@@ -1447,7 +1656,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-amundi-reduces-position-in-bright-horizons-family-solutions-inc-bfam-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2108902156549236837",
@@ -1458,7 +1667,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-amundi-sells-24459-shares-of-cohu-inc-cohu-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3782802577591798156",
@@ -1469,7 +1678,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-amundi-sells-33504-shares-of-vontier-corporation-vnt-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3998305922904293433",
@@ -1480,7 +1689,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-macys-inc-m-shares-sold-by-amundi-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4798496673466264525",
@@ -1491,7 +1700,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-amundi-sells-37753-shares-of-saia-inc-saia-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7421910180350233654",
@@ -1502,7 +1711,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-amundi-buys-127411-shares-of-cleveland-cliffs-inc-clf-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5226260285947188238",
@@ -1513,7 +1722,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-tmc-the-metals-company-inc-tmc-shares-bought-by-amundi-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5235629564111974417",
@@ -1524,7 +1733,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-amundi-cuts-stock-position-in-caterpillar-inc-cat-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3136845727547872231",
@@ -1535,7 +1744,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-johnson-johnson-jnj-shares-acquired-by-ameritas-advisory-services-llc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5190014910801722857",
@@ -1546,7 +1755,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-microsoft-corporation-msft-is-altrafin-ags-10th-largest-position-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4087039171142471690",
@@ -1557,7 +1766,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-altman-advisors-inc-acquires-1031-shares-of-meta-platforms-inc-meta-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3661594450059261426",
@@ -1568,7 +1777,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-altiora-financial-group-llc-takes-147-million-position-in-amazoncom-inc-amzn-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6361781051721908740",
@@ -1579,29 +1788,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-2759-shares-in-tesla-inc-tsla-acquired-by-alphagrep-uk-ltd-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "-3603900075606438101",
-      "title": "Allworth Financial LP Cuts Holdings in Zoetis Inc. $ZTS",
-      "published_at": "2026-09-15T07:04:43+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/filing-allworth-financial-lp-cuts-holdings-in-zoetis-inc-zts-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "-3477421006826109253",
-      "title": "AlpenGlobal Capital LLC Has $3.74 Million Stake in Meta Platforms, Inc. $META",
-      "published_at": "2026-09-15T07:04:43+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/filing-alpenglobal-capital-llc-has-374-million-stake-in-meta-platforms-inc-meta-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2467375093386359719",
@@ -1614,95 +1801,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-alphagrep-uk-ltd-purchases-new-shares-in-broadcom-inc-avgo-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "8527515457790333872",
-      "title": "Britain Will ‘Heed Warnings’ Over AI, Burnham’s Deputy Says",
-      "published_at": "2026-09-15T07:04:41+00:00",
-      "source": "bloomberg.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.bloomberg.com/news/articles/2026-09-15/britain-will-heed-warnings-over-ai-burnham-s-deputy-says",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "4048715859983990130",
-      "title": "Abbot Financial Management Inc. Buys Shares of 55,294 Apple Inc. $AAPL",
-      "published_at": "2026-09-15T07:04:37+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/filing-abbot-financial-management-inc-buys-shares-of-55294-apple-inc-aapl-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "-5038792367776167514",
-      "title": "Addison Advisors LLC Sells 7,901 Shares of JPMorgan Chase & Co. $JPM",
-      "published_at": "2026-09-15T07:04:36+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/filing-addison-advisors-llc-sells-7901-shares-of-jpmorgan-chase-co-jpm-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "-4087849977637681144",
-      "title": "1,955 Shares in Tesla, Inc. $TSLA Bought by Advisory Solutions Group LLC",
-      "published_at": "2026-09-15T07:04:36+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/filing-1955-shares-in-tesla-inc-tsla-bought-by-advisory-solutions-group-llc-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "6152256795262512104",
-      "title": "Advisory Solutions Group LLC Takes Position in International Business Machines Corporation $IBM",
-      "published_at": "2026-09-15T07:04:35+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/filing-advisory-solutions-group-llc-takes-position-in-international-business-machines-corporation-ibm-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "-4119749999949887681",
-      "title": "Microsoft Corporation $MSFT is Allied Investment Advisors LLC's 4th Largest Position",
-      "published_at": "2026-09-15T07:04:35+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/filing-microsoft-corporation-msft-is-allied-investment-advisors-llcs-4th-largest-position-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "-3369074127026459136",
-      "title": "5,815 Shares in Costco Wholesale Corporation $COST Purchased by Agur Provident & Training Funds Management Ltd.",
-      "published_at": "2026-09-15T07:04:35+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/filing-5815-shares-in-costco-wholesale-corporation-cost-purchased-by-agur-provident-training-funds-management-ltd-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "536761301412868321",
-      "title": "Allworth Financial LP Sells 4,746 Shares of Caterpillar Inc. $CAT",
-      "published_at": "2026-09-15T07:04:34+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/filing-allworth-financial-lp-sells-4746-shares-of-caterpillar-inc-cat-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2128391498546897305",
@@ -1715,18 +1814,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-allworth-financial-lp-trims-stock-position-in-micron-technology-inc-mu-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "-8720787685388710395",
-      "title": "133,308 Shares in Apple Inc. $AAPL Purchased by 1ST Source Bank",
-      "published_at": "2026-09-15T07:04:30+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/filing-133308-shares-in-apple-inc-aapl-purchased-by-1st-source-bank-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5850232043953050513",
@@ -1737,7 +1825,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946214-iss-a-s-isfff-analyst-investor-day-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7098300294380400703",
@@ -1748,7 +1836,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9081265/full-year-2026-new-hope-corporation-ltd-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4891118242358582376",
@@ -1759,7 +1847,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946325-northern-large-cap-value-fund-q2-2026-commentary",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8177273020878635250",
@@ -1772,7 +1860,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946311-marvell-stock-qualcomm-just-entered-its-aws-territory-but-buy-case-still-holds",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4630391940958685285",
@@ -1783,7 +1871,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946320-bond-vigilantes-smell-blood-in-water",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7214378044338284948",
@@ -1796,7 +1884,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946309-market-reset-a-6-percent-risk-free-rate-could-mean-15x-pe-for-the-market",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-572832991301453656",
@@ -1809,7 +1897,7 @@
       ],
       "summary": null,
       "url": "https://officechai.com/ai/closed-source-ai-is-like-bottled-water-but-water-is-also-free-nvidia-ceo-jensen-huang",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8265665438100269354",
@@ -1820,7 +1908,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/15/80-years-of-history-warn-what-september-rate-hike",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1013955369696093657",
@@ -1831,7 +1919,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946308-let-the-ai-craze-pay-you-monthly-income",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8720076870776960952",
@@ -1842,7 +1930,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946307-binc-attractive-7-1-percent-yield-controlled-duration-but-tight-credit-spreads",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7701581906813639980",
@@ -1853,7 +1941,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946306-spyi-a-buy-for-a-market-with-less-room-for-error",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3307849173444013344",
@@ -1864,7 +1952,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946305-picpay-holdings-stock-hold-until-price-reclaims-resistance-and-litigation-clears",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5166367254107343292",
@@ -1875,7 +1963,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946303-jive-international-value-star-with-flashing-caution-lights",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7894408792367796233",
@@ -1886,7 +1974,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946317-baron-india-fund-q2-2026-shareholder-letter",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7978226230946603282",
@@ -1899,7 +1987,7 @@
       ],
       "summary": null,
       "url": "https://www.digitimes.com/news/a20260915VL215/samsung-dram-sk-hynix-2028-production.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1665062872983673663",
@@ -1910,7 +1998,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/15/what-spacexs-lockup-expiry-could-mean-for-anthropi",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6816788850081619631",
@@ -1923,7 +2011,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/consensus-nvidia-corporation-nasdaq-nvda-receives-consensus-recommendation-of-buy-from-analysts-2026-09-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7078492415098427148",
@@ -1934,7 +2022,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946247-kestra-medical-technologies-ltd-kmts-q1-2027-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5931153085653625991",
@@ -1947,7 +2035,7 @@
       ],
       "summary": null,
       "url": "https://www.bloomberg.com/news/audio/2026-09-15/bloomberg-daybreak-europe-nvidia-ceo-trump-call-podcast",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1805584995906202681",
@@ -1958,7 +2046,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946313-pgim-floating-rate-income-fund-q2-2026-commentary",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4995648058335656733",
@@ -1969,7 +2057,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946312-invesco-global-focus-fund-q2-2026-commentary",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4267698016704964833",
@@ -1980,7 +2068,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946302-formfactor-the-small-contacts-behind-a-much-larger-earnings-opportunity",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4629858968777002683",
@@ -1991,7 +2079,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://klementoninvesting.substack.com/p/more-than-a-military-alliance",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8574529432826940657",
@@ -2004,7 +2092,7 @@
       ],
       "summary": null,
       "url": "https://www.ibtimes.co.uk/trump-calls-nvidia-ceo-jensen-huang-ai-takeover-fears-1819730",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1446079453873932279",
@@ -2015,7 +2103,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/opinion/articles/2026-09-15/byd-s-34-000-chinese-suvs-are-stirring-up-german-automaker-angst",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6714766183263473462",
@@ -2026,7 +2114,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946310-allspring-utility-and-telecommunications-fund-q2-2026-commentary",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3918976585862043030",
@@ -2037,7 +2125,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/berniepleskoff/2026/09/15/3-sluggers-are-leading-relentless-san-diego-padres-to-playoff-berth",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5489481600533924394",
@@ -2048,7 +2136,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946301-intuitive-surgical-stock-my-sell-case-is-losing-ground-rating-upgrade",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3545982626624931159",
@@ -2059,7 +2147,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946300-applovin-stock-misunderstood-business-best-investment",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6673720180986050702",
@@ -2070,7 +2158,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/siladityaray/2026/09/15/ossoff-says-trump-is-compromised-on-ai-safety-regulation-as-obama-backs-slowdown-calls",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1933087770755387296",
@@ -2081,7 +2169,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946297-market-expects-rate-hike-bond-market-gives-excuse-to-hold",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3282287245962569384",
@@ -2094,7 +2182,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/news/4642717-trump-calls-ai-a-hoax-in-surprise-onstage-call-with-nvidias-jensen-huang",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3951813151403804257",
@@ -2107,7 +2195,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/pcmasterrace/comments/1wgr8k4/help_amd_graphics_headache",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3222254335110350998",
@@ -2120,7 +2208,7 @@
       ],
       "summary": null,
       "url": "https://www.livemint.com/companies/news/samsung-invests-in-nvidia-rival-dutch-ai-chip-startup-euclyd-gets-230-million-funding-as-quest-for-alternatives-grow-11789444181041.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5252868260023072246",
@@ -2131,7 +2219,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/siladityaray/2026/09/15/ossoff-says-trump-is-compromised-on-ai-safety-regulation-due-to-don-jr-investments",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7893842218193405685",
@@ -2142,7 +2230,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946296-duolingo-growth-strategy-working-so-far",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6157041861422964283",
@@ -2153,7 +2241,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/15/arm-stock-is-down-more-than-40-here-s-why-i-m-staying-on-the-sidelines",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1290031173655284687",
@@ -2164,7 +2252,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946285-new-hope-corporation-limited-nhpef-q4-2026-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5673344429736239105",
@@ -2175,7 +2263,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080583/full-year-2026-wam-global-ltd-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4264398193327809654",
@@ -2186,7 +2274,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946299-commodities-saudi-supply-uncertainty-has-oil-extending-gains",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "239537225618834393",
@@ -2197,7 +2285,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://rozenberg.substack.com/p/atkinson-wins-justice",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "9136220913225314003",
@@ -2208,7 +2296,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/hannahabraham/2026/09/15/this-year-the-emmys-stuck-to-caution-over-commentary",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8469154650808622653",
@@ -2221,7 +2309,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/news/4642723-samsung-backs-nvidia-ai-chip-rival-in-230m-funding-round-report",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4963182533932595639",
@@ -2232,7 +2320,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946295-enphase-energy-ai-story-is-not-playing-out-maintain-hold",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4398548670337911826",
@@ -2245,7 +2333,7 @@
       ],
       "summary": null,
       "url": "https://www.neowin.net/news/dutch-startup-secures-230-million-to-challenge-nvidia",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7614244750215168994",
@@ -2258,7 +2346,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/pcmasterrace/comments/1wgqetk/old_but_gold",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5436482216748599194",
@@ -2271,7 +2359,7 @@
       ],
       "summary": null,
       "url": "https://applescoop.org/story/how-iphones-are-really-made-2026-tsmc-foxconn-supply-chain",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8743077026477553986",
@@ -2284,7 +2372,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/pcmasterrace/comments/1wgq887/windows_11_kb5129195_emergency_update_released",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2356836582256521280",
@@ -2297,7 +2385,7 @@
       ],
       "summary": null,
       "url": "https://www.tweaktown.com/rss/click/news/113549",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4048165999314843992",
@@ -2310,7 +2398,7 @@
       ],
       "summary": null,
       "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-sb-energy-to-sell-up-to-500-million-worth-of-shares-to-japanese-investors-ahead-of-us-ipo/articleshow/134251818.cms",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1695053843670250345",
@@ -2323,7 +2411,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/news/4642724-broadcom-ceo-dismisses-ai-slowdown-concerns-stands-by-long-term-revenue-goals",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4365608494015261265",
@@ -2334,7 +2422,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/15/3-ai-robotics-stocks-worth-owning-over-tesla-right",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7091194905544698506",
@@ -2348,7 +2436,7 @@
       ],
       "summary": null,
       "url": "https://www.insidermonkey.com/blog/donald-trump-rejects-calls-for-ai-slowdown-that-changes-the-game-for-nvidia-and-amd-1837607",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4168500186831272830",
@@ -2359,7 +2447,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/siladityaray/2026/09/14/mcconnell-returns-to-senate-after-three-month-absence-photos",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4416452958885273827",
@@ -2370,7 +2458,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946202-mara-holdings-inc-mara-presents-at-h-c-wainwright-28th-annual-global-investment-conference",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2546595171660871848",
@@ -2381,7 +2469,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946193-immunocore-holdings-plc-imcr-presents-at-morgan-stanley-24th-annual-global-healthcare",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1479316114441149142",
@@ -2394,7 +2482,7 @@
       ],
       "summary": null,
       "url": "https://www.nextplatform.com/ai/2026/09/15/operationalize-ai-at-scale-with-hpe-and-nvidia/5296445",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8720720591520079433",
@@ -2407,7 +2495,7 @@
       ],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/15/prediction-micron-stock-will-hit-1250-after-sept-3",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3067909227539308631",
@@ -2418,7 +2506,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4941662-politics-and-the-markets-091526",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8176557764418354382",
@@ -2431,7 +2519,7 @@
       ],
       "summary": null,
       "url": "https://arxiv.org/abs/2609.13551",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1818326018040795681",
@@ -2442,7 +2530,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946291-coherent-improving-fundamentals-im-completely-unfazed-rating-upgrade",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3873114905890783037",
@@ -2456,7 +2544,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080570/ai-stock-selloff-nvidia-nvda-and-amd-under-pressure-amid-market-turmoil",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1080985304275844032",
@@ -2467,7 +2555,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946290-rubrik-stock-plenty-steam-rally-ai-security-concerns-grow",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8567266404247455103",
@@ -2478,7 +2566,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946294-finding-value-opportunities-among-highly-rated-stocks",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6983815511473025005",
@@ -2489,7 +2577,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946289-vericel-maci-and-regenerative-knee-cartilage",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-9079194495688292174",
@@ -2500,7 +2588,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/davidphelan/2026/09/14/apple-releases-ios-27-with-key-new-iphone-features-and-major-upgrades",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2666419685351499027",
@@ -2511,7 +2599,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.asiancenturystocks.com/glp-1-winners-and-losers",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3532848092186069930",
@@ -2524,7 +2612,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/stocks/comments/1wgp4x6/ais_next_bottleneck_might_be_electricity_not_chips",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3031782912307119126",
@@ -2535,7 +2623,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/tonifitzgerald/2026/09/14/who-won-most-emmys-apple-tv-tops-favorites-hbo-and-netflix",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "883420655746920037",
@@ -2548,7 +2636,7 @@
       ],
       "summary": null,
       "url": "https://invezz.com/news/2026/09/15/samsung-and-sk-hynix-defy-a-6-us-chip-rout-what-is-korea-seeing-differently",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-18117906307207017",
@@ -2561,7 +2649,7 @@
       ],
       "summary": null,
       "url": "https://nai500.com/blog/2026/09/broadcom-delivered-strong-q3-results-but-its-stock-fell-what-is-the-market-worried-about",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4313216715913952203",
@@ -2572,7 +2660,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946292-copt-defense-properties-cdp-presents-at-bofa-ny-global-real-estate-conference-2026-slideshow",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6011224672818643853",
@@ -2585,7 +2673,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080568/broadcom-avgo-ceo-addresses-ai-development-and-chip-demand-concerns",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5614552020710399737",
@@ -2598,7 +2686,7 @@
       ],
       "summary": null,
       "url": "https://www.digitimes.com/news/a20260915PD214/tsmc-3nm-2nm-capacity-cowos.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6369080624973998084",
@@ -2609,7 +2697,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946284-lululemon-stock-fall-from-grace-still-holding-on-rating-downgrade",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6411448005081596215",
@@ -2620,7 +2708,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://alexsteffen.substack.com/p/a-framework-for-redesigning-your",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7130019535208938458",
@@ -2631,7 +2719,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://beachman.substack.com/p/calling-bs-on-the-ai-safety-narrative",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6653796132271395273",
@@ -2644,7 +2732,7 @@
       ],
       "summary": null,
       "url": "https://taekim.substack.com/p/jensen-huang-on-the-irresponsible",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2299151136257582244",
@@ -2655,7 +2743,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/zitaballingerfletcher/2026/09/14/the-backbone-of-americas-nuclear-triad-is-aging-as-missile-needs-grow",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1069506968960753533",
@@ -2666,7 +2754,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/billionaire-ken-griffin-just-loaded-up-on-this-div",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6736856264841955342",
@@ -2679,7 +2767,7 @@
       ],
       "summary": null,
       "url": "https://www.notebookcheck.net/Nvidia-RTX-60-series-reportedly-greenlit-for-early-2027-launch.1399287.0.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3393859827852942366",
@@ -2693,7 +2781,7 @@
       ],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/why-micron-intel-amd-chip-stocks-fell-today",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2129662837279058639",
@@ -2704,7 +2792,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://policytensor.substack.com/p/why-the-houthis-are-so-powerful",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1510152547518202932",
@@ -2715,7 +2803,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/opinion/articles/2026-09-15/joshua-wong-s-freedom-means-more-than-cheap-chinese-cars",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1140556472269551284",
@@ -2726,7 +2814,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/laurasirikul/2026/09/14/2026-emmys-stephen-colbert-uses-his-outstanding-variety-win-to-uplift-his-crew",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4677794593006846005",
@@ -2737,7 +2825,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/laurasirikul/2026/09/14/2026-emmys-the-pitt-wins-second-outstanding-drama-series-award",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8562798258099632209",
@@ -2748,7 +2836,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/siladityaray/2026/09/14/stephen-colberts-canceled-late-show-wins-best-variety-series-emmy",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7937686622247040246",
@@ -2761,7 +2849,7 @@
       ],
       "summary": null,
       "url": "https://gizmodo.com/ai-ceos-predictably-suck-up-to-trump-amid-ai-pause-debate-2000811593",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4333672450487050900",
@@ -2772,7 +2860,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946281-august-income-2-raises-from-high-yield-5-7-8-percent",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7674935617561111078",
@@ -2785,7 +2873,7 @@
       ],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-09-15/trump-china-push-back-on-calls-to-slow-ai-video",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4185101298078837401",
@@ -2796,7 +2884,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/willdawson/2026/09/14/rhea-seehorns-pluribus-emmy-is-a-win-for-apple-tv",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8085100115624854357",
@@ -2807,7 +2895,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946280-globant-stock-delivery-shift-creates-high-reward-bull-case",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8957508738969438306",
@@ -2818,7 +2906,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/tomlayberger/2026/09/14/looking-ahead-following-a-shaky-start-for-a-few-big-ten-teams",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7668266821185993731",
@@ -2829,7 +2917,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/alisondurkee/2026/09/14/supreme-court-keeps-usps-mail-in-ballot-rule-blocked-for-midterms-heres-what-voters-should-know",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7753927931370984356",
@@ -2840,7 +2928,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946287-bond-market-strikes-back",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7336325558334425819",
@@ -2851,7 +2939,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/own-coca-cola-by-sept-15-to-qualify-for-the-oct-1",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5286112835114263737",
@@ -2862,7 +2950,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/meet-this-eventual-member-of-the-1-trillion-club-t",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4174166291672580391",
@@ -2873,7 +2961,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/earnings/call-transcripts/2026/09/14/hain-celestial-hain-q1-2027-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6749630874779877252",
@@ -2884,7 +2972,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/earnings/call-transcripts/2026/09/14/rf-industries-rfil-q3-2026-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4760276694484466201",
@@ -2895,7 +2983,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/alfredkonuwa/2026/09/14/wwe-raw-results-as-roman-reigns-beats-penta-in-mexico-city",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "9084968037216262021",
@@ -2906,7 +2994,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.aboveavalon.com/notes/2026/9/14/going-beyond-apples-presentation-interesting-tidbits-and-observations-from-apples-surprise-and-shine-event-part-1",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1473099752740016526",
@@ -2917,7 +3005,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946286-digital-core-reit-dgtcf-presents-at-maybank-reitas-sgx-sreit-day-slideshow",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2868292532644122930",
@@ -2928,7 +3016,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080537/q1-2027-mindwalk-holdings-corp-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6107033305148878246",
@@ -2939,7 +3027,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080549/q4-2026-radiant-logistics-inc-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5198734835143895462",
@@ -2950,7 +3038,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080545/q1-2027-kestra-medical-technologies-ltd-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4604370654642541019",
@@ -2961,7 +3049,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080538/q2-2026-dave-busters-entertainment-inc-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1046220718565712134",
@@ -2972,7 +3060,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946232-kyverna-therapeutics-inc-kytx-presents-at-morgan-stanley-24th-annual-global-healthcare",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3751296372643293003",
@@ -2985,7 +3073,7 @@
       ],
       "summary": null,
       "url": "https://www.livemint.com/ai/artificial-intelligence/trump-doubles-down-on-ai-push-speaks-to-nvidia-ceo-terms-safety-concerns-a-hoax-as-industry-leaders-unite-amid-risks-11789438496498.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1499724990308179378",
@@ -2996,7 +3084,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946278-crane-nxt-stock-likely-to-remain-cheap-until-management-reignites-growth",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1839784385935434342",
@@ -3009,7 +3097,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/nvidia/comments/1wgnkh1/how_much_of_a_resource_hog_is_studio_if_i_want_to",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4743445566505221920",
@@ -3022,7 +3110,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946277-amdl-bullish-on-amd-but-the-leverage-changes-the-thesis",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8861177083064999864",
@@ -3035,7 +3123,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/pcmasterrace/comments/1wgnj32/am4_build_help",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5649000235420473521",
@@ -3049,7 +3137,7 @@
       ],
       "summary": null,
       "url": "https://www.bgr.com/2255362/amd-gpu-common-problems",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4617796731865992676",
@@ -3060,7 +3148,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/forget-picking-one-winner-portfolio-diversificatio",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8120241504112108776",
@@ -3073,7 +3161,7 @@
       ],
       "summary": null,
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVkU4djhYWHladGZiY0N6amVYeHA5RmVsTTJ2NFZoRThpaUhaMjhXTElKQUVoMzlZTUtxYXRnLV80Zmp3NlNvNVB5TngtUmdveS1tVjVLZ2phblF5d050RnFnQWdhdmVBTWt2VlJ2N0Y5V05qN2Q1elJQdTgzMDNmUzNXNkhza3hHaUtySWwxb25raDBsTXc4dWg5NkpnTGtXQlg5eDZMOXhLenVGbzM5ekJ30gG3AUFVX3lxTE1WN2tTRGx1Tnp3N0xULUdhUFBmUTJIUjA0cEJ1a1ROd09GTU1hdExMeXg4a1NTU2pFZDdpeC1ucS1HYkphRFlhWjR1aUhyel9QWTRsVDU4UXhUb3BwOExkLUVMUnlNNXdwb2M5dUVxbUZLbllqVjdDQXRnQjRUTEk2WVZrc1JHWG9oRDR1QWo4X0dnQTZGZWFtSFd2TC1SYkJ3MlN0LVBKT3NJTkZQZm9KR1U3R01XZw",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-86606669022283812",
@@ -3084,7 +3172,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946275-bloom-energy-stock-valuation-attractive-buy-this-dip",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "314143570946219667",
@@ -3095,7 +3183,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/opinion/articles/2026-09-15/indonesia-s-prabowo-picked-a-good-time-to-oust-his-finance-chief",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-645973223332837182",
@@ -3106,7 +3194,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946282-enova-international-inc-enva-discusses-withdrawal-of-regulatory-applications-for-proposed",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6669411975213965788",
@@ -3119,7 +3207,7 @@
       ],
       "summary": null,
       "url": "https://www.techradar.com/pro/chinese-vendor-debuts-worlds-first-amd-ryzen-ai-max-pro-495-laptop-but-192gb-lpddr5x-8533-for-gaming-really",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2651790522915180953",
@@ -3132,7 +3220,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946274-megaprojects-a-cross-sector-industrial-capex-cycle",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1262512293242176236",
@@ -3143,7 +3231,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946283-keycorp-key-presents-at-barclays-24th-annual-global-financial-services-conference-slideshow",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7533738956186677026",
@@ -3154,7 +3242,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946170-bank-of-america-corporation-bac-presents-at-barclays-24th-annual-global-financial-services",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2190716060747232995",
@@ -3167,7 +3255,7 @@
       ],
       "summary": null,
       "url": "https://www.digitimes.com/news/a20260915VL204/donald-trump-jensen-huang-ai-data-center-nvidia.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5643507454568928408",
@@ -3178,7 +3266,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946254-4d-molecular-therapeutics-inc-fdmt-presents-at-morgan-stanley-24th-annual-global-healthcare",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2836708358561463193",
@@ -3189,7 +3277,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946270-westrock-coffee-production-facility-ramp-drives-earnings",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5564356527705047678",
@@ -3202,7 +3290,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1795586/000137606626000007/0001376066-26-000007-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3526067695837464800",
@@ -3215,7 +3303,7 @@
       ],
       "summary": null,
       "url": "https://techcrunch.com/2026/09/14/jensen-huang-took-a-call-from-trump-and-showed-off-something-else-too",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-25138841649577956",
@@ -3228,7 +3316,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080518/broadcom-ceo-dismisses-ai-development-concerns-amid-market-volatility-avgo",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3919783907810197513",
@@ -3241,7 +3329,7 @@
       ],
       "summary": null,
       "url": "https://www.webpronews.com/amds-enhanced-smt-protection-refines-security-for-virtual-machines-without-sacrificing-efficiency",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8560638673807877527",
@@ -3252,7 +3340,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/hannahabraham/2026/09/14/taylor-swift-makes-surprise-appearance-in-inside-joke-laden-emmys-sketch-emmys-2026",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1746750132765978574",
@@ -3263,7 +3351,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946266-arborgen-holdings-limited-rubnf-shareholder-analyst-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1132901121058675630",
@@ -3276,7 +3364,7 @@
       ],
       "summary": null,
       "url": "https://www.digitimes.com/news/a20260915PD205/hyundai-data-autonomous-driving-nvidia-hardware.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6061903094230401510",
@@ -3287,7 +3375,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946279-calamos-global-dynamic-income-fund-q2-2026-commentary",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1103465664749514341",
@@ -3298,7 +3386,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/timtreadgold/2026/09/14/the-next-hormuz-refinery-losses-which-drive-oil-to-150-a-barrel",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4009877424724402594",
@@ -3311,7 +3399,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1985487/000119312526391084/0001193125-26-391084-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2626630470408986782",
@@ -3326,7 +3414,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1434754/000093041326002888/0000930413-26-002888-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1496300809560170695",
@@ -3337,7 +3425,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/jimryan1/2026/09/14/bob-mould-on-reuniting-sugar-working-in-trios-speaking-out-in-song",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7465003956402752293",
@@ -3348,7 +3436,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/laurasirikul/2026/09/14/2026-emmys-the-pitts-noah-wyle-wins-second-emmy-for-lead-actor-in-a-drama-series",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8497370450087034927",
@@ -3361,7 +3449,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1436126/000208229626000008/0002082296-26-000008-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8818525476952264756",
@@ -3374,7 +3462,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1436126/000208228926000012/0002082289-26-000012-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2291251470221430858",
@@ -3385,7 +3473,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/gemmaallen/2026/09/14/emmys-2026-who-is-katie-dippold-the-woman-behind-widows-bays-19-nominations",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2153791483656927183",
@@ -3399,7 +3487,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1419951/000173112226001242/0001731122-26-001242-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-9182254106507633093",
@@ -3410,7 +3498,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946276-rates-spark-gimme-five",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "767257659270229172",
@@ -3421,7 +3509,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/veronicavillafane/2026/09/14/netflix-marks-15-years-in-mexico-with-slate-of-15-local-originals",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1625679589507815996",
@@ -3432,7 +3520,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/this-index-fund-could-turn-25000-into-20635655",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2120633008387310803",
@@ -3445,7 +3533,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1552797/000161551526000030/0001615515-26-000030-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5425978700050855300",
@@ -3458,7 +3546,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1898718/000110465926107636/0001104659-26-107636-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4306858774641013751",
@@ -3469,7 +3557,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946265-ase-technology-can-miss-augusts-run-rate-and-still-beat-q3-guidance",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4364474583337191421",
@@ -3480,7 +3568,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946273-the-elmet-group-co-elmt-discusses-strategic-investments-defense-partnerships-and-acquisition",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8297242365257414437",
@@ -3493,7 +3581,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/nvidia/comments/1wgltco/my_rtx_5090_fe_rma_was_rejected_because_the",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2145513837119650975",
@@ -3504,7 +3592,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946272-sesa-s-p-a-2027-q1-results-earnings-call-presentation",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2163541227754532049",
@@ -3515,7 +3603,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946252-dave-and-busters-entertainment-inc-play-q2-2027-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8574323834170029393",
@@ -3526,7 +3614,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946235-zenas-biopharma-inc-zbio-presents-at-morgan-stanley-24th-annual-global-healthcare-conference",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5894227157706372541",
@@ -3537,7 +3625,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946271-the-elmet-group-co-elmt-discusses-strategic-investments-defense-partnerships-and-acquisition",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7409277579481648636",
@@ -3555,7 +3643,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1838987/000110432926000021/0001104329-26-000021-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1090745058893516516",
@@ -3569,7 +3657,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1635088/000114036126036535/0001140361-26-036535-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-9161660998206665752",
@@ -3580,7 +3668,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946269-hartford-core-bond-etf-q2-2026-commentary",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4706775252746962353",
@@ -3591,7 +3679,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946268-blackrock-advantage-small-cap-growth-fund-q2-2026-commentary",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8492284842747617568",
@@ -3609,7 +3697,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1801170/000180117026000218/0001801170-26-000218-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3643851274799856629",
@@ -3620,7 +3708,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946264-carl-icahn-13f-report-q2-2026-update",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3753174081602247251",
@@ -3637,7 +3725,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1849380/000149315226042642/0001493152-26-042642-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6757281809631372053",
@@ -3648,7 +3736,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946267-john-hancock-multimanager-2030-lifetime-portfolio-q2-2026-commentary",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6765705525475321083",
@@ -3659,7 +3747,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/hannahabraham/2026/09/14/jean-smart-and-allison-janney-tie-for-most-emmys-ever-won-emmys-2026",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3662273916038657548",
@@ -3670,7 +3758,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/erikkain/2026/09/14/wordle-hints-clues-answer-tuesday-september-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2972299805985600040",
@@ -3681,7 +3769,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946244-sana-biotechnology-inc-sana-presents-at-morgan-stanley-24th-annual-global-healthcare",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1008030540481829602",
@@ -3692,7 +3780,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/erikkain/2026/09/14/nyt-pips-answers-tuesday-september-15",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8009249650977072857",
@@ -3706,7 +3794,7 @@
       ],
       "summary": null,
       "url": "https://news.google.com/atom/articles/CBMiW0FVX3lxTE1LX1VWZndOZkpCRzh4M21BdnVxb0QwNGxiX3UxamJ6TlV4ZDZRZWlhY3RmMS14WjNDazU1YWpKMFF4THhWNFF3eDBndzBqdmRBcFl3dTBiTk1GaXM",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6421379337875239754",
@@ -3717,7 +3805,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946194-insmed-incorporated-insm-presents-at-morgan-stanley-24th-annual-global-healthcare-conference",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4085642722408428544",
@@ -3728,7 +3816,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946169-regeneron-pharmaceuticals-inc-regn-presents-at-morgan-stanley-24th-annual-global-healthcare",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5148169848947492287",
@@ -3739,7 +3827,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.platformer.news/trump-johnson-ai-safety-regulation",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4932322352641258583",
@@ -3756,7 +3844,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1823945/000119312526391030/0001193125-26-391030-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8828212451595782038",
@@ -3767,7 +3855,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/earnings/call-transcripts/2026/09/14/coda-octopus-coda-q3-2026-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "9141930860120995099",
@@ -3780,7 +3868,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1082324/000140477126000004/0001404771-26-000004-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3966079910185915854",
@@ -3793,7 +3881,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/pcmasterrace/comments/1wgkveg/wanting_to_upgrade_pc_parts_to_play_wardogs",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6666412071346695063",
@@ -3806,7 +3894,7 @@
       ],
       "summary": null,
       "url": "https://archlinux.org/packages/core-testing/any/linux-firmware-amd",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7109435584357232365",
@@ -3819,7 +3907,7 @@
       ],
       "summary": null,
       "url": "https://qz.com/trump-nvidia-jensen-huang-all-in-summit-ai-safety-hoax-091426",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6053638014943050070",
@@ -3830,7 +3918,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/spacex-spent-158-billion-on-ai-in-a-quarter-heres",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5424033092906873274",
@@ -3841,7 +3929,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946201-zentalis-pharmaceuticals-inc-zntl-presents-at-morgan-stanley-24th-annual-global-healthcare",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6565997443683030183",
@@ -3852,7 +3940,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946249-evertz-technologies-limited-et-ca-q1-2027-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8035386053690721499",
@@ -3866,7 +3954,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1817241/000119312526391012/0001193125-26-391012-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4671235765068908551",
@@ -3879,7 +3967,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1137789/000198827126000010/0001988271-26-000010-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3642478254460760612",
@@ -3892,7 +3980,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2063196/000123191926001177/0001231919-26-001177-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1589592313008247189",
@@ -3903,7 +3991,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946255-fractyl-health-inc-guts-presents-at-morgan-stanley-24th-annual-global-healthcare-conference",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-571976616968291293",
@@ -3914,7 +4002,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946242-cg-oncology-inc-cgon-presents-at-morgan-stanley-24th-annual-global-healthcare-conference",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4361950819893350533",
@@ -3927,7 +4015,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/899460/000119312526391003/0001193125-26-391003-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8552423804698422200",
@@ -3940,7 +4028,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1802974/000196858226000972/0001968582-26-000972-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7435732629579246651",
@@ -3954,7 +4042,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1692787/000090514826004192/0000905148-26-004192-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3356936076770934503",
@@ -3967,7 +4055,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080333/ati-inc-ati-shares-fall-53-gf-value-says-still-overvalued",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5006709488507691435",
@@ -3978,7 +4066,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/is-adobe-stock-a-buy-right-now-in-september",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7792386469588585754",
@@ -3991,7 +4079,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080330/us-market-declines-nvidia-nvda-drops-over-3-amid-ai-concerns",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2571743512278179368",
@@ -4008,7 +4096,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1828972/000182897226000142/0001828972-26-000142-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7457579487945448033",
@@ -4019,7 +4107,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/spacex-signing-several-multi-billion-dollar-deals",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8941825232272055293",
@@ -4032,7 +4120,7 @@
       ],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/nvidia-ceo-jensen-huang-makes-shocking-prediction",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "329513132573783498",
@@ -4043,7 +4131,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/down-45-should-investors-buy-the-dip-in-archer-avi",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "726740962387897191",
@@ -4054,7 +4142,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/massive-update-for-joby-aviation-stock-investors",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4916145806461521183",
@@ -4065,7 +4153,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/the-proliferation-of-agentic-ai-has-been-great-new",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4514638356760532312",
@@ -4076,7 +4164,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/is-oracle-an-no-brainer-buy-after-the-spectacular",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3596055889586927874",
@@ -4089,7 +4177,7 @@
       ],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/coreweave-delivers-fantastic-news-for-nvidia-stock",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "198102528911859530",
@@ -4102,7 +4190,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1327567/000196858226000970/0001968582-26-000970-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "595227505119652680",
@@ -4113,7 +4201,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/president-trump-delivers-massive-news-for-stock-ma",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7900558473650730632",
@@ -4124,7 +4212,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946245-united-therapeutics-corporation-uthr-presents-at-morgan-stanley-24th-annual-global-healthcare",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2784593497490513380",
@@ -4135,7 +4223,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946246-mindwalk-holdings-corp-hyft-q1-2027-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8470614489481668043",
@@ -4146,7 +4234,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946236-denali-therapeutics-inc-dnli-presents-at-morgan-stanley-24th-annual-global-healthcare",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4787242594163726789",
@@ -4157,7 +4245,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946263-cellebrite-di-ltd-clbt-discusses-leadership-transition-and-strategic-focus-on-growth-and",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "538401613534073125",
@@ -4168,7 +4256,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/timlammers/2026/09/14/2026-emmys-full-winners-list--live-updates",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6860988449427760951",
@@ -4181,7 +4269,7 @@
       ],
       "summary": null,
       "url": "https://www.techpowerup.com/352706/amd-ryzen-5-5500f-beats-ryzen-5-5500-by-up-to-16-in-early-gaming-benchmarks",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6325708599356898522",
@@ -4194,7 +4282,7 @@
       ],
       "summary": null,
       "url": "https://www.digitimes.com/news/a20260914PD229/nvidia-mediatek-market-chipset-gpu.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4415520861307222601",
@@ -4207,7 +4295,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1649904/000164990426000026/0001649904-26-000026-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2414588774071524083",
@@ -4220,7 +4308,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1828791/000184310426000016/0001843104-26-000016-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1960143878383136716",
@@ -4233,7 +4321,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1090012/000109001226000123/0001090012-26-000123-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-876361449738278067",
@@ -4244,7 +4332,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946243-zymeworks-inc-zyme-presents-at-morgan-stanley-24th-annual-global-healthcare-conference",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2967925568094634041",
@@ -4255,7 +4343,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946240-radiant-logistics-inc-rlgt-q4-2026-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8940235973026775557",
@@ -4266,7 +4354,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946224-east-west-bancorp-inc-ewbc-presents-at-barclays-24th-annual-global-financial-services",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7891549889746189213",
@@ -4279,7 +4367,7 @@
       ],
       "summary": null,
       "url": "https://www.cnbc.com/2026/09/14/samsung-euclyd-ai-chip-funding.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3223906998558398664",
@@ -4290,7 +4378,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/09/14/prediction-interactive-brokers-ends-2026-with-more-than-6-million-customer-accounts",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7839790860161242455",
@@ -4303,7 +4391,7 @@
       ],
       "summary": null,
       "url": "https://www.gizmochina.com/2026/09/14/peladn-wo5-mini-pc-launched-specs-price",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7324983972970393203",
@@ -4317,7 +4405,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2007191/000162828026061944/0001628280-26-061944-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5522402740447042915",
@@ -4334,7 +4422,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000116/0001283699-26-000116-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7656180798585741723",
@@ -4347,7 +4435,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/858877/000201528726000020/0002015287-26-000020-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1452817693270447170",
@@ -4358,7 +4446,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946262-genda-inc-2027-q2-results-earnings-call-presentation",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4541336978653801054",
@@ -4376,7 +4464,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1838987/000119312526390949/0001193125-26-390949-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2280767411918071094",
@@ -4395,7 +4483,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/896493/000121465926011678/0001214659-26-011678-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5106402751265569002",
@@ -4406,7 +4494,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946261-sanlam-limited-2026-q2-results-earnings-call-presentation",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1440659433903593823",
@@ -4417,7 +4505,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946260-sun-international-limited-2026-q2-results-earnings-call-presentation",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1994184352230701641",
@@ -4430,7 +4518,20 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946259-chain-bridge-bancorp-inc-cbna-presents-at-us-bank-and-banking-on-tech-conferences-slideshow",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "6660390598058229738",
+      "title": "EagleRock Land, LLC: Form 4 - Statement of changes in beneficial ownership of securities",
+      "published_at": "2026-09-14T23:07:29+00:00",
+      "source": "sec.gov",
+      "category": "disclosures",
+      "tickers": [
+        "EROK"
+      ],
+      "summary": null,
+      "url": "https://www.sec.gov/Archives/edgar/data/2104882/000119312526390944/0001193125-26-390944-index.htm",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4280305938400573964",
@@ -4441,7 +4542,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946258-unilever-plc-ul-presents-at-barclays-19th-annual-global-consumer-staples-conference-slideshow",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7813946880005890899",
@@ -4454,7 +4555,7 @@
       ],
       "summary": null,
       "url": "https://news.google.com/atom/articles/CBMitAFBVV95cUxPQkF6Q0JLVjMyRkRmX2YxS3J3MlRGX2xGdzhDWTF2alBnQ19vSmhxNGJpTTZrcDZlOTV3VTJnN3BCOXkzYzduOGo0bmpIc09CZ1lGbzdmdkc1eVlrYUEwN1RDV1NWUGdqYzBTWlZqYUVHWjFMSEpoMnplbDhkYTkyeHhRb0tFU3V2MXVkLXc2alVVUGlXRnctRFpkTzNDLXhOWWJOYXpVM09vNF94UEFFbVBxeFE",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6031788120374673659",
@@ -4468,7 +4569,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/pcmasterrace/comments/1wgj4ml/5060_ti_5070_or_9070",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8708080869428753135",
@@ -4479,7 +4580,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.libertyrpf.com/p/seeding-future-nostalgia",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6101522917453494876",
@@ -4490,40 +4591,18 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946257-kobe-bussan-co-ltd-2026-q3-results-earnings-call-presentation",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1385641137038870470",
       "title": "i-mobile Co.,Ltd. 2026 Q4 - Results - Earnings Call Presentation | $IMCLF",
       "published_at": "2026-09-14T23:01:42+00:00",
       "source": "seekingalpha.com",
-      "category": "analysis",
+      "category": "disclosures",
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946256-i-mobile-co-ltd-2026-q4-results-earnings-call-presentation",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "-7823212358246203773",
-      "title": "Alliance Entertainment's Dip Is An Opportunity To Add This To Your Stock Collection | $AENT",
-      "published_at": "2026-09-14T23:01:39+00:00",
-      "source": "seekingalpha.com",
-      "category": "analysis",
-      "tickers": [],
-      "summary": null,
-      "url": "https://seekingalpha.com/article/4946241-alliance-entertainment-dip-is-an-opportunity-to-add-this-to-your-stock-collection",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "1123028336429291447",
-      "title": "Takeda Pharmaceutical Company Limited (TAK) Presents at Morgan Stanley 24th Annual Global Healthcare Conference Transcript | $TAK $TKPHF",
-      "published_at": "2026-09-14T23:01:37+00:00",
-      "source": "seekingalpha.com",
-      "category": "analysis",
-      "tickers": [],
-      "summary": null,
-      "url": "https://seekingalpha.com/article/4946208-takeda-pharmaceutical-company-limited-tak-presents-at-morgan-stanley-24th-annual-global",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6217696768064172380",
@@ -4536,18 +4615,32 @@
       ],
       "summary": null,
       "url": "https://cryptobriefing.com/nvidia-huang-trump-ai-development",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2135125341768881258",
       "title": "Parrot S.A. 2026 Q2 - Results - Earnings Call Presentation | $PAOTF",
       "published_at": "2026-09-14T23:00:46+00:00",
       "source": "seekingalpha.com",
-      "category": "analysis",
+      "category": "disclosures",
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946253-parrot-s-a-2026-q2-results-earnings-call-presentation",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "-1469367410852706167",
+      "title": "Figure Technology Solutions, Inc.: Form 4 - Statement of changes in beneficial ownership of securities",
+      "published_at": "2026-09-14T23:00:05+00:00",
+      "source": "sec.gov",
+      "category": "disclosures",
+      "tickers": [
+        "FGRS",
+        "FIGR"
+      ],
+      "summary": null,
+      "url": "https://www.sec.gov/Archives/edgar/data/2064124/000149315226042631/0001493152-26-042631-index.htm",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7638056427692631665",
@@ -4565,7 +4658,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1661053/000149315226042629/0001493152-26-042629-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6219801619004521842",
@@ -4582,7 +4675,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1828318/000205236326000054/0002052363-26-000054-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6321058675614880604",
@@ -4595,18 +4688,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1133869/000110465926107591/0001104659-26-107591-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "-3166350016538708860",
-      "title": "NovoCure Limited (NVCR) Presents at Morgan Stanley 24th Annual Global Healthcare Conference Transcript | $NVCR",
-      "published_at": "2026-09-14T22:51:39+00:00",
-      "source": "seekingalpha.com",
-      "category": "analysis",
-      "tickers": [],
-      "summary": null,
-      "url": "https://seekingalpha.com/article/4946215-novocure-limited-nvcr-presents-at-morgan-stanley-24th-annual-global-healthcare-conference",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6020195443766856136",
@@ -4620,7 +4702,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1468642/000212674626000002/0002126746-26-000002-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2590239073138223764",
@@ -4634,7 +4716,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1965143/000121390026099841/0001213900-26-099841-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3045939065082903429",
@@ -4647,7 +4729,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2070849/000208854726000010/0002088547-26-000010-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8963296930895437565",
@@ -4662,7 +4744,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1844971/000119312526390907/0001193125-26-390907-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5032567770015776790",
@@ -4676,7 +4758,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/885307/000153658826000031/0001536588-26-000031-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5433025442458156095",
@@ -4689,18 +4771,7 @@
       ],
       "summary": null,
       "url": "https://www.cnbc.com/2026/09/14/broadcom-ceo-on-anthropics-slowdown-push-ai-revenue-targets-havent-changed.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "-8716868756947293841",
-      "title": "The Senate must reject the Clarity Act’s ethics charade",
-      "published_at": "2026-09-14T22:42:33+00:00",
-      "source": "citationneeded.news",
-      "category": "analysis",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.citationneeded.news/clarity-act-ethics-charade",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3489609001303533372",
@@ -4713,29 +4784,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1171759/000215426726000002/0002154267-26-000002-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "5099149628581701044",
-      "title": "Yesway, Inc. (YSWY) Presents at Goldman Sachs Global Consumer and Retail Conference Transcript | $YSWY",
-      "published_at": "2026-09-14T22:41:39+00:00",
-      "source": "seekingalpha.com",
-      "category": "analysis",
-      "tickers": [],
-      "summary": null,
-      "url": "https://seekingalpha.com/article/4946248-yesway-inc-yswy-presents-at-goldman-sachs-global-consumer-and-retail-conference-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "4038998362227778010",
-      "title": "Microsoft Just Made a Move That Could Put More Pressure on Its Azure Business. Here's Why It Could Turn Out Great for the Stock",
-      "published_at": "2026-09-14T22:41:37+00:00",
-      "source": "fool.com",
-      "category": "analysis",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.fool.com/investing/2026/09/14/microsoft-just-made-a-move-that-could-put-more-pressure-on-its-azure-business-here-s-why-it-could-turn-out-great-for-the-stock",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1737922354360830581",
@@ -4750,7 +4799,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946239-sk-hynix-vs-micron-memory-trade-isnt-done-rotating",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7189743787288975456",
@@ -4763,7 +4812,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2001184/000201438626000014/0002014386-26-000014-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8656975600498435039",
@@ -4778,7 +4827,20 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1844971/000119312526390887/0001193125-26-390887-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
+    },
+    {
+      "news_id": "-4657304308948657001",
+      "title": "First Breach, Inc.: Form 4 - Statement of changes in beneficial ownership of securities",
+      "published_at": "2026-09-14T22:30:04+00:00",
+      "source": "sec.gov",
+      "category": "disclosures",
+      "tickers": [
+        "FBDT"
+      ],
+      "summary": null,
+      "url": "https://www.sec.gov/Archives/edgar/data/1892704/000121390026099824/0001213900-26-099824-index.htm",
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7831782214408502686",
@@ -4791,7 +4853,7 @@
       ],
       "summary": null,
       "url": "https://www.engadget.com/2254793/how-to-use-windows-11-media-creation-tool-create-bootable-usb-drive",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7542892378305754489",
@@ -4804,7 +4866,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080170/western-digital-corp-wdc-shares-fall-45-what-gf-score-of-74-tells-investors",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3152979282224311500",
@@ -4817,7 +4879,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1830487/000195004726009455/0001950047-26-009455-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7820738680717905",
@@ -4835,7 +4897,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/7789/000000778926000221/0000007789-26-000221-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8904769669933980858",
@@ -4848,7 +4910,7 @@
       ],
       "summary": null,
       "url": "https://www.straitstimes.com/world/nvidia-ceo-jensen-huang-puts-trump-on-speakerphone-while-downplaying-ai-risks",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4687591196934247149",
@@ -4861,7 +4923,7 @@
       ],
       "summary": null,
       "url": "https://www.law360.com/appellate/articles/2524791",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8832252499198319486",
@@ -4874,7 +4936,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1325964/000107997326001255/0001079973-26-001255-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "912369602417371584",
@@ -4887,7 +4949,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2081043/000119312526390857/0001193125-26-390857-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2366622013081398080",
@@ -4900,7 +4962,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1671933/000210927226000010/0002109272-26-000010-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3716971962470297136",
@@ -4913,7 +4975,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/893949/000162828026061930/0001628280-26-061930-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8988797530610201935",
@@ -4926,7 +4988,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1002638/000195004726009454/0001950047-26-009454-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4537681548767447863",
@@ -4939,7 +5001,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1769628/000195004726009453/0001950047-26-009453-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8238562629542993362",
@@ -4952,7 +5014,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080145/nvidia-nvda-stock-drops-amid-ai-model-usage-concerns",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5925371257323647451",
@@ -4966,7 +5028,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1474627/000147793226005587/0001477932-26-005587-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5855289756481569435",
@@ -4979,7 +5041,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080136/a-look-at-advanced-micro-devices-inc-amd-after-44-decline-gf-value-28140-vs-price-49341",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5004030592211247818",
@@ -4992,7 +5054,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080135/a-look-at-micron-technology-inc-mu-after-52-decline-gf-value-63368-vs-price-92403",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5134945105229022184",
@@ -5005,7 +5067,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080134/a-look-at-sk-hynix-inc-skhy-after-76-decline-gf-value-12294-vs-price-17563",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2699710919134311836",
@@ -5018,7 +5080,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1023731/000102373126000153/0001023731-26-000153-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8438952702181514643",
@@ -5031,7 +5093,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080131/is-broadcom-inc-avgo-a-bargain-after-48-drop-gf-value-says-undervalued",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "917164365944080883",
@@ -5044,7 +5106,7 @@
       ],
       "summary": null,
       "url": "https://www.tweaktown.com/rss/click/news/113545",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-424707122771917431",
@@ -5057,7 +5119,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080128/taiwan-semiconductor-manufacturing-co-ltd-tsm-stock-down-35-but-still-overvalued-gf-score-98100",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "981727735245408501",
@@ -5074,7 +5136,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1819493/000119312526390844/0001193125-26-390844-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3088810437667735604",
@@ -5085,7 +5147,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946238-idw-media-holdings-inc-idwm-q3-2026-earnings-call-transcript",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4102156759581715143",
@@ -5098,7 +5160,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9080121/is-nvidia-corp-nvda-a-bargain-after-34-drop-gf-value-says-undervalued",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2191381517471435915",
@@ -5115,7 +5177,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1841408/000119312526390839/0001193125-26-390839-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1652591009347114124",
@@ -5128,7 +5190,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1447362/000195824426000597/0001958244-26-000597-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7892982403426142371",
@@ -5141,7 +5203,7 @@
       ],
       "summary": null,
       "url": "https://www.gsmarena.com/qualcomms_snapdragon_8_elite_gen_6_may_be_made_in_part_by_samsung-news-74609.php",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2502819709267420427",
@@ -5154,7 +5216,7 @@
       ],
       "summary": null,
       "url": "https://www.nytimes.com/2026/09/14/briefing/trump-ai-slowdown-epa-pollution.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5072106400087120076",
@@ -5169,7 +5231,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1075415/000110465926107581/0001104659-26-107581-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "557036687510288195",
@@ -5182,7 +5244,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1551306/000155130626000152/0001551306-26-000152-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8503901994574940178",
@@ -5195,7 +5257,7 @@
       ],
       "summary": null,
       "url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7563322050084320504",
@@ -5208,7 +5270,7 @@
       ],
       "summary": null,
       "url": "https://www.prnewswire.com/news-releases/ati-ceo-to-speak-at-morgan-stanley-14th-annual-laguna-conference-302878141.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-765126351404801259",
@@ -5221,7 +5283,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/712537/000202905926000010/0002029059-26-000010-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8654181408581552736",
@@ -5234,7 +5296,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946223-qqqi-a-dull-market-is-the-one-regime-this-strategy-cant-monetize",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2892063906050463955",
@@ -5248,7 +5310,7 @@
       ],
       "summary": null,
       "url": "https://www.latimes.com/business/story/2026-09-14/ai-shares-tumble-as-industry-leaders-call-for-slowdown",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1729564221196807715",
@@ -5266,7 +5328,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1801170/000195004726009449/0001950047-26-009449-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1183000158121699076",
@@ -5281,7 +5343,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1866364/000209313526000003/0002093135-26-000003-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7831477126242720523",
@@ -5298,7 +5360,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1137774/000113777426000204/0001137774-26-000204-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3861415451397847759",
@@ -5311,7 +5373,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-western-digital-nasdaq-wdc-shares-down-45-time-to-sell-2026-09-14",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "415412723118560507",
@@ -5324,7 +5386,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1593275/000209434326000008/0002094343-26-000008-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5507968742760786298",
@@ -5337,7 +5399,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2064953/000170918326000008/0001709183-26-000008-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5679800815583672629",
@@ -5350,7 +5412,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1717307/000110465926107573/0001104659-26-107573-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2504783762047737501",
@@ -5363,7 +5425,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1309108/000162828026061917/0001628280-26-061917-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4633626410729944077",
@@ -5377,7 +5439,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/913760/000162828026061915/0001628280-26-061915-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2967303415598138962",
@@ -5390,97 +5452,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/pcmasterrace/comments/1wggwe7/for_those_planning_to_buy_an_amd_ryzen_processor",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "-1358376319631764892",
-      "title": "NOCOPI TECHNOLOGIES INC/MD/: Form 4 - Statement of changes in beneficial ownership of securities",
-      "published_at": "2026-09-14T21:30:44+00:00",
-      "source": "sec.gov",
-      "category": "disclosures",
-      "tickers": [
-        "NNUP",
-        "NNUPD"
-      ],
-      "summary": null,
-      "url": "https://www.sec.gov/Archives/edgar/data/888981/000149315226042620/0001493152-26-042620-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "-7684327384489455061",
-      "title": "COSTCO WHOLESALE CORP /NEW: Form 4 - Statement of changes in beneficial ownership of securities",
-      "published_at": "2026-09-14T21:30:24+00:00",
-      "source": "sec.gov",
-      "category": "disclosures",
-      "tickers": [
-        "COST"
-      ],
-      "summary": null,
-      "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000080/0000909832-26-000080-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "2234598305975113634",
-      "title": "Stewards, Inc.: Form 8-K - 8-K",
-      "published_at": "2026-09-14T21:29:50+00:00",
-      "source": "sec.gov",
-      "category": "disclosures",
-      "tickers": [
-        "FAVO",
-        "SWRD"
-      ],
-      "summary": null,
-      "url": "https://www.sec.gov/Archives/edgar/data/1795851/000166357726000275/0001663577-26-000275-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "1655090578271918836",
-      "title": "CITIGROUP INC: Form 424B2 - Prospectus [Rule 424(b)(2)]",
-      "published_at": "2026-09-14T21:29:49+00:00",
-      "source": "sec.gov",
-      "category": "disclosures",
-      "tickers": [
-        "C",
-        "C-PJ",
-        "C-PK",
-        "C-PN",
-        "C-PR",
-        "C-PS",
-        "CDNPV",
-        "DAUD",
-        "DCHF",
-        "DEUR",
-        "DGBP",
-        "DIVC",
-        "DJPY",
-        "DLBR",
-        "DWT",
-        "MLPC",
-        "MLPE",
-        "UAUD",
-        "UCHF",
-        "UEUR",
-        "UGBP",
-        "UJPY",
-        "ULBR",
-        "UWT"
-      ],
-      "summary": null,
-      "url": "https://www.sec.gov/Archives/edgar/data/831001/000191870426027530/0001918704-26-027530-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
-    },
-    {
-      "news_id": "4087000543756645521",
-      "title": "TELEFONICA BRASIL S.A.: Form 6-K - Report of foreign issuer [Rules 13a-16 and 15d-16]",
-      "published_at": "2026-09-14T21:29:46+00:00",
-      "source": "sec.gov",
-      "category": "disclosures",
-      "tickers": [
-        "VIV"
-      ],
-      "summary": null,
-      "url": "https://www.sec.gov/Archives/edgar/data/1066119/000129281426004550/0001292814-26-004550-index.htm",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5324677566713071751",
@@ -5493,7 +5465,7 @@
       ],
       "summary": null,
       "url": "https://intelligence.theregister.com/paper/view/20842",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "7466206536537396739",
@@ -5506,7 +5478,7 @@
       ],
       "summary": null,
       "url": "https://www.cnbc.com/2026/09/14/trump-phones-nvidia-huang-all-in-calls-data-center-opposition-hoax.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3827782202683118444",
@@ -5519,7 +5491,7 @@
       ],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13584632/sandisk-nasdaqsndk-stock-price-down-5-heres-why.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6299819858158368166",
@@ -5532,7 +5504,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-sk-hynix-nasdaq-skhy-shares-down-76-should-you-sell-2026-09-14",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8365664053144578662",
@@ -5545,7 +5517,7 @@
       ],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13584625/nvidia-nasdaqnvda-shares-down-3-4-heres-why.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8621859179084934321",
@@ -5558,7 +5530,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-sandisk-nasdaq-sndk-trading-down-5-whats-next-2026-09-14",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1875025843953925769",
@@ -5571,7 +5543,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-taiwan-semiconductor-manufacturing-nyse-tsm-trading-down-33-heres-what-happened-2026-09-14",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8622820012977652212",
@@ -5584,7 +5556,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-broadcom-nasdaq-avgo-trading-down-48-heres-what-happened-2026-09-14",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "8522748529207960592",
@@ -5597,7 +5569,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-advanced-micro-devices-nasdaq-amd-trading-down-44-after-insider-selling-2026-09-14",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1927771691940705487",
@@ -5610,7 +5582,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-micron-technology-nasdaq-mu-stock-price-down-53-time-to-sell-2026-09-14",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-703081358861030921",
@@ -5623,7 +5595,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-nvidia-nasdaq-nvda-stock-price-down-34-heres-why-2026-09-14",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2625089020352474835",
@@ -5636,7 +5608,7 @@
       ],
       "summary": null,
       "url": "https://www.socialmediatoday.com/news/pinterest-announces-new-deal-with-nvidia/830356",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "6681783759351441669",
@@ -5649,7 +5621,7 @@
       ],
       "summary": null,
       "url": "https://www.tweaktown.com/rss/click/news/113534",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "3567295411283617858",
@@ -5662,7 +5634,7 @@
       ],
       "summary": null,
       "url": "https://cryptobriefing.com/nvidia-time-worlds-best-companies-2026",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6968232871714795060",
@@ -5675,7 +5647,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/insider-advanced-micro-devices-nasdaq-amd-ceo-lisa-su-sells-70000-shares-of-stock-2026-09-14",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2266808534696182178",
@@ -5688,7 +5660,7 @@
       ],
       "summary": null,
       "url": "https://www.investing.com/news/stock-market-news/trump-calls-nvidia-ceo-onstage-to-dismiss-ai-regulation-concerns-4900511",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4189796983958713538",
@@ -5701,7 +5673,7 @@
       ],
       "summary": null,
       "url": "https://www.thestreet.com/investing/stocks/elon-musk-spacex-nvidia-ai-2027",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2090668074552093171",
@@ -5714,7 +5686,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-seagate-technology-nasdaq-stx-stock-price-down-3-following-insider-selling-2026-09-14",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1192622444413821498",
@@ -5727,7 +5699,7 @@
       ],
       "summary": null,
       "url": "https://www.bloomberg.com/news/articles/2026-09-14/nvidia-ceo-puts-trump-on-speakerphone-while-downplaying-ai-risks",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2797903494529672837",
@@ -5741,7 +5713,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-drops-over-4-21-210015158.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "509581772542078172",
@@ -5754,7 +5726,7 @@
       ],
       "summary": null,
       "url": "https://www.bloomberg.com/news/articles/2026-09-14/minebea-mitsumi-pauses-m-a-to-chase-ai-nvidia-demand-for-components",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2305463389853748876",
@@ -5767,7 +5739,7 @@
       ],
       "summary": null,
       "url": "https://cointelegraph.com/news/kraken-brings-defi-yield-to-tokenized-stocks-and-etfs",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5824880464006568007",
@@ -5782,7 +5754,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/m/2084aecc-79ec-32d8-a4ee-0894a4e6a808/dow-jones-futures%3A-nvidia%2C.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1753965554460001179",
@@ -5795,7 +5767,7 @@
       ],
       "summary": null,
       "url": "https://virginiabusiness.com/wall-street-ai-safety-chipmakers-treasury-yields",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8078474260289092367",
@@ -5808,7 +5780,7 @@
       ],
       "summary": null,
       "url": "https://www.axios.com/2026/09/14/trump-jensen-huang-nvidia-ai-all-in-summit",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2493051019426535338",
@@ -5821,7 +5793,7 @@
       ],
       "summary": null,
       "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-coda-octopus-group-inc-q3-2026-earnings-call-summary",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3917381242971037026",
@@ -5834,7 +5806,7 @@
       ],
       "summary": null,
       "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-the-hain-celestial-group-inc-q1-2027-earnings-call-summary",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "2081201372122022687",
@@ -5847,7 +5819,7 @@
       ],
       "summary": null,
       "url": "https://news.google.com/atom/articles/CBMihgFBVV95cUxPRjhtdU1rR0ZPZzBMOGZwZUpnYk8tWWtnVk0tV2VsRF9abV9pR2RicmJGbmtld045bkdwZVpSbzNKVDlLQ3ltamh0amZ0SnpQVGwwYnNvSS14SEZKRlNPb05Tdkxxc3k3b3h1N1RhVTJDbmtLNDBFd2VMSlEzQWN5UzUwajJFQQ",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5668731384426081696",
@@ -5860,7 +5832,7 @@
       ],
       "summary": null,
       "url": "https://www.washingtonpost.com/politics/2026/09/14/onstage-call-with-nvidia-ceo-trump-deems-ai-fears-hoax",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "1981259821529595118",
@@ -5873,7 +5845,7 @@
       ],
       "summary": null,
       "url": "https://www.webpronews.com/hugging-face-seeks-inside-access-to-frontier-ai-labs-as-nvidia-deal-looms",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-6731764961192815699",
@@ -5886,7 +5858,7 @@
       ],
       "summary": null,
       "url": "https://www.businessinsider.com/nvidia-ceo-jensen-huang-ai-doomerism-lacks-scientific-basis-2026-9",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5840171851039514298",
@@ -5899,7 +5871,7 @@
       ],
       "summary": null,
       "url": "https://www.techmeme.com/260914/p36",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-4798278116900391216",
@@ -5912,7 +5884,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/m/e8c0a567-addf-325b-8e69-657d5975fcc3/stock-market-today%3A-dow.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2299440524089093651",
@@ -5925,7 +5897,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/m/bc210ef9-85c0-3967-9c05-a582a3653b08/oracle%2C-corning%2C-alphabet%2C-ge.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-2157932435896459349",
@@ -5938,7 +5910,7 @@
       ],
       "summary": null,
       "url": "https://blockonomi.com/amd-stock-drops-below-500-despite-bullish-outlook",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "627927884594931857",
@@ -5951,7 +5923,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4946182-nvidia-too-cheap-to-ignore-due-to-misguided-ai-panic",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1649784848118744342",
@@ -5964,7 +5936,7 @@
       ],
       "summary": null,
       "url": "https://www.pymnts.com/news/artificial-intelligence/2026/pinterest-boosts-ai-powered-search-speed-sevenfold-with-nvidia-tech",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "341374931308134593",
@@ -5977,7 +5949,7 @@
       ],
       "summary": null,
       "url": "https://cryptobriefing.com/cornelis-raises-205m-challenge-nvidia",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-7963673845418485683",
@@ -5990,7 +5962,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/technology/ai/articles/ai-infrastructure-company-cornelis-raises-200737836.html",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "4325062878936531033",
@@ -6003,7 +5975,7 @@
       ],
       "summary": null,
       "url": "https://www.theverge.com/tech/995079/president-donald-trump-calls-nvidia-ceo-jensen-huang-all-in-summit",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3023068672744327068",
@@ -6018,7 +5990,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/list-promising-large-cap-stocks-to-add-to-your-watchlist-september-14th-2026-09-14",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3801034966207173303",
@@ -6031,7 +6003,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/wallstreetbets/comments/1wgeblo/and_youre_bearish_on_nvidia",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8399774226441834168",
@@ -6044,7 +6016,7 @@
       ],
       "summary": null,
       "url": "https://wccftech.com/intel-core-ultra-cpu-deals-newegg-free-240mm-aio-motherboard-bundle",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-8577437732708273905",
@@ -6057,7 +6029,7 @@
       ],
       "summary": null,
       "url": "https://blockonomi.com/intel-stock-drops-5-what-triggered-the-sudden-selloff",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1466130142811292221",
@@ -6070,7 +6042,7 @@
       ],
       "summary": null,
       "url": "https://www.financemagnates.com/cryptocurrency/exchange/kraken-lets-users-earn-defi-yield-on-nvidia-and-etf-xstocks",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-3984634428857110018",
@@ -6083,7 +6055,7 @@
       ],
       "summary": null,
       "url": "https://www.latimes.com/business/story/2026-09-14/broadcom-buys-its-irvine-office-building",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-1236878507937168137",
@@ -6096,7 +6068,7 @@
       ],
       "summary": null,
       "url": "https://dev.to/ktirupati/architectural-evaluation-why-we-re-engineered-ai-safety-from-text-guardrails-to-infrastructure-4m4c",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "-5622004853465370874",
@@ -6109,7 +6081,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/pcmasterrace/comments/1wgduig/running_resident_evil_9_at_1440p_multi_frame",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     },
     {
       "news_id": "5398134346854943268",
@@ -6122,7 +6094,7 @@
       ],
       "summary": null,
       "url": "https://cryptobriefing.com/coreweave-nvidia-partnership-ai-infrastructure",
-      "fetched_at": "2026-09-15T07:48:50.193712+00:00"
+      "fetched_at": "2026-09-15T08:04:03.148855+00:00"
     }
   ]
 }
