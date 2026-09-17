@@ -1,6 +1,9 @@
 {
-  "timestamp": "2026-09-17T12:54:27.195046+00:00",
-  "status": "unavailable",
-  "reason": "invalid_url",
-  "source": "tickertick"
+  "timestamp": "2026-09-17T19:46:23.298696+00:00",
+  "status": "ok",
+  "reason": null,
+  "source": "tickertick",
+  "freshness_status": "delayed",
+  "source_lag_minutes": 19,
+  "latest_published_at": "2026-09-17T19:26:38+00:00"
 }
