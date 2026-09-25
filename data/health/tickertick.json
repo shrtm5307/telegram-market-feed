@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-09-25T23:43:02.787760+00:00",
+  "timestamp": "2026-09-25T23:55:59.901241+00:00",
   "status": "ok",
   "reason": null,
   "source": "tickertick",
-  "freshness_status": "delayed",
-  "source_lag_minutes": 55,
+  "freshness_status": "stale",
+  "source_lag_minutes": 68,
   "latest_published_at": "2026-09-25T22:47:56+00:00"
 }
