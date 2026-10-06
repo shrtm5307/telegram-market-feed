@@ -1,13 +1,237 @@
 {
-  "timestamp": "2026-10-06T22:55:55.179137+00:00",
+  "timestamp": "2026-10-06T23:16:30.389375+00:00",
   "status": "ok",
   "window_hours": 24,
   "source": "TickerTick",
-  "freshness_status": "delayed",
-  "source_lag_minutes": 20,
-  "latest_published_at": "2026-10-06T22:35:00+00:00",
-  "count": 492,
+  "freshness_status": "ok",
+  "source_lag_minutes": 14,
+  "latest_published_at": "2026-10-06T23:02:12+00:00",
+  "count": 497,
   "items": [
+    {
+      "news_id": "136801896093284728",
+      "title": "Auto Dealers Pull Banking Into Their Operating Software",
+      "published_at": "2026-10-06T23:02:12+00:00",
+      "source": "pymnts.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.pymnts.com/transportation/2026/auto-dealers-pull-banking-into-their-operating-software",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "6756900531931997433",
+      "title": "Five Takeaways in New Book From Thom Tillis, Who Turned on Trump",
+      "published_at": "2026-10-06T23:00:16+00:00",
+      "source": "nytimes.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.nytimes.com/2026/10/06/us/politics/takeaways-book-thom-tillis-trump.html",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-457860398970446374",
+      "title": "FEDERAL HOME LOAN MORTGAGE CORP: Form 3 - Initial statement of beneficial ownership of securities",
+      "published_at": "2026-10-06T22:54:45+00:00",
+      "source": "sec.gov",
+      "category": "disclosures",
+      "tickers": [
+        "FMCC",
+        "FMCCG",
+        "FMCCH",
+        "FMCCI",
+        "FMCCJ",
+        "FMCCK",
+        "FMCCL",
+        "FMCCM",
+        "FMCCN",
+        "FMCCO",
+        "FMCCP",
+        "FMCCS",
+        "FMCCT",
+        "FMCKI",
+        "FMCKJ",
+        "FMCKK",
+        "FMCKL",
+        "FMCKM",
+        "FMCKN",
+        "FMCKO",
+        "FMCKP",
+        "FREGP",
+        "FREJN",
+        "FREJO",
+        "FREJP"
+      ],
+      "summary": null,
+      "url": "https://www.sec.gov/Archives/edgar/data/1026214/000119312526415925/0001193125-26-415925-index.htm",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-8345738697015212979",
+      "title": "Why GE Vernova Stock Trounced the Market Today",
+      "published_at": "2026-10-06T22:53:53+00:00",
+      "source": "fool.com",
+      "category": "analysis",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.fool.com/investing/2026/10/06/why-ge-vernova-stock-trounced-the-market-today",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-6553316712979044108",
+      "title": "Nomad Foods Limited (NOMD) Analyst/Investor Day Transcript | $NOMD",
+      "published_at": "2026-10-06T22:52:34+00:00",
+      "source": "seekingalpha.com",
+      "category": "analysis",
+      "tickers": [],
+      "summary": null,
+      "url": "https://seekingalpha.com/article/4952304-nomad-foods-limited-nomd-analyst-investor-day-transcript",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-5127152840557119405",
+      "title": "Trump to Speak to Putin on Plague, Iran Ramps Up Ship Attacks",
+      "published_at": "2026-10-06T22:52:01+00:00",
+      "source": "bloomberg.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.bloomberg.com/news/audio/2026-10-06/trump-to-speak-to-putin-on-plague-iran-ramps-up-ship-attacks",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "3110622470112833107",
+      "title": "Kayak and Skyscanner CEOs: Metasearch Isn’t Dead — It’s Evolving",
+      "published_at": "2026-10-06T22:49:57+00:00",
+      "source": "skift.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://skift.com/2026/10/06/kayak-and-skyscanner-ceos-metasearch-isnt-dead-its-evolving",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "4497152674047207217",
+      "title": "Big Take: The Unexpected Billionaires of the AI Boom",
+      "published_at": "2026-10-06T22:49:38+00:00",
+      "source": "bloomberg.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.bloomberg.com/news/videos/2026-10-06/big-take-the-unexpected-billionaires-of-the-ai-boom",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "4415697872176576978",
+      "title": "Anthropic folds Project Glasswing into an expanded three-tier Cyber Verification Program",
+      "published_at": "2026-10-06T22:46:17+00:00",
+      "source": "siliconangle.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://siliconangle.com/2026/10/06/anthropic-folds-project-glasswing-into-an-expanded-three-tier-cyber-verification-program",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-276801475506993230",
+      "title": "HubSpot Lays Off 7% of Workforce, Says It’s Not Because of AI",
+      "published_at": "2026-10-06T22:45:28+00:00",
+      "source": "theinformation.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.theinformation.com/briefings/hubspot-lays-7-workforce-says-ai",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "2483368099092705309",
+      "title": "What Does The Orange Light Mean On A PlayStation 5?",
+      "published_at": "2026-10-06T22:45:00+00:00",
+      "source": "slashgear.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.slashgear.com/2274500/what-does-orange-light-mean-playstation-5",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "640027071050742608",
+      "title": "Couple Charged With Conspiring to Abuse Numerous Surrogate Children",
+      "published_at": "2026-10-06T22:42:54+00:00",
+      "source": "nytimes.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.nytimes.com/2026/10/06/us/california-child-abuse-surrogate.html",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "2172865564090815411",
+      "title": "In Iceland, Rubio Dodges a Diplomatic Flap Over a Trump Map",
+      "published_at": "2026-10-06T22:42:26+00:00",
+      "source": "nytimes.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.nytimes.com/2026/10/06/us/politics/trump-map-iceland-rubio.html",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-4451765639487181224",
+      "title": "Freddie Jackson, ‘You Are My Lady’ Singer That Topped R&B Charts, Dead at 69",
+      "published_at": "2026-10-06T22:42:07+00:00",
+      "source": "nytimes.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.nytimes.com/2026/10/06/arts/music/freddie-jackson-dead.html",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-1281637102737470581",
+      "title": "Democrats Look Strong in Polls, Thanks to These Voter Groups",
+      "published_at": "2026-10-06T22:39:50+00:00",
+      "source": "nytimes.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.nytimes.com/2026/10/06/us/politics/democrats-senate-polls-voters.html",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "4221051464039618099",
+      "title": "9.4% Dividend Yield From Dynex Capital's New Steady Preferred Share",
+      "published_at": "2026-10-06T22:38:34+00:00",
+      "source": "seekingalpha.com",
+      "category": "analysis",
+      "tickers": [],
+      "summary": null,
+      "url": "https://seekingalpha.com/article/4952361-9-4-percent-dividend-yield-from-dynex-capital-new-steady-preferred-share",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-5560398337430139741",
+      "title": "AI Image-Generation Techniques Power a New Hourly Flood Forecasting Model",
+      "published_at": "2026-10-06T22:36:28+00:00",
+      "source": "bioengineer.org",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://bioengineer.org/ai-image-generation-techniques-power-a-new-hourly-flood-forecasting-model",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-7676025381294100048",
+      "title": "Joby Hit With Over $100 Million in Damages in IP Lawsuit Verdict",
+      "published_at": "2026-10-06T22:35:01+00:00",
+      "source": "fool.com",
+      "category": "analysis",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.fool.com/investing/2026/10/06/joby-hit-with-over-usd100-million-in-damages-in-ip-lawsuit-verdict",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
     {
       "news_id": "-8949600947428488938",
       "title": "Sources: Xbox has secured exclusive game streaming rights for Grand Theft Auto VI; it is not clear how long the agreement will be in place (Tom Warren/The Verge)",
@@ -17,7 +241,29 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.techmeme.com/261006/p43",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-2786886124033584561",
+      "title": "Midfield options and a fab front four - what we've learned about England",
+      "published_at": "2026-10-06T22:34:46+00:00",
+      "source": "bbc.co.uk",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.bbc.co.uk/sport/football/articles/cq62y431dj8vo",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-7127435350792916858",
+      "title": "Ex-Ramp engineers raise $20M for platform Melius after scrapping their first product",
+      "published_at": "2026-10-06T22:34:03+00:00",
+      "source": "techcrunch.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3136260697731106291",
@@ -28,7 +274,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952360-grupo-mexico-is-primed-for-a-downward-reset",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5334124945162399979",
@@ -39,7 +285,62 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-10-06/wald-raf-fairford-b-1-move-is-depicted-out-of-context-video",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-5950983011362033766",
+      "title": "New Soil Scoring Method Reveals Hidden Damage From Polluted River Irrigation",
+      "published_at": "2026-10-06T22:31:29+00:00",
+      "source": "bioengineer.org",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://bioengineer.org/new-soil-scoring-method-reveals-hidden-damage-from-polluted-river-irrigation",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-7789623442244898723",
+      "title": "Eye Damage in Diabetes May Signal Hidden Kidney and Leg Artery Disease",
+      "published_at": "2026-10-06T22:31:26+00:00",
+      "source": "bioengineer.org",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://bioengineer.org/eye-damage-in-diabetes-may-signal-hidden-kidney-and-leg-artery-disease",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "1351019601723422933",
+      "title": "Low-cost electrochemical sensors catch peanut fungus days before symptoms appear",
+      "published_at": "2026-10-06T22:31:23+00:00",
+      "source": "bioengineer.org",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://bioengineer.org/low-cost-electrochemical-sensors-catch-peanut-fungus-days-before-symptoms-appear",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-2218023194329540858",
+      "title": "Hybrid AI model spots never-before-seen cyber attacks and explains its calls",
+      "published_at": "2026-10-06T22:30:35+00:00",
+      "source": "bioengineer.org",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://bioengineer.org/hybrid-ai-model-spots-never-before-seen-cyber-attacks-and-explains-its-calls",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "1416796746842046312",
+      "title": "Collins’s vote for Kavanaugh haunts her on the campaign trail.",
+      "published_at": "2026-10-06T22:30:24+00:00",
+      "source": "nytimes.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.nytimes.com/live/2026/10/06/us/maine-senate-debate-election/collinss-vote-for-kavanaugh-haunts-her-on-the-campaign-trail",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6847057393860021472",
@@ -50,7 +351,42 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.techmeme.com/261006/p42",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-8350092639331294826",
+      "title": "10 Android Phones That Beat The Google Pixel 11 Pro's Battery Life",
+      "published_at": "2026-10-06T22:30:00+00:00",
+      "source": "slashgear.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.slashgear.com/2277469/android-phones-that-beat-google-pixel-11-pro-battery-life",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "3200519383449135716",
+      "title": "SpaceX looks to raise $40bn to buy Nvidia chips in financing led by Apollo",
+      "published_at": "2026-10-06T22:28:55+00:00",
+      "source": "ft.com",
+      "category": "watchlist",
+      "tickers": [
+        "NVDA"
+      ],
+      "summary": null,
+      "url": "https://www.ft.com/content/d3f5928d-f38c-4666-8f7a-8737f9c45f51",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-44923076159241168",
+      "title": "Honeymoon over as Pocognoli's Scotland suffer domestic disharmony",
+      "published_at": "2026-10-06T22:28:47+00:00",
+      "source": "bbc.co.uk",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.bbc.co.uk/sport/football/articles/c5lye031jvgro",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-273586838987574282",
@@ -61,7 +397,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/news/4650778-biomarin-q3-financial-results-see-ipr-and-d-expense-impact-283m",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6423785632979342136",
@@ -74,7 +410,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/pcmasterrace/comments/1wzg8sa/gaming_monitor_advice",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3883655268841567644",
@@ -85,7 +421,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-10-06/we-re-going-to-win-michigan-new-hampshire-and-maine-video",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2134166737214175287",
@@ -96,7 +432,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-10-06/why-gas-flares-keep-burning-despite-big-oil-s-pledges-video",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3665386314293261992",
@@ -107,7 +443,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/news/4650777-u-s-crude-stockpiles-fell-2_1m-barrels-last-week-api-says",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4640174214107455199",
@@ -118,7 +454,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/saudi-nursing-has-grown-fast-but-real-professional-authority-is-still-unproven",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4044038634859425840",
@@ -129,7 +465,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/skin-deep-no-more-vitiligo-doubles-the-risk-of-metabolic-syndrome-and-insulin-resistance",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6378396511147429284",
@@ -140,7 +476,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.nytimes.com/live/2026/10/06/us/maine-senate-debate-election/here-are-5-takeaways-from-the-most-recent-times-siena-poll-on-the-maine-senate-race",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7173924594194951496",
@@ -151,7 +487,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/three-ai-models-one-verdict-ensemble-network-pushes-skin-cancer-detection-toward-99-accuracy",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "115312407013840528",
@@ -162,7 +498,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/nih-pioneer-award-backs-scientist-building-cancer-therapies-that-evolve-alongside-tumors",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "380415926549287576",
@@ -173,7 +509,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.theinformation.com/briefings/pinterest-names-new-cfo",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "620655029434719541",
@@ -184,7 +520,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://siliconangle.com/2026/10/06/vinci-reels-in-250m-for-its-engineering-simulation-platform",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6299884767872848445",
@@ -195,7 +531,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/audio/2026-10-06/trump-to-call-putin-about-plague-iran-increases-hormuz-attacks",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3425404310485176887",
@@ -206,7 +542,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://siliconangle.com/2026/10/06/google-expands-embeddinggemma-beyond-text-to-images-audio-and-video",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-9095139263046911253",
@@ -217,7 +553,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bbc.co.uk/news/articles/ck054zm1701qo",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2439141406573713710",
@@ -228,7 +564,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/digital-twin-pigs-computer-models-recreate-scoliosis-to-guide-growth-modulating-spine-implants",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1952820516907563430",
@@ -239,7 +575,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.theverge.com/report/1005859/microsoft-xbox-gta-6-streaming-rights",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3195151561355849579",
@@ -250,7 +586,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-10-06/businessweek-daily-ai-bulls-take-the-lead-podcast-video",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7961627085564578283",
@@ -261,7 +597,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/articles/2026-10-06/kosovo-averts-early-elections-as-lawmakers-back-new-president",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1791095059861156464",
@@ -272,7 +608,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-10-06/hamilton-lane-s-bell-on-secondary-markets-opportunity-video",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8045431276946454241",
@@ -283,7 +619,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.slashgear.com/2273831/what-does-road-sign-with-two-arrows-pointing-downward-mean",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5567179380252766712",
@@ -294,7 +630,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952357-duke-energy-preferreds-interest-rate-environment-suggests-caution",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7285401007528539874",
@@ -305,7 +641,18 @@
       "tickers": [],
       "summary": null,
       "url": "https://slate.com/life/2026/10/kash-patel-alexis-wilkins-girlfriend-engaged-fbi.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "1601129400787482257",
+      "title": "'Outfought' and 'not good enough' - Robertson on Scotland defeat",
+      "published_at": "2026-10-06T22:13:15+00:00",
+      "source": "bbc.co.uk",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.bbc.co.uk/sport/football/articles/crz98xv1e8nlo",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4846582471002011896",
@@ -316,7 +663,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.cnbc.com/2026/10/06/jim-cramer-ai-stocks.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5644467537203055369",
@@ -327,7 +674,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/articles/2026-10-06/stock-market-today-dow-s-p-live-updates",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-143278718903779117",
@@ -338,7 +685,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952316-omniab-inc-oabi-analyst-investor-day-transcript",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-231999988675402742",
@@ -349,7 +696,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-10-06/blackrock-s-magyera-on-latest-future-of-wealth-report-video",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8365209037738490469",
@@ -360,7 +707,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.nytimes.com/2026/10/06/world/canada/tumbler-ridge-shooting-plot-washington-arrest.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1862884573636131107",
@@ -371,7 +718,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.cnet.com/tech/gaming/todays-nyt-connections-hints-and-answers-for-oct-7-1214",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8302178307806129402",
@@ -382,7 +729,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/silver-dotted-titanium-dioxide-cathode-and-gelatin-gel-push-flexible-zinc-air-batteries-toward-wearables",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7268376388962656577",
@@ -393,7 +740,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.cnet.com/tech/gaming/todays-wordle-hints-answer-and-help-for-oct-7-1936",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "116843626340757700",
@@ -404,7 +751,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/sex-shapes-the-course-of-myotonic-dystrophy-landmark-registry-study-reveals",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4112317131235420512",
@@ -415,7 +762,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/mapping-the-non-drug-toolkit-that-helps-head-and-neck-cancer-patients-survive-chemoradiotherapy",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7217296155501762539",
@@ -426,7 +773,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/news/4650776-chevron-to-divest-stakes-in-hess-midstream-dj-basin-crude-midstream-assets",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7574808316149651712",
@@ -437,7 +784,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952356-zim-integrated-sea-of-problems",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4025336243881524561",
@@ -448,7 +795,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/tiny-fibers-big-defense-how-pp-and-pva-fibers-shield-concrete-from-freeze-thaw-destruction",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7385015761597494155",
@@ -459,7 +806,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-10-06/apollo-s-zelter-says-compute-energy-will-be-ai-bottlenecks",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5832190164913550008",
@@ -470,7 +817,18 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/articles/2026-10-06/trump-resists-deeper-us-role-in-saudi-arabia-houthi-conflict",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "2070121126424682051",
+      "title": "TA Services acquires 2 Texas cross-border carriers, adds 133 trucks",
+      "published_at": "2026-10-06T22:03:32+00:00",
+      "source": "freightwaves.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.freightwaves.com/news/ta-services-acquires-2-texas-cross-border-carriers-adds-133-trucks",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2436927771777295035",
@@ -481,7 +839,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/articles/2026-10-06/latest-oil-market-news-and-analysis-for-oct-7",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2207473898895723625",
@@ -492,7 +850,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-10-06/dimensional-pm-on-ipo-pipeline-concentration-risks-video",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8081832359084647388",
@@ -503,7 +861,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.nytimes.com/live/2026/10/06/us/maine-senate-debate-election/collins-has-distanced-herself-from-trump-and-his-record-in-hopes-of-re-election",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "490216701867199582",
@@ -514,7 +872,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/heat-and-fermentation-timing-shape-the-quality-of-okara-flour",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-508219154414088131",
@@ -527,7 +885,7 @@
       ],
       "summary": null,
       "url": "https://www.xda-developers.com/i-replaced-my-aging-shield-tv-with-onns-budget-box-it-handles-plex-better",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4672840853524188339",
@@ -538,7 +896,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/articles/2026-10-06/apollo-weighs-larger-role-in-government-lending-as-debt-soars",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6314484492043030620",
@@ -549,7 +907,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-expands-discounts-support-founders",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3392553729436862612",
@@ -562,7 +920,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1720265/000215725526000003/0002157255-26-000003-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2280713002406656887",
@@ -573,7 +931,18 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/newsletters/2026-10-06/rba-ai-warning-australiansuper-expansion-firmus-ipo",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "8791879868642138684",
+      "title": "Cornell Frat Brothers Alleged 'Damage Control' Attempts Are 'Really Damning': Sexual Harassment Lawyer",
+      "published_at": "2026-10-06T21:59:14+00:00",
+      "source": "forbes.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.forbes.com/sites/forbestv/2026/10/06/cornell-frat-brothers-alleged-damage-control-attempts-are-really-damning-sexual-harassment-lawyer",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1543512519126292439",
@@ -586,7 +955,7 @@
       ],
       "summary": null,
       "url": "https://www.techpowerup.com/353443/amd-b650-chipset-arrives-on-a-usd-58-pcie-expansion-card-from-jginyue",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8219603369988532578",
@@ -599,7 +968,7 @@
       ],
       "summary": null,
       "url": "https://www.eetimes.com/the-ai-boom-has-a-gigawatt-accounting-problem",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3867066003928543698",
@@ -610,7 +979,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketwatch.com/bulletins/redirect/go",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8117825160430885184",
@@ -621,7 +990,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.investopedia.com/terms/u/umbrella-personal-liability-policy.asp",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3575571737420428032",
@@ -634,7 +1003,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/pcmasterrace/comments/1wzfh66/what_card_do_i_buy_if_my_budget_is_400_and_i",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6341906495632243867",
@@ -645,7 +1014,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/why-freshworks-stock-bumped-higher-today",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2644460870518894799",
@@ -656,7 +1025,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.cnet.com/tech/services-and-software/free-browser-extension-filters-out-amazons-fake-brands",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8300638642524852478",
@@ -667,7 +1036,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610297/pinterest-nysepins-stock-insider-gokul-rajaram-sells-1050-shares.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4559193960395173808",
@@ -678,7 +1047,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/neonatal-heart-failure-in-china-burden-rises-as-mortality-clues-stay-elusive",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3059029763189188516",
@@ -689,7 +1058,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.nytimes.com/2026/10/06/us/politics/trump-advisers-republika-srpska.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4129046012075941140",
@@ -700,7 +1069,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952355-sphq-still-a-buy-but-its-quality-advantage-over-jqua-may-not-be-sustainable",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1716924635699942936",
@@ -711,7 +1080,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.nytimes.com/2026/10/06/briefing/discontent-grips-france.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6499154465763405373",
@@ -722,7 +1091,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-10-06/the-close-10-6-2026-video",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2419679670801244696",
@@ -733,7 +1102,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bbc.co.uk/news/articles/cmwyzyldv1yeo",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3338667791335839644",
@@ -744,7 +1113,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/articles/2026-10-06/virginia-lieutenant-governor-opposes-nextera-dominion-deal",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6421356157576110182",
@@ -755,7 +1124,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/human-density-not-climate-drives-rodent-borne-hemorrhagic-fever-risk-in-southwest-china",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8615402606434159281",
@@ -766,7 +1135,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/nanoparticle-geometry-boosts-antibiotic-power-against-mrsa",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6319271820959104606",
@@ -777,7 +1146,18 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.techmeme.com/261006/p41",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-2856460373826131946",
+      "title": "Done Deal: Skydance + Paramount + Warner Bros. = Skydance?",
+      "published_at": "2026-10-06T21:48:43+00:00",
+      "source": "forbes.com",
+      "category": "curated_market",
+      "tickers": [],
+      "summary": null,
+      "url": "https://www.forbes.com/sites/legalentertainment/2026/10/06/done-deal-skydance--paramount--warner-bros--skydance",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4232485313021459719",
@@ -788,7 +1168,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.prnewswire.com/news-releases/harbor-health-brings-care-and-coverage-together-in-houston-with-the-acquisition-of-village-medical-clinics-302900374.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2166352529105972282",
@@ -801,7 +1181,7 @@
       ],
       "summary": null,
       "url": "https://www.techpowerup.com/353440/leak-tips-nvidia-rtx-spark-powered-microsoft-surface-laptop-specs",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6496121445607487743",
@@ -812,7 +1192,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.retaildive.com/news/top-retail-conferences-in-2027/832294",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5341219579454169916",
@@ -823,7 +1203,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.theverge.com/news/1006238/apple-lg-homekit-rumor-fcc",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2523132583996055063",
@@ -834,7 +1214,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.investing.com/news/insider-trading-news/royal-gold-ceo-william-heissenbuttel-sells-567614-in-shares-93CH-4935331",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7328788382573777973",
@@ -845,7 +1225,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://semiengineering.com/ultra-compact-photonic-bends-reduce-loss-while-meeting-foundry-rules-georgia-tech",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8837180358183921537",
@@ -856,7 +1236,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.slashgear.com/2274495/what-are-drifting-buoys-where-found-in-ocean",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5066804599298627151",
@@ -867,7 +1247,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.cnet.com/deals/star-wars-galactic-racer-free-amazon-luna-prime-day-deal",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1781674667438660206",
@@ -878,7 +1258,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/rock-bottom-does-not-drive-recovery-johns-hopkins-study-of-opioid-addiction-finds",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1474237231439250804",
@@ -889,7 +1269,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952354-arrivent-biopharma-phase-3-failure-resets-the-investment-case-rating-downgrade",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-395681227860613212",
@@ -900,7 +1280,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/why-women-skip-cancer-screenings-rural-china-study-maps-the-full-journey",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2800990322488286941",
@@ -911,7 +1291,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.cnet.com/deals/aiper-october-prime-day-sale",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4790481571756658488",
@@ -922,7 +1302,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.businessinsider.com/guides/deals/prime-day-travel-deals-2026-10",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "9154441987345267243",
@@ -933,7 +1313,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bbc.co.uk/news/articles/ckm23709pjz7o",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5953972350892169332",
@@ -944,7 +1324,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/nih-backs-bold-epigenetics-quest-to-decode-how-immune-cells-walk-the-tightrope-between-defense-and-disease",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4311679491284913384",
@@ -955,7 +1335,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610288/alibaba-group-nysebaba-shares-down-1-4-time-to-sell.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "119693277068143317",
@@ -966,7 +1346,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610289/defiance-silver-cvedef-shares-down-18-8-time-to-sell.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6403410788877477410",
@@ -977,7 +1357,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-mara-nasdaq-mara-stock-price-down-18-time-to-sell-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-328146477368434144",
@@ -988,7 +1368,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-nio-nyse-nio-shares-climb-19-heres-what-happened-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8657583727009819832",
@@ -999,7 +1379,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-alibaba-group-nyse-baba-stock-falls-14-time-to-sell-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7757826436088876988",
@@ -1010,7 +1390,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-tilray-brands-nasdaq-tlry-shares-up-16-whats-next-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-9172198722866902963",
@@ -1021,7 +1401,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/news/4650770-gold-futures-gain-as-us-dollar-yields-turn-lower",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8541575002320432706",
@@ -1032,7 +1412,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.techmeme.com/261006/p40",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1606540562569886308",
@@ -1045,7 +1425,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/pcmasterrace/comments/1wzf4ak/pc_restarts_upon_closing_to_desktop_sometimes",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1222371454533681726",
@@ -1056,7 +1436,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-penguin-solutions-tops-q4-2026-estimates-shares-rise-93CH-4935328",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2755522399719199568",
@@ -1067,7 +1447,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.cnet.com/tech/gaming/todays-nyt-strands-hints-answers-and-help-for-oct-7-948",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "672383931645027938",
@@ -1078,7 +1458,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952353-csx-corporation-still-not-willing-to-climb-aboard",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7462665114698464567",
@@ -1089,7 +1469,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/news/4650775-first-digital-eyes-nasdaq-listing-in-250m-koyn-deal",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7624628480550910491",
@@ -1100,7 +1480,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.businessinsider.com/florence-pugh-daring-outfits-ranked-2026",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4189303875784957396",
@@ -1111,7 +1491,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-axil-brands-posts-higher-profit-in-q1-2026-93CH-4935327",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8348685776744521943",
@@ -1122,7 +1502,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/articles/2026-10-06/how-ai-hardware-suppliers-are-becoming-billionaires-big-take-asia",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6149519436492355685",
@@ -1133,7 +1513,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.cnet.com/tech/gaming/todays-nyt-connections-sports-edition-hints-and-answers-for-oct-7-744",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8345891409316655530",
@@ -1144,7 +1524,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.nytimes.com/2026/10/06/arts/music/kennedy-center-records-trump-lawyers.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7152764615635593662",
@@ -1155,7 +1535,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-10-06/taleb-calls-stocks-a-trap-sees-naive-ai-investors-video",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-9041837572247036184",
@@ -1166,7 +1546,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.cnet.com/services/a-court-ruling-killed-click-to-cancel-but-nyc-just-brought-it-back",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6888610132558944758",
@@ -1177,7 +1557,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/news/4650571-levi-strauss-q3-2026-earnings-preview",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "776318954981542273",
@@ -1188,7 +1568,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/news/4650572-richardson-electronics-q1-2027-earnings-preview",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3355361362963040739",
@@ -1199,7 +1579,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/newsletters/2026-10-06/s-p-500-notches-first-record-close-since-august",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3336205238525807996",
@@ -1210,7 +1590,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/hidden-protein-networks-emerge-as-central-players-in-huntingtons-disease",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5005760265117478080",
@@ -1221,7 +1601,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/articles/2026-10-06/boston-dynamics-taps-amazon-alexa-executive-as-new-ceo",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "402132067812609854",
@@ -1232,7 +1612,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/four-in-ten-covid-19-chest-ct-scans-were-medically-unnecessary-iranian-study-finds",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1983928355018723682",
@@ -1243,7 +1623,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952352-zscaler-once-forgotten-cybersecurity-winner-but-not-for-long-downgrade",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1258218692388332553",
@@ -1254,7 +1634,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952359-nahl-group-plc-nhlpf-q2-2026-earnings-call-transcript",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2478883519943401928",
@@ -1270,7 +1650,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1518461/000110465926114133/0001104659-26-114133-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5908942445522947824",
@@ -1281,7 +1661,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952358-rezolve-ai-plc-rzlv-analyst-investor-day-slideshow",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5189312498419750014",
@@ -1292,7 +1672,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-10-06/union-square-advisors-president-on-m-a-landscape-video",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-652205901540775204",
@@ -1303,7 +1683,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.investing.com/news/insider-trading-news/vishay-intertechnology-director-raanan-zilberman-sells-593696-in-stock-93CH-4935320",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8782053792187539728",
@@ -1314,7 +1694,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://arstechnica.com/gadgets/2026/10/drone-strikes-likely-russian-sink-ships-in-nato-countries-economic-zones",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7640498993741724363",
@@ -1325,7 +1705,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.wired.com/story/prime-day-digital-wall-calendar-deals-10-06-2026",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "9119436914930191329",
@@ -1339,7 +1719,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2001557/000114036126038822/0001140361-26-038822-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7205191844448668929",
@@ -1350,7 +1730,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://semiengineering.com/monolithic-3d-memristor-tft-stack-for-programmable-neuromorphic-computing-snu-yonsei",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5815132508663650152",
@@ -1361,7 +1741,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/scientists-map-how-lemongrass-makes-its-signature-lemon-scent-and-where-the-evidence-runs-thin",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3072029387963575221",
@@ -1375,7 +1755,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2001557/000114036126038821/0001140361-26-038821-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2035958719962006353",
@@ -1386,7 +1766,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.economist.com/international/2026/10/06/vladimir-putin-and-the-pariah-problem",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7208385997544774843",
@@ -1397,7 +1777,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/hidden-nitrogen-fixing-bacteria-reveal-a-secret-evolution-inside-casuarina-root-nodules",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2242606465358924031",
@@ -1414,7 +1794,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1276187/000119312526415828/0001193125-26-415828-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-9084847601023395735",
@@ -1442,7 +1822,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/19617/000121390026107306/0001213900-26-107306-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6165717054811054461",
@@ -1453,7 +1833,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.businessinsider.com/iran-los-angeles-san-diego-nuclear-weapon-strike-trump-2026-10",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5144177930632189636",
@@ -1469,7 +1849,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1547546/000110465926114127/0001104659-26-114127-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5230628009442260884",
@@ -1480,7 +1860,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.cnet.com/deals/dells-xps13-laptop-sale-less-than-macbook-neo",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3004807796018445931",
@@ -1491,7 +1871,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.investopedia.com/terms/r/regulation-9.asp",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5873247817247910269",
@@ -1502,7 +1882,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/news/videos/2026-10-06/gold-is-becoming-more-of-a-reserve-currency-taleb-says-video",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4283031851350562580",
@@ -1513,7 +1893,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/news/4650774-ztest-electronics-gaap-eps-of-0_03-revenue-of-9_2m",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-83815800596909079",
@@ -1524,7 +1904,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/cellulose-based-sorbent-pulls-critical-metals-from-organic-waste-streams-in-minutes",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1325140791777059962",
@@ -1535,7 +1915,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://bioengineer.org/solar-and-battery-sizing-gets-a-reality-check-for-grids-that-keep-failing",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3747838466012283629",
@@ -1546,7 +1926,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610279/joby-aviation-nysejoby-stock-insider-gregory-bowles-sells-5302-shares.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6295923031067277017",
@@ -1557,7 +1937,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610278/applied-digital-nasdaqapld-shares-up-2-6-heres-what-happened.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5480417195284829619",
@@ -1568,7 +1948,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610277/lam-research-nasdaqlrcx-stock-falls-3-4-should-you-sell.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7572059898155155134",
@@ -1579,7 +1959,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610276/palo-alto-networks-nasdaqpanw-stock-price-up-3-2-heres-why.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6570636134401991686",
@@ -1590,7 +1970,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952350-why-we-just-bought-1000-more-shares-of-enbridge",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6230940014904354589",
@@ -1601,7 +1981,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610275/ciena-nysecien-shares-up-14-2-still-a-buy.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1300769036571403812",
@@ -1612,7 +1992,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610274/costco-wholesale-nasdaqcost-stock-price-up-1-3-time-to-buy.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2320869390154863738",
@@ -1623,7 +2003,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/insider-pinterest-nyse-pins-director-sells-1050-shares-of-stock-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1983184443160113685",
@@ -1634,7 +2014,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/insider-bicycle-therapeutics-nasdaq-bcyc-stock-insider-robert-charles-swanton-sells-3431-shares-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1055415211399558647",
@@ -1645,7 +2025,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610273/intuitive-machines-nasdaqlunr-shares-up-5-4-still-a-buy.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4468729157091989067",
@@ -1656,7 +2036,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/insider-intellia-therapeutics-nasdaq-ntla-cao-michael-dube-sells-1864-shares-of-stock-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3315514923668512761",
@@ -1667,7 +2047,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/insider-bicycle-therapeutics-nasdaq-bcyc-stock-insider-kevin-lee-sells-6167-shares-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1012148955192937976",
@@ -1678,18 +2058,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/insider-oklo-nyse-oklo-general-counsel-sells-649-shares-of-company-stock-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "6195420850042003856",
-      "title": "Joby Aviation (NYSE:JOBY) Insider Gregory Bowles Sells 5,302 Shares of Company Stock",
-      "published_at": "2026-10-06T21:23:06+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/insider-joby-aviation-nyse-joby-insider-gregory-bowles-sells-5302-shares-of-company-stock-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-689127542654838046",
@@ -1700,7 +2069,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/insider-nwpx-infrastructure-nasdaq-nwpx-director-sells-2662000-in-stock-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5335382809811138008",
@@ -1711,29 +2080,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610272/mp-materials-nysemp-shares-up-3-6-time-to-buy.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "6995726019375928245",
-      "title": "Dyne Therapeutics (NASDAQ:DYN) Director Buys $40,000.00 in Stock",
-      "published_at": "2026-10-06T21:23:05+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/insider-dyne-therapeutics-nasdaq-dyn-director-buys-4000000-in-stock-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "5749124907698794174",
-      "title": "Exodus Movement (NYSEAMERICAN:EXOD) CFO James Gernetzke Sells 5,579 Shares of Company Stock",
-      "published_at": "2026-10-06T21:23:05+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/insider-exodus-movement-nyseamerican-exod-cfo-james-gernetzke-sells-5579-shares-of-company-stock-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "9077255778231614507",
@@ -1746,183 +2093,7 @@
       ],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610271/sk-hynix-nasdaqskhy-shares-down-6-4-heres-what-happened.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "9081394853235769753",
-      "title": "Federated Learning Meets OneM2M: Smarter, Faster AI for the Internet of Things",
-      "published_at": "2026-10-06T21:22:24+00:00",
-      "source": "bioengineer.org",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://bioengineer.org/federated-learning-meets-onem2m-smarter-faster-ai-for-the-internet-of-things",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "5870344643782544143",
-      "title": "Hibernating Squirrels Hold Clues to Diabetes and Muscle Loss in New NIH-Funded Study",
-      "published_at": "2026-10-06T21:22:23+00:00",
-      "source": "bioengineer.org",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://bioengineer.org/hibernating-squirrels-hold-clues-to-diabetes-and-muscle-loss-in-new-nih-funded-study",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-7414579252679627815",
-      "title": "Watch: Riot police clash with school protesters and use tear gas in France",
-      "published_at": "2026-10-06T21:22:22+00:00",
-      "source": "bbc.co.uk",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.bbc.co.uk/news/videos/cwm26078pkepo",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-3539114120578404429",
-      "title": "Salesforce (NYSE:CRM) Stock Price Down 2.3% - Time to Sell?",
-      "published_at": "2026-10-06T21:22:17+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-salesforce-nyse-crm-stock-price-down-23-time-to-sell-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "7041193168372702043",
-      "title": "Ciena (NYSE:CIEN) Shares Up 14.2% - Here's Why",
-      "published_at": "2026-10-06T21:22:15+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-ciena-nyse-cien-shares-up-142-heres-why-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "3557481340307028072",
-      "title": "Teradyne (NASDAQ:TER) Stock Price Down 3.2% - What's Next?",
-      "published_at": "2026-10-06T21:22:15+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-teradyne-nasdaq-ter-stock-price-down-32-whats-next-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-8382193414087184656",
-      "title": "Kinder Morgan (NYSE:KMI) Shares Up 2.5% - Here's Why",
-      "published_at": "2026-10-06T21:22:14+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-kinder-morgan-nyse-kmi-shares-up-25-heres-why-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "6419317947665970773",
-      "title": "Vistra (NYSE:VST) Shares Climb 10.7% - Here's Why",
-      "published_at": "2026-10-06T21:22:13+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-vistra-nyse-vst-shares-climb-107-heres-why-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "5864957417618475058",
-      "title": "Redwire (NYSE:RDW) Stock Price Up 2.1% - Still a Buy?",
-      "published_at": "2026-10-06T21:22:13+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-redwire-nyse-rdw-stock-price-up-21-still-a-buy-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "4895140594849585751",
-      "title": "Applied Digital (NASDAQ:APLD) Stock Price Up 2.6% - Should You Buy?",
-      "published_at": "2026-10-06T21:22:13+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-applied-digital-nasdaq-apld-stock-price-up-26-should-you-buy-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-7715757022645208430",
-      "title": "Procter & Gamble (NYSE:PG) Shares Climb 1.6% - What's Next?",
-      "published_at": "2026-10-06T21:22:13+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-procter-gamble-nyse-pg-shares-climb-16-whats-next-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "5840724667263756850",
-      "title": "Boeing (NYSE:BA) Stock Falls 1.5% - Here's Why",
-      "published_at": "2026-10-06T21:22:12+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-boeing-nyse-ba-stock-falls-15-heres-why-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-4049570439961606251",
-      "title": "Astera Labs (NASDAQ:ALAB) Stock Price Up 7.6% - Here's Why",
-      "published_at": "2026-10-06T21:22:12+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-astera-labs-nasdaq-alab-stock-price-up-76-heres-why-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-3388638964875895566",
-      "title": "NIKE (NYSE:NKE) Stock Price Up 1.9% - Still a Buy?",
-      "published_at": "2026-10-06T21:22:12+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-nike-nyse-nke-stock-price-up-19-still-a-buy-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-1965181237587237048",
-      "title": "IREN (NASDAQ:IREN) Shares Climb 2% - Still a Buy?",
-      "published_at": "2026-10-06T21:22:11+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-iren-nasdaq-iren-shares-climb-2-still-a-buy-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-1410467192251089206",
-      "title": "Intuitive Machines (NASDAQ:LUNR) Stock Price Up 5.4% - Here's Why",
-      "published_at": "2026-10-06T21:22:11+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-intuitive-machines-nasdaq-lunr-stock-price-up-54-heres-why-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4446935609386631256",
@@ -1935,51 +2106,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-western-digital-nasdaq-wdc-stock-price-down-69-time-to-sell-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-2003415935035492012",
-      "title": "Robinhood Markets (NASDAQ:HOOD) Shares Down 1.8% - Should You Sell?",
-      "published_at": "2026-10-06T21:22:10+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-robinhood-markets-nasdaq-hood-shares-down-18-should-you-sell-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "8215591220737261152",
-      "title": "SoundHound AI (NASDAQ:SOUN) Stock Falls 2.7% - Here's Why",
-      "published_at": "2026-10-06T21:22:09+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-soundhound-ai-nasdaq-soun-stock-falls-27-heres-why-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "7922273153507464672",
-      "title": "SoFi Technologies (NASDAQ:SOFI) Stock Falls 1% - Here's Why",
-      "published_at": "2026-10-06T21:22:09+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-sofi-technologies-nasdaq-sofi-stock-falls-1-heres-why-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-4161882953157391692",
-      "title": "Costco Wholesale (NASDAQ:COST) Stock Price Up 1.3% - Still a Buy?",
-      "published_at": "2026-10-06T21:22:08+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-costco-wholesale-nasdaq-cost-stock-price-up-13-still-a-buy-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-9013226052651445128",
@@ -1992,18 +2119,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-seagate-technology-nasdaq-stx-shares-down-92-heres-what-happened-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-3911166956474562311",
-      "title": "Hewlett Packard Enterprise (NYSE:HPE) Stock Price Up 3.1% - Time to Buy?",
-      "published_at": "2026-10-06T21:22:06+00:00",
-      "source": "marketbeat.com",
-      "category": "curated_market",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.marketbeat.com/instant-alerts/price-hewlett-packard-enterprise-nyse-hpe-stock-price-up-31-time-to-buy-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5701207260206472986",
@@ -2016,7 +2132,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/723254/000095010326015293/0000950103-26-015293-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "498142532962701675",
@@ -2031,7 +2147,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1280784/000162828026065264/0001628280-26-065264-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8006709809400487707",
@@ -2048,7 +2164,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1785424/000110465926114122/0001104659-26-114122-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3645982420341754919",
@@ -2061,7 +2177,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-sandisk-nasdaq-sndk-shares-down-26-heres-why-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6851977077327717879",
@@ -2074,7 +2190,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-sk-hynix-nasdaq-skhy-shares-down-64-heres-why-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1189402737245041223",
@@ -2087,7 +2203,7 @@
       ],
       "summary": null,
       "url": "https://wccftech.com/original-doom-gets-nvidia-dlss-5-neural-rendering-through-a-custom-directx-12-port",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2203240730337091762",
@@ -2100,7 +2216,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/price-broadcom-nasdaq-avgo-stock-jumps-37-heres-what-happened-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "358402709397248823",
@@ -2113,7 +2229,7 @@
       ],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610267/micron-technology-nasdaqmu-stock-falls-1-7-heres-what-happened.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6836900840518387929",
@@ -2126,7 +2242,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/markets/stocks/articles/powerfleet-vs-roadzen-faster-growth-212020080.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1230209724627656812",
@@ -2150,7 +2266,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/886982/000119312526415805/0001193125-26-415805-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6097191458969118454",
@@ -2180,7 +2296,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/72971/000183988226049849/0001839882-26-049849-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4679149247684874859",
@@ -2193,7 +2309,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/732417/000196545126000008/0001965451-26-000008-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2890208841129987677",
@@ -2208,7 +2324,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1998781/000149315226045994/0001493152-26-045994-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3809254357765568566",
@@ -2221,7 +2337,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/nvidia/comments/1wzeil1/what_issues_are_users_having_with_nvidia",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8859527528119131662",
@@ -2234,7 +2350,7 @@
       ],
       "summary": null,
       "url": "https://www.bloomberg.com/news/audio/2026-10-06/stock-movers-constellation-brands-seagate-biotech-podcast",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1060582852206169635",
@@ -2247,7 +2363,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/news/4650769-tsmc-boosts-us-investments-to-265b-on-ai-boom-report",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6638836615115592685",
@@ -2258,7 +2374,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952288-trx-gold-corporation-trx-ca-discusses-record-gold-prices-and-expansion-of-buck-reef-project",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3803912719617626524",
@@ -2269,7 +2385,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/maureenkerr/2026/10/06/conn-igguldens-genghis-tests-whether-an-ai-made-tv-series-can-pay",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8357453518328747044",
@@ -2343,7 +2459,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1114446/000183988226049845/0001839882-26-049845-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1587324637501994820",
@@ -2354,7 +2470,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952346-ai-trade-broadens-again-capital-stack-recycling-video",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7880986898865973417",
@@ -2369,7 +2485,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/929351/000092935126000043/0000929351-26-000043-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4958463307272606896",
@@ -2382,7 +2498,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/wallstreetbets/comments/1wze9hx/i_picked_a_bad_time_to_sell_amd_covered_calls",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8681508276448089439",
@@ -2397,7 +2513,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2036973/000118518526004627/0001185185-26-004627-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2226088058729502418",
@@ -2410,7 +2526,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/96021/000110465926114102/0001104659-26-114102-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "689491018761499472",
@@ -2421,7 +2537,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/antoniopequenoiv/2026/10/06/trumps-jos-a-bank-suit-during-nebraska-rally-raises-eyebrows",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8877040877081481117",
@@ -2436,7 +2552,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2036973/000118518526004625/0001185185-26-004625-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3507750067688781014",
@@ -2450,7 +2566,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2038439/000173112226001321/0001731122-26-001321-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7959953177450561317",
@@ -2463,7 +2579,7 @@
       ],
       "summary": null,
       "url": "https://www.tweaktown.com/rss/click/news/113940",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2144540761361851960",
@@ -2474,7 +2590,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/anthropic-pushes-its-ipo-to-november-as-investors",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2089079007032808545",
@@ -2487,7 +2603,7 @@
       ],
       "summary": null,
       "url": "https://cryptobriefing.com/nvidia-500-billion-compute-financing-platforms",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "134095027293515691",
@@ -2500,7 +2616,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1794546/000119312526415735/0001193125-26-415735-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1309134934265378214",
@@ -2513,7 +2629,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1776985/000212397526000031/0002123975-26-000031-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7157030480608332516",
@@ -2526,7 +2642,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/stocks/comments/1wze2hd/is_nvidia_buying_back_their_own_stock_a_bad_sign",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6601899055487773031",
@@ -2550,7 +2666,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/886982/000119312526415720/0001193125-26-415720-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6332882391086437041",
@@ -2564,7 +2680,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1829794/000168316826007662/0001683168-26-007662-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5056639882634374818",
@@ -2654,7 +2770,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/312070/000095010326015292/0000950103-26-015292-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8482336379093781329",
@@ -2682,7 +2798,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/19617/000191870426030786/0001918704-26-030786-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3637179381125910173",
@@ -2693,7 +2809,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/opinion/articles/2026-10-06/china-s-growth-target-has-become-a-trap-for-xi",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-121430805364008860",
@@ -2706,7 +2822,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1618756/000180472926000022/0001804729-26-000022-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4218174389171672107",
@@ -2719,7 +2835,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1699350/000207246826000002/0002072468-26-000002-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7431691453059407924",
@@ -2732,7 +2848,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1771007/000095010326015290/0000950103-26-015290-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-243970550823951570",
@@ -2743,7 +2859,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952345-at-and-t-mixed-signals-and-dividend-not-attractive-enough",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1928704117983971327",
@@ -2754,7 +2870,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://beachman.substack.com/p/new-position-alert-bought-an-enterprise",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6626666279715235007",
@@ -2768,7 +2884,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1856437/000122520826008299/0001225208-26-008299-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "12248496474686364",
@@ -2781,7 +2897,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1751783/000094337426000442/0000943374-26-000442-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8474234530366853924",
@@ -2794,7 +2910,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/26324/000162828026065252/0001628280-26-065252-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7079833351956001648",
@@ -2807,7 +2923,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/stocks/comments/1wzdr0a/why_do_people_keep_spouting_its_a_bubble_when",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4199996819556610869",
@@ -2820,7 +2936,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/96021/000110465926114079/0001104659-26-114079-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6737589060134802175",
@@ -2833,7 +2949,21 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/m/23879019-ae2b-39de-9232-cdfcba882196/stock-market-today%3A-dow%2C-s%26p.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-9122274244042793931",
+      "title": "Performance Shipping Inc.: Form 6-K - Report of foreign issuer [Rules 13a-16 and 15d-16]",
+      "published_at": "2026-10-06T20:42:45+00:00",
+      "source": "sec.gov",
+      "category": "disclosures",
+      "tickers": [
+        "DCIX",
+        "PSHG"
+      ],
+      "summary": null,
+      "url": "https://www.sec.gov/Archives/edgar/data/1481241/000114036126038814/0001140361-26-038814-index.htm",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6160161541458763667",
@@ -2847,7 +2977,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1636282/000162828026065249/0001628280-26-065249-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "990717514905666476",
@@ -2875,7 +3005,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/895421/000183988226049844/0001839882-26-049844-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-9117391099394460250",
@@ -2889,7 +3019,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1389545/000143774926032232/0001437749-26-032232-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8361477149010061758",
@@ -2900,7 +3030,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952344-mega-fortune-running-out-of-cash",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4590058530914694377",
@@ -2914,7 +3044,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1934245/000193424526000003/0001934245-26-000003-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2883598065032312743",
@@ -2932,7 +3062,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1883814/000182912626010817/0001829126-26-010817-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1245157268184572401",
@@ -2946,7 +3076,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1739104/000191647326000044/0001916473-26-000044-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5635590718587012253",
@@ -2957,7 +3087,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952342-petrobras-an-election-catalyst-with-risks-on-both-sides",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-72379969300228092",
@@ -2968,7 +3098,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952343-why-g7-countries-releasing-millions-of-barrels-of-oil-is-good-for-american-oil-companies",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8518210400511527176",
@@ -2982,7 +3112,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1551901/000110465926114075/0001104659-26-114075-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7910059081701895070",
@@ -2995,7 +3125,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1047127/000162828026065246/0001628280-26-065246-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6584983458840457235",
@@ -3017,7 +3147,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1159508/000095010326015286/0000950103-26-015286-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5088364502753865503",
@@ -3050,7 +3180,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/70858/000191870426030779/0001918704-26-030779-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1831431160290250075",
@@ -3067,7 +3197,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/886163/000195023226000003/0001950232-26-000003-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3633095807856501810",
@@ -3078,7 +3208,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952341-vici-buy-based-on-forensic-value-equation-deep-dive",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3903997307001892281",
@@ -3091,7 +3221,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1367083/000168316826007659/0001683168-26-007659-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2886430514043242883",
@@ -3104,7 +3234,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/863900/000199937126022244/0001999371-26-022244-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-9194583909428421347",
@@ -3115,7 +3245,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/why-grab-holdings-stock-slumped-by-12-in-september",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5772659056786838335",
@@ -3128,7 +3258,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/pcmasterrace/comments/1wzdgxt/reasonable_ssd_prices",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5339053379403850495",
@@ -3141,7 +3271,20 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9110859/why-1-veteran-analyst-says-micron-stock-could-nearly-double-soon",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-3420442788765980279",
+      "title": "AVIAT NETWORKS, INC.: Form 8-K - Current report",
+      "published_at": "2026-10-06T20:31:53+00:00",
+      "source": "sec.gov",
+      "category": "disclosures",
+      "tickers": [
+        "AVNW"
+      ],
+      "summary": null,
+      "url": "https://www.sec.gov/Archives/edgar/data/1377789/000162828026065243/0001628280-26-065243-index.htm",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5005240589188891338",
@@ -3154,7 +3297,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1641489/000164148926000032/0001641489-26-000032-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5634581197767052497",
@@ -3165,7 +3308,20 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952351-atco-ltd-aco-x-ca-discusses-merger-of-canadian-utilities-and-emera-and-strategic-spin-out-of",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
+    },
+    {
+      "news_id": "-1957990111306271481",
+      "title": "Walker & Dunlop, Inc.: Form 8-K - Current report",
+      "published_at": "2026-10-06T20:30:57+00:00",
+      "source": "sec.gov",
+      "category": "disclosures",
+      "tickers": [
+        "WD"
+      ],
+      "summary": null,
+      "url": "https://www.sec.gov/Archives/edgar/data/1497770/000110465926114073/0001104659-26-114073-index.htm",
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8210279357599502128",
@@ -3201,7 +3357,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/831001/000095010326015284/0000950103-26-015284-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4151289197326080201",
@@ -3214,7 +3370,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1367083/000168316826007657/0001683168-26-007657-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3981032378685375399",
@@ -3231,7 +3387,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1567892/000149315226045958/0001493152-26-045958-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8396369126690573202",
@@ -3242,7 +3398,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952340-ch-robinson-rxo-is-no-shortcut-to-value-i-say-no",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8321469383513616914",
@@ -3259,7 +3415,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1567892/000149315226045957/0001493152-26-045957-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "9118436368260452297",
@@ -3272,7 +3428,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/news/4650744-seagate-technology-falls-9-in-sector-wide-decline",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8056363848141823504",
@@ -3292,7 +3448,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1130713/000135445726000958/0001354457-26-000958-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6070912082939659644",
@@ -3305,7 +3461,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-surge-record-202842954.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-9111257548441740636",
@@ -3319,7 +3475,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1777921/000196530126000155/0001965301-26-000155-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4014967400614508263",
@@ -3409,7 +3565,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/312070/000095010326015282/0000950103-26-015282-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7002836934189787524",
@@ -3423,7 +3579,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/1788999/000146510926000079/0001465109-26-000079-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8267890512064481947",
@@ -3441,7 +3597,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/899051/000089905126000148/0000899051-26-000148-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3383657591907504140",
@@ -3454,33 +3610,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111946/lambdas-4-billion-fundraise-boosts-nvidiabacked-cloud-firm-ahead-of-ipo-nvda",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-5711058183170337513",
-      "title": "Arista Networks, Inc.: Form 144 - Report of proposed sale of securities",
-      "published_at": "2026-10-06T20:25:34+00:00",
-      "source": "sec.gov",
-      "category": "disclosures",
-      "tickers": [
-        "ANET"
-      ],
-      "summary": null,
-      "url": "https://www.sec.gov/Archives/edgar/data/1596532/000195004726010084/0001950047-26-010084-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-8915401437293271440",
-      "title": "Roblox Corp: Form 4 - Statement of changes in beneficial ownership of securities",
-      "published_at": "2026-10-06T20:25:32+00:00",
-      "source": "sec.gov",
-      "category": "disclosures",
-      "tickers": [
-        "RBLX"
-      ],
-      "summary": null,
-      "url": "https://www.sec.gov/Archives/edgar/data/1315098/000131509826000188/0001315098-26-000188-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-99506859780430790",
@@ -3491,7 +3621,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/split-across-ai-infrastructure-stocks-worth-2030",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8778206387895383640",
@@ -3502,7 +3632,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952339-baker-hughes-chart-adds-to-one-stop-shop-strategy",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8503249567107753423",
@@ -3515,7 +3645,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2023554/000130817926000425/0001308179-26-000425-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1398342269357902654",
@@ -3528,7 +3658,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2023554/000130817926000424/0001308179-26-000424-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3790383752887535914",
@@ -3541,7 +3671,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111415/citi-resets-amd-stock-price-target-for-2026",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5216301315525594431",
@@ -3554,7 +3684,7 @@
       ],
       "summary": null,
       "url": "https://www.sec.gov/Archives/edgar/data/2023554/000130817926000423/0001308179-26-000423-index.htm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7142431778562929022",
@@ -3567,7 +3697,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/m/6bc60917-b03e-3b32-867f-280f61f427c5/the-world%E2%80%99s-largest-stock-has.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2894680559277666557",
@@ -3580,7 +3710,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/markets/stocks/articles/amd-report-fiscal-third-quarter-201500341.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1523353278312182260",
@@ -3593,7 +3723,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/wallstreetbets/comments/1wzcyv9/been_to_long_wsb_back_with_amd_success",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2118070371832727657",
@@ -3604,7 +3734,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952244-banco-bilbao-vizcaya-argentaria-s-a-bbva-discusses-ai-transformation-technology-strategy-and",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3209303334106570606",
@@ -3617,7 +3747,7 @@
       ],
       "summary": null,
       "url": "https://www.investopedia.com/market-udpate-marvell-lifts-its-long-term-outlook-on-strong-ai-demand-the-stock-is-surging-mrvl-12161577",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5783383328661334531",
@@ -3630,7 +3760,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/pcmasterrace/comments/1wzcxas/trying_to_minmax_this_build_need_help",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6006900677726601082",
@@ -3641,7 +3771,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952336-getting-ahead-of-the-holiday-rush-amazon-and-2-top-stocks-to-buy",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-377977068989119488",
@@ -3652,7 +3782,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952335-vaxcyte-strong-buy-vax-31-trial-win-ipd-vax-31-and-additional-readouts-1st-half-2027",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "818708848719592671",
@@ -3665,7 +3795,7 @@
       ],
       "summary": null,
       "url": "https://www.tweaktown.com/rss/click/news/113931",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6821859387526485396",
@@ -3678,7 +3808,7 @@
       ],
       "summary": null,
       "url": "https://www.investing.com/analysis/nvidias-record-high-masks-a-historically-cheap-forward-multiple-200689056",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7835869454819914897",
@@ -3691,7 +3821,7 @@
       ],
       "summary": null,
       "url": "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7891036220720360528",
@@ -3702,7 +3832,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/is-now-the-time-to-cash-out-of-the-s-and-p-500-s-top-3-stocks-of-2026",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5849408140692666029",
@@ -3715,7 +3845,7 @@
       ],
       "summary": null,
       "url": "https://www.neowin.net/deals/best-amazon-prime-day-2026-ssd-deals-from-samsung-acer-sandisk-silicon-power-and-more",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-9009972423557096963",
@@ -3726,7 +3856,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/3-dividend-stocks-worth-buying-near-their-52-week",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2794607633103131734",
@@ -3737,7 +3867,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952332-claritev-revenue-growth-is-back-cash-flow-is-the-next-test",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2545274769215566295",
@@ -3748,7 +3878,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952331-bristol-myers-squibb-patent-cliff-is-still-a-problem",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6585581658181504137",
@@ -3761,7 +3891,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111689/intel-stock-slips-as-tsmc-talks-complicate-terafabs-14a-bet",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4436341807349162201",
@@ -3774,7 +3904,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111922/lambda-eyes-4-billion-fundraise-ahead-of-ipo-backed-by-nvidia-nvda",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6782164512472472078",
@@ -3787,7 +3917,7 @@
       ],
       "summary": null,
       "url": "https://stockstory.org/us/stocks/nasdaq/amd/news/why-up-down/amd-amd-stock-is-up-what-you-need-to-know-4",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "789236459399830410",
@@ -3800,7 +3930,7 @@
       ],
       "summary": null,
       "url": "https://stockstory.org/us/stocks/nasdaq/stx/news/why-up-down/seagate-stx-stock-trades-down-here-is-why",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "9192455753200627608",
@@ -3813,7 +3943,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111920/seagate-technology-stx-competes-with-toshiba-for-tdks-magneticheads-segment-amid-market-selloff",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "739692660052441827",
@@ -3824,7 +3954,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/saradorn/2026/10/06/trumps-approval-rating-stagnates-at-record-low-32-in-latest-poll",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2818431272990274202",
@@ -3835,7 +3965,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/inuit-applovin-and-lululemon-have-crashed-more-than-50-in-2026-are-these-stocks-bargains-or-busts",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6546249692992756536",
@@ -3846,7 +3976,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/verizon-vs-att-which-dividend-stock-is-the-better",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3633522296985334600",
@@ -3857,7 +3987,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/oliviashalhoup/2026/10/06/alanis-morissette-questlove-and-justine-skye-mark-soho-house-festivals-new-york-debut",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "259225562187449778",
@@ -3868,7 +3998,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952330-at-and-t-sub-growth-is-real-despite-industry-threats-10-percent-fcf-yield",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6588813622334070042",
@@ -3879,7 +4009,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952303-toyo-co-ltd-toyo-analyst-investor-day-transcript",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1792370274437636879",
@@ -3890,7 +4020,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/saradorn/2026/10/06/hottest-2026-midterm-races-democrats-lead-in-maine-and-new-hampshire-senate-races-updated-daily",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "9019784543893349553",
@@ -3904,7 +4034,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/m/23879019-ae2b-39de-9232-cdfcba882196/stock-market-today%3A-dow.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "690348590085611298",
@@ -3917,7 +4047,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111899/amd-maintained-by-citigroup-price-target-raised-to-800",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4049944946594565024",
@@ -3928,7 +4058,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/better-cloud-investment-amazon-or-nebius-group",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "776797397803198928",
@@ -3939,7 +4069,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/why-constellation-energy-rallied-today",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-9220660462220825226",
@@ -3952,7 +4082,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/m/6612443d-a988-30ab-8b0c-3bf4dceff987/why-memory-stocks-are-sitting.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4871964151423858034",
@@ -3963,7 +4093,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952327-discovery-mining-a-path-to-tripling-its-gold-production",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6119251131269634308",
@@ -3974,7 +4104,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952326-10-percent-raise-from-cummins-and-3-other-september-raises",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4641727592099269052",
@@ -3985,7 +4115,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952325-chi-to-chy-swap-into-the-cheaper-calamos-convertible-twin",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-467734379813380693",
@@ -3996,7 +4126,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/antoniopequenoiv/2026/10/06/trump-mobile-hack-exposes-personal-data-for-thousands-of-customers",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4637845894866190174",
@@ -4009,7 +4139,7 @@
       ],
       "summary": null,
       "url": "https://economictimes.indiatimes.com/tech/funding/nvidia-backed-lambda-targets-4-billion-raise-ahead-of-planned-ipo-wsj/articleshow/134749552.cms",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5835196952050623063",
@@ -4020,7 +4150,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952338-pt-medco-energi-internasional-tbk-2026-q2-results-earnings-call-presentation",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6390294025654956937",
@@ -4034,7 +4164,7 @@
       ],
       "summary": null,
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPV0g3Vl9oNWVWc0JnemQ3U2xLOXJ0SDZZSVljcEtiaExTRTgtTzB1a3puLURIQjJJSmJvbG1XbE9jVWlKSTdfWFpSblZIUzhiTkVITkFpcm1XT1NMVVVQVHRZaXJoejh4UG5HaDRWQWNHclgtUmIxX1g2czJ3SUhFZEVlSGtrR1U",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2110009535407550729",
@@ -4045,7 +4175,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/fionariley/2026/10/06/heavier-dementia-patients-tend-to-live-longer-and-researchers-are-unsure-why",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5069702420746740037",
@@ -4056,7 +4186,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952337-pt-medco-energi-internasional-tbk-mdcoy-q2-2026-earnings-call-transcript",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4829699547143135295",
@@ -4067,7 +4197,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952324-jefferson-capital-low-valuation-backed-by-rising-recoveries",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3994184527828375495",
@@ -4080,7 +4210,7 @@
       ],
       "summary": null,
       "url": "https://developer.nvidia.com/blog/doca-gpunetio-gda-ki-unified-gpu-networking",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6527067066925250844",
@@ -4091,7 +4221,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952323-genmab-epkinly-shines-in-phase-3-dlbcl-trial",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-295079162169245372",
@@ -4105,7 +4235,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/list-large-cap-stocks-to-follow-today-october-6th-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2857791037089998684",
@@ -4120,7 +4250,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/list-technology-stocks-to-research-october-6th-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1832302206206759005",
@@ -4133,7 +4263,7 @@
       ],
       "summary": null,
       "url": "https://www.webpronews.com/broadcoms-vmware-pricing-overhaul-pushes-90-of-users-toward-alternatives",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7103433583084256797",
@@ -4146,7 +4276,7 @@
       ],
       "summary": null,
       "url": "https://www.youtube.com/watch",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4633719576007842194",
@@ -4157,7 +4287,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952334-apogee-enterprises-inc-2027-q2-results-earnings-call-presentation",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6995871196220975917",
@@ -4168,7 +4298,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952333-lamb-weston-holdings-inc-2027-q1-results-earnings-call-presentation",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7279252788926131051",
@@ -4181,7 +4311,7 @@
       ],
       "summary": null,
       "url": "https://www.techmeme.com/261006/p32",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2826964993734254089",
@@ -4192,7 +4322,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.bloomberg.com/opinion/articles/2026-10-06/australia-s-energy-experiment-proved-the-skeptics-wrong",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3126934301549765675",
@@ -4205,7 +4335,7 @@
       ],
       "summary": null,
       "url": "https://www.pymnts.com/cybersecurity/2026/crowdstrike-launches-startup-accelerator-to-combat-ai-related-threats",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2304683061967873981",
@@ -4218,7 +4348,7 @@
       ],
       "summary": null,
       "url": "https://www.tomshardware.com/desktops/gaming-pcs/hp-takes-usd2200-off-a-ryzen-7-9800x3d-and-rtx-5080-prebuilt-at-usd2-799-sale-slashes-44-percent-off-an-omen-system-thats-ready-to-game-however-you-want",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6336655156625442909",
@@ -4229,7 +4359,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952321-reams-asset-management-q3-2026-letter-to-clients",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-226722063278924641",
@@ -4240,7 +4370,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952295-rpm-international-inc-rpm-q1-2027-earnings-call-transcript",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8026322012166474186",
@@ -4251,7 +4381,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952293-atco-ltd-aco-x-ca-discusses-merger-of-canadian-utilities-and-emera-and-strategic-spin-out-of",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4610610884628548594",
@@ -4262,7 +4392,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/forbestv/2026/10/06/this-is-the-key-question-we-need-answered-about-cornell-investigation-title-ix-attorney",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6019710515050408534",
@@ -4273,7 +4403,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952319-visa-mastercard-at-risk-of-disruption-time-to-underweight-them",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7450047760476122376",
@@ -4286,7 +4416,7 @@
       ],
       "summary": null,
       "url": "https://www.tikr.com/blog/surging-etfs-up-in-2026",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3916199895950204483",
@@ -4297,7 +4427,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952318-vltava-fund-q3-2026-letter-to-shareholders",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8894075614517096661",
@@ -4308,7 +4438,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/qualcomms-ai-infrastructure-pivot-is-underapprecia",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4466404750378835424",
@@ -4319,7 +4449,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/department-of-energy-announces-a-new-multi-billion-dollar-nuclear-energy-deal",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1691121744543139177",
@@ -4330,7 +4460,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952315-chatham-lodging-trust-credit-profile-and-rating-8-71-percent-cy-on-preferred-shares",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-708681303759708317",
@@ -4341,7 +4471,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/why-option-care-health-stock-skyrocketed-on-tuesday",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4139118485894645193",
@@ -4352,7 +4482,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952284-stocks-are-getting-cheaper-even-as-indices-rally",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7182809037071784074",
@@ -4366,7 +4496,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/m/667e263c-1832-3aad-8c7e-270a36395b2a/seagate-and-western-digital.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-806368158535708311",
@@ -4377,7 +4507,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952328-omniab-inc-oabi-analyst-investor-day-slideshow",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2732451783761139852",
@@ -4390,7 +4520,7 @@
       ],
       "summary": null,
       "url": "https://blockonomi.com/constellation-energy-soars-13-on-record-3-6-gigawatt-google-power-agreement",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "9056120758531253645",
@@ -4401,7 +4531,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952320-mideast-disruptions-north-american-ngl-export-growth",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2542356285454951793",
@@ -4412,7 +4542,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/3-growth-stocks-to-buy-instead-of-spacex",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3059607344754376138",
@@ -4425,7 +4555,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/m/2a003763-34ba-3048-b95d-81b76986c0a0/micron-stock-drops.-why-it.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6826618314217797635",
@@ -4438,7 +4568,7 @@
       ],
       "summary": null,
       "url": "https://www.barchart.com/story/news/4990205/3-reasons-why-you-should-still-buy-amd-stock-at-a-1-trillion-valuation",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6499256096414802181",
@@ -4451,7 +4581,7 @@
       ],
       "summary": null,
       "url": "https://www.investing.com/news/stock-market-news/why-is-broadcom-stock-rallying-today-93CH-4935075",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7909659377892600381",
@@ -4462,7 +4592,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/why-corteva-stock-is-rocketing-higher-today",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3484939861222322330",
@@ -4475,7 +4605,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/m/7003431f-36c8-336f-bf14-80d032b6a728/only-four-trillion-dollar.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4739748009366085395",
@@ -4488,7 +4618,7 @@
       ],
       "summary": null,
       "url": "https://www.phoronix.com/news/Boost-Recently-Busy-CPUs",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4465675191077726794",
@@ -4501,7 +4631,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/options-broadcom-nasdaq-avgo-stock-sees-heavy-call-option-buying-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2051948506561477114",
@@ -4512,7 +4642,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/why-c-h-robinson-stock-was-sliding-again-today",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3695094846758956275",
@@ -4523,7 +4653,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/3-magnificent-ai-cloud-computing-stocks-that-could",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1304884024659787012",
@@ -4534,7 +4664,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952311-energy-transfer-buy-the-dip-proprietary-forecast-sees-strong-volume-growth",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8779543756301928099",
@@ -4547,7 +4677,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952310-palantir-bullish-ai-case-has-never-looked-more-exciting",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8298539849756954233",
@@ -4558,7 +4688,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/johntamny/2026/10/06/without-the-chinese-the-us-cant-win-the-ai-race-with-china",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5471591451584307464",
@@ -4571,7 +4701,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111658/broadcom-stocks-rise-41-as-power-bottleneck-leaves-forecasts-intact",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6433466502858510643",
@@ -4584,7 +4714,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111655/nvidia-recordbreaking-jump-sends-shockwaves-through-nearly-900-etfs",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3034647891023732741",
@@ -4597,7 +4727,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111611/tsmc-stocks-drop-as-musk-confirms-terafab-talks-without-a-deal",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4148415893465570025",
@@ -4610,7 +4740,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111560/cathie-wood-just-bought-13-million-of-broadcom-stock",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-9207370046190444744",
@@ -4621,7 +4751,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/why-i-don-t-think-meta-s-ai-strategy-will-be-successful",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7401612320875640819",
@@ -4632,7 +4762,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952308-tradeweb-remains-an-interesting-growth-play-in-the-financial-sector",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7148738022239771823",
@@ -4645,7 +4775,7 @@
       ],
       "summary": null,
       "url": "https://www.barchart.com/story/news/4989909/amd-stock-looks-hot-at-new-all-time-highs-but-any-hiccups-will-burst-the-entire-ai-bubble",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3623857086000538473",
@@ -4656,7 +4786,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/would-you-let-an-ai-agent-trade-crypto-for-you-rob",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7006821477745496985",
@@ -4669,7 +4799,7 @@
       ],
       "summary": null,
       "url": "https://www.techpowerup.com/353425/nvidia-releases-geforce-617-42-whql-game-ready-drivers",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4246873159428811949",
@@ -4682,7 +4812,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/list-best-manufacturing-stocks-to-watch-today-october-6th-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8947387053660467497",
@@ -4695,7 +4825,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/technology/ai/articles/tsmc-q3-earnings-strong-ai-180000931.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7381679987846769480",
@@ -4708,7 +4838,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-2-momentum-stocks-buy-180000565.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8158063587657849637",
@@ -4721,7 +4851,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/markets/stocks/articles/3-red-hot-stocks-benefited-180000916.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3253443711843956406",
@@ -4732,7 +4862,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/odd-one-out-one-mega-cap-tech-giant-is-a-sell",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2533364118546654863",
@@ -4745,7 +4875,7 @@
       ],
       "summary": null,
       "url": "https://slashdot.org/story/26/10/06/1649245/licensing-costs-driving-90-of-vmware-users-to-explore-options-survey-finds",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1033086886618972908",
@@ -4756,7 +4886,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952307-continuing-conflicts-favor-leveraged-gush-etf",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4610429477004612156",
@@ -4769,7 +4899,7 @@
       ],
       "summary": null,
       "url": "https://thenextweb.com/news/amd-su-safety-ecosystem-europe",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4226331095529211957",
@@ -4780,7 +4910,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/tomlayberger/2026/10/06/several-ivy-league-grads-making-their-mark-in-the-fbs",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2057826455395935619",
@@ -4793,7 +4923,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/news/4650659-nvidia-backed-neocloud-lambda-is-raising-4b-in-final-round-before-ipo---wsj",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1815020022188126239",
@@ -4804,7 +4934,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/chuckmurr/2026/10/06/sam-mcdowell-passes-away-at-84---alcohol-ruined-career-60-years-ago",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3520507851708602024",
@@ -4818,7 +4948,7 @@
       ],
       "summary": null,
       "url": "https://invezz.com/news/2026/10/06/seagate-western-digital-stocks-are-falling-again-on-tuesday-heres-why",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8956378962543810179",
@@ -4831,7 +4961,7 @@
       ],
       "summary": null,
       "url": "https://robottoday.com/industry-briefing/nvidia-acquires-hugging-face-to-strengthen-position-in-physical-ai-development/15043",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8900709308379317811",
@@ -4842,7 +4972,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/forbestv/2026/10/06/heres-what-concerns-me-most-about-the-russian-plague-lab-death-former-white-house-official",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1420453902174093877",
@@ -4855,7 +4985,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952306-micron-tighter-market-conditions-through-2028-mean-this-is-a-great-buy",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8206383584106135768",
@@ -4866,7 +4996,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/trentreinsmith/2026/10/06/ufc-333-main-event-early-betting-odds-and-line-movement",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6524556113910045093",
@@ -4879,7 +5009,7 @@
       ],
       "summary": null,
       "url": "https://www.barchart.com/story/news/4989307/mu-stock-alert-what-to-know-as-micron-netlist-reach-600-million-patent-settlement",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7611582904420171561",
@@ -4890,7 +5020,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952289-value-line-inc-valu-shareholder-analyst-call-transcript",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1128947088545078812",
@@ -4903,7 +5033,7 @@
       ],
       "summary": null,
       "url": "https://blockonomi.com/amazon-amzn-stock-eyes-8-billion-nvidia-chip-financing-deal-as-amzn-gains",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3746130075509741294",
@@ -4914,7 +5044,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952305-koru-south-koreas-daily-returns-amplified-by-factor-of-3x",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2088697769510997536",
@@ -4927,7 +5057,7 @@
       ],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/why-broadcom-stock-popped-tuesday-morning",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4965340401707612880",
@@ -4938,7 +5068,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952314-canadian-utilities-limited-cu-ca-emera-incorporated-m-and-a-call-slideshow",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "9169701083691395124",
@@ -4952,7 +5082,7 @@
       ],
       "summary": null,
       "url": "https://blockonomi.com/western-digital-wdc-and-seagate-face-pressure-from-multi-billion-dollar-tdk-acquisition-race",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8495155171704362552",
@@ -4965,7 +5095,7 @@
       ],
       "summary": null,
       "url": "https://www.tikr.com/blog/citi-predicts-25-upside-for-amd-as-the-key-beneficiary-of-an-expanded-300-billion-cpu-market",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4489846625246668162",
@@ -4976,7 +5106,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952250-consolidated-edison-inc-ed-discusses-strategy-for-clean-energy-transition-and-infrastructure",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "9093392500048229368",
@@ -4987,7 +5117,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952313-nomad-foods-limited-nomd-analyst-investor-day-slideshow",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "614047404814589135",
@@ -4998,7 +5128,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/carolinereid/2026/10/06/jurassic-world-rebirth-roars-off-with-220-million-profit",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1998759494227490134",
@@ -5009,7 +5139,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952302-oil-and-gas-you-aint-seen-nothing-yet",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3454277402786383093",
@@ -5023,7 +5153,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952300-nvidia-the-capital-bottleneck-is-becoming-a-6-trillion-catalyst",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3929187724612221026",
@@ -5034,7 +5164,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952276-navigating-through-an-increasingly-irrational-market",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3831037536983293319",
@@ -5045,7 +5175,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952299-alliance-laundry-holdings-is-cleaning-up-nicely",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4652257628772386184",
@@ -5058,7 +5188,7 @@
       ],
       "summary": null,
       "url": "https://www.techspot.com/news/114116-amd-vows-massively-increase-ai-chip-supply-2027.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1460157440709924123",
@@ -5069,7 +5199,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952309-tva-secures-first-smr-construction-permit",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3395913931648498927",
@@ -5080,7 +5210,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952210-aurora-innovation-the-technology-is-maturing-now-comes-the-hard-part",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1709517354577614686",
@@ -5091,7 +5221,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/pepsicos-next-earnings-report-on-oct-8-2026-could-send-the-stock-soaringplunging-heres-why",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3084241324307810429",
@@ -5104,7 +5234,7 @@
       ],
       "summary": null,
       "url": "https://www.investopedia.com/market-update-amd-stock-hit-a-fresh-high-meta-muse-ai-agent-is-a-win-for-the-chipmaker-says-citi-12161248",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2237098658668508387",
@@ -5115,7 +5245,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/paramount-completes-acquisition-of-warner-bros-discovery-heres-what-comes-next-for-skydance-skyd",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5047899499411672693",
@@ -5126,7 +5256,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/tedreed/2026/10/06/american-airlines-plans-huge-airport-club-for-charlotte-as--lease-deal-nears",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-342004756438953149",
@@ -5137,7 +5267,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/3-of-the-best-growth-stocks-to-buy-in-october-2026",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8388849019846837589",
@@ -5148,7 +5278,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/hsbc-thinks-abbvie-can-climb-to-315-heres-the-bull",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3572705359300179893",
@@ -5162,7 +5292,7 @@
       ],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/sandisk-vs-sk-hynix-which-memory-stock-has-more-up",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5738730515212712526",
@@ -5175,7 +5305,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111595/micron-stocks-edge-lower-as-2027-memory-peak-tests-record-margins",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8382963779027547627",
@@ -5186,7 +5316,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952298-central-puerto-sa-powering-up-the-navsotp",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5230403772428614598",
@@ -5199,7 +5329,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-2090-shares-of-micron-technology-inc-mu-acquired-by-paladin-partners-llc-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "7392722244818157672",
@@ -5212,7 +5342,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-micron-technology-inc-mu-stock-bought-by-legacy-private-trust-co-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-400320398548193699",
@@ -5225,7 +5355,7 @@
       ],
       "summary": null,
       "url": "https://www.livemint.com/ai/anthropic-ceo-dario-amodei-made-18-million-in-2025-how-it-compares-with-tech-peers-11791305349667.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5047347746869451912",
@@ -5238,7 +5368,7 @@
       ],
       "summary": null,
       "url": "https://lunduke.substack.com/p/nvidia-says-wayland-not-faster-than",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6538869659883000417",
@@ -5253,7 +5383,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/m/4dd12e57-7617-3012-b143-0d797d9fa46f/marvell%2C-nvidia%2C-amd%2C.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3365176950985557811",
@@ -5264,7 +5394,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/costcos-cash-pile-keeps-building-could-a-special-d",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-192380123394147089",
@@ -5275,7 +5405,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952297-neighborhood-intelligence-a-kitchen-sink-monday",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4353173473560798592",
@@ -5288,7 +5418,7 @@
       ],
       "summary": null,
       "url": "https://www.tickerreport.com/banking-finance/13610003/2782-broadcom-inc-avgo-shares-purchased-by-colton-groome-financial-advisors-llc.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2542113836220840003",
@@ -5301,7 +5431,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-eleva-capital-sas-increases-holdings-in-taiwan-semiconductor-manufacturing-company-ltd-tsm-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-72725295549973515",
@@ -5314,7 +5444,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-eleva-capital-sas-makes-new-1123-million-investment-in-broadcom-inc-avgo-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2878923549557383836",
@@ -5327,7 +5457,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-taiwan-semiconductor-manufacturing-company-ltd-tsm-stock-acquired-by-colton-groome-financial-advisors-llc-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "494723606691621194",
@@ -5340,7 +5470,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-broadcom-inc-avgo-shares-bought-by-colton-groome-financial-advisors-llc-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5370734571216162592",
@@ -5353,7 +5483,7 @@
       ],
       "summary": null,
       "url": "https://www.marketbeat.com/instant-alerts/filing-byrne-asset-management-llc-sells-2190-shares-of-advanced-micro-devices-inc-amd-2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "9175577264912422724",
@@ -5364,7 +5494,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/daviddeal/2026/10/06/a-verity-strong-opening-demonstrates-the-power-of-women-in-theaters",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4293462852805096521",
@@ -5375,7 +5505,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952296-ast-spacemobile-the-bull-case-just-got-stronger",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-332388840814455192",
@@ -5386,7 +5516,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/conormurray/2026/10/06/trump-likely-cant-claim-executive-privilege-in-kennedy-center-case-legal-experts-say",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2659905863306071279",
@@ -5399,7 +5529,7 @@
       ],
       "summary": null,
       "url": "https://semiwiki.com",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3904031572318027876",
@@ -5412,7 +5542,7 @@
       ],
       "summary": null,
       "url": "https://www.servethehome.com/gigabyte-w775-v10-l01-hands-on-bringing-nvidia-gb300-deskside",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4517145502425870391",
@@ -5425,7 +5555,7 @@
       ],
       "summary": null,
       "url": "https://www.forbes.com/sites/zacharyfolk/2026/10/06/michael-dells-net-worth-soars-after-stock-market-gains-closing-the-gap-with-googles-larry-page",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3596131034940577685",
@@ -5440,7 +5570,7 @@
       ],
       "summary": null,
       "url": "https://247wallst.com/investing/2026/10/06/sk-hynix-falls-4-on-earnings-caution-before-a-rebalancing-goldman-says-favors-it-sandisk-slips-2-micron-holds-firm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3636265499506630055",
@@ -5451,7 +5581,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952291-ast-spacemobile-cheaper-and-better-than-spacex-upgrade",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1334085436940573286",
@@ -5464,7 +5594,7 @@
       ],
       "summary": null,
       "url": "https://nai500.com/blog/2026/10/nvidia-nears-6-trillion-as-buyback-ai-hype-fuel-rally",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6340800217912350129",
@@ -5477,7 +5607,7 @@
       ],
       "summary": null,
       "url": "https://cryptobriefing.com/nvidia-approaches-6-trillion-market-cap-as-stock-hits-record-high",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7018022926442966652",
@@ -5490,7 +5620,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/markets/article/as-ai-bubble-fears-circulate-remember-the-railroad-bust-of-1873-165422026.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3923267464601864840",
@@ -5501,7 +5631,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/timlammers/2026/10/06/artificial-early-reviews-cheer-biopic-about-openai-ceo-sam-altman",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6194660281516080594",
@@ -5514,7 +5644,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111589/nvidia-stocks-rise-14-as-power-crunch-spares-2027-forecasts",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-184090599887885750",
@@ -5527,7 +5657,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/wallstreetbets/comments/1wz7l9t/advanced_money_dispenser_leap_positions",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3071605044651302397",
@@ -5538,7 +5668,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/terdawn-deboe/2026/10/06/5-tips-to-get-your-small-business-recommended-by-ai-in-q4",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4394853157632531277",
@@ -5551,7 +5681,7 @@
       ],
       "summary": null,
       "url": "https://247wallst.com/investing/2026/10/06/jensen-huang-vs-satya-nadella-whose-promises-about-ai-better-approximate-the-truth",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1516767252573848609",
@@ -5564,7 +5694,7 @@
       ],
       "summary": null,
       "url": "https://247wallst.com/investing/2026/10/06/western-digital-fell-nearly-20-over-the-last-3-months-a-respected-wall-street-analyst-says-140-to-come",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1314188926155423505",
@@ -5577,7 +5707,7 @@
       ],
       "summary": null,
       "url": "https://247wallst.com/investing/2026/10/06/heres-why-im-buying-broadcom-even-as-concerns-about-circular-financing-with-anthropic-mount",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2705163075717825155",
@@ -5590,7 +5720,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111581/amd-stocks-jump-21-as-2027-supply-push-and-800-target",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6168560311730321809",
@@ -5603,7 +5733,7 @@
       ],
       "summary": null,
       "url": "https://www.reddit.com/r/wallstreetbets/comments/1wz7g0s/broadcom_is_finally_moving_lets_goo",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8305827632260294962",
@@ -5617,7 +5747,7 @@
       ],
       "summary": null,
       "url": "https://www.trefis.com/articles/617682/what-could-send-sandisk-stock-soaring/2026-10-06",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1653066540508264844",
@@ -5630,7 +5760,7 @@
       ],
       "summary": null,
       "url": "https://www.gurufocus.com/news/9111558/cathie-wood-dumps-millions-of-amd-stock-amid-massive-rally",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3919360216313607367",
@@ -5641,7 +5771,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/why-marvell-stock-rallied-tuesday-morning",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4494613731630983872",
@@ -5652,7 +5782,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952286-astronincs-marked-down-after-a-record-quarter-buy",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5910940424252602885",
@@ -5663,7 +5793,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/history-says-infrastructure-booms-create-winners-a",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7621669711580083625",
@@ -5674,7 +5804,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.mbi-deepdives.com/ads-data",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5333325568910796213",
@@ -5687,7 +5817,7 @@
       ],
       "summary": null,
       "url": "https://www.law360.com/corporate/articles/2534113",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8879067100941777501",
@@ -5698,7 +5828,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952290-quince-therapeutics-inc-qncx-shareholder-analyst-call-prepared-remarks-transcript",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7539441722272057912",
@@ -5709,7 +5839,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/3-of-the-best-dividend-stocks-to-buy-in-october-2026",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8880271729659419972",
@@ -5720,7 +5850,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952275-tesla-cybercab-a-trillion-dollar-business-im-not-buying",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-352498057728816937",
@@ -5733,7 +5863,7 @@
       ],
       "summary": null,
       "url": "https://tracking.swap.fm/track/bHsDpvy53mYwJpnc1UL5/traffic.megaphone.fm/MOBI7217201841.mp3",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4634742163152780867",
@@ -5744,7 +5874,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952274-chipmos-theres-still-potential-to-outperform-in-long-run",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4809249534164365219",
@@ -5755,7 +5885,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952260-lamb-weston-holdings-inc-lw-q1-2027-earnings-call-transcript",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6014610381437405049",
@@ -5768,7 +5898,7 @@
       ],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/not-microsoft-not-google-the-2-trillion-tech-titan",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8173061480347150458",
@@ -5781,7 +5911,7 @@
       ],
       "summary": null,
       "url": "https://fortune.com/2026/10/06/taiwan-opens-phoenix-office-as-265-billion-chip-investment-in-arizona-grows-over-chinas-objections",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5488671027502637641",
@@ -5792,7 +5922,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952272-adient-onshoring-and-conquest-wins-drive-robust-backlog",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4442362050672246807",
@@ -5803,7 +5933,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952271-elevated-short-selling-points-to-year-end-rally",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1663590800001607547",
@@ -5814,7 +5944,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952270-first-industrial-39-percent-rent-growth-and-the-stock-is-falling",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5979656534155378531",
@@ -5825,7 +5955,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/why-centrus-stock-popped-on-tuesday",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-910815175211983320",
@@ -5836,7 +5966,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/history-says-this-1-move-will-determine-whether",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8892648020301550104",
@@ -5850,7 +5980,7 @@
       ],
       "summary": null,
       "url": "https://finance.yahoo.com/m/008d4be5-bcad-334f-9c07-c0776f2b87d3/seagate-and-western-digital.html",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8120481696279220247",
@@ -5863,7 +5993,7 @@
       ],
       "summary": null,
       "url": "https://9to5toys.com/2026/10/06/rare-portable-ssd-storage-fall-prime-day-deals",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-2311846055828940182",
@@ -5874,7 +6004,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952268-bradesco-is-no-longer-just-a-turnaround-story-after-the-election-rally",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-530234967509906105",
@@ -5885,7 +6015,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/paultassi/2026/10/06/the-best-taylor-sheridan-shows-by-rotten-tomatoes-score-from-tulsa-king-to-mayor-of-kingstown",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8449848668640111101",
@@ -5896,7 +6026,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952267-market-concentration-isnt-worrying-me-how-im-preparing-for-q4",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "1912507853147757620",
@@ -5909,7 +6039,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952266-nvidia-plenty-of-reasons-to-worry-but-stock-keeps-cooking",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6927560417009830629",
@@ -5920,7 +6050,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/brucebrumberg/2026/10/06/ipos-made-easier-with-ai-tool-developed-by-major-law-firm",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1270053450982779127",
@@ -5931,7 +6061,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952292-canadian-utilities-limited-cu-ca-m-and-a-call-transcript",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-1868483290234593377",
@@ -5942,7 +6072,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952294-informa-plc-ifjpy-m-and-a-call-transcript",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "6602728421819030117",
@@ -5953,7 +6083,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/why-xanadu-quantum-technologies-stock-jumped-17-today",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5901209140559934612",
@@ -5964,7 +6094,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://www.forbes.com/sites/joshweiss/2026/10/06/alternate-history-noir-teq-features-hardboiled-mystery-in-aztec-controlled-los-angeles-first-look",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4947278841976573523",
@@ -5978,7 +6108,7 @@
       ],
       "summary": null,
       "url": "https://www.phoronix.com/review/nvidia-vera-hpc",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "3415773910676156873",
@@ -5991,7 +6121,7 @@
       ],
       "summary": null,
       "url": "https://www.fool.com/coverage/better-buy/2026/10/06/applied-materials-vs-nvidia-which-chip-stock-better-buy-2026",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8680999294280333029",
@@ -6004,7 +6134,7 @@
       ],
       "summary": null,
       "url": "https://www.eweek.com/news/apac-indonesia-nvidia-ai-infrastructure-zankore",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8840937655678719486",
@@ -6017,7 +6147,7 @@
       ],
       "summary": null,
       "url": "https://www.fool.com/investing/2026/10/06/prediction-500-a-month-invested-in-nvidia-stock-wi",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-5196192147828034576",
@@ -6030,7 +6160,7 @@
       ],
       "summary": null,
       "url": "https://invezz.com/news/2026/10/06/netlist-stock-why-micron-will-pay-nlst-30m-a-quarter-for-5-years",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-4075880663814455914",
@@ -6043,7 +6173,7 @@
       ],
       "summary": null,
       "url": "https://www.barchart.com/story/news/4987441/dear-sk-hynix-stock-fans-mark-your-calendars-for-october-8",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-6417718770660035349",
@@ -6056,7 +6186,7 @@
       ],
       "summary": null,
       "url": "https://www.ft.com/content/4aabf94b-2c5c-4ea6-9e5a-660c17ca84db",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4735687909544944064",
@@ -6070,7 +6200,7 @@
       ],
       "summary": null,
       "url": "https://www.marketwatch.com/story/these-5-chip-stocks-are-cheaper-than-the-s-p-500-and-offer-faster-growth-f8ab4386",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4579220620709452882",
@@ -6083,7 +6213,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952265-broadcom-when-the-story-and-the-stock-disagree",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-3979587000110023573",
@@ -6097,7 +6227,7 @@
       ],
       "summary": null,
       "url": "https://247wallst.com/investing/2026/10/06/amd-spikes-4-as-citi-lifts-target-to-800-and-stifel-goes-to-700-nvidia-ticks-up-intel-slips",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7040126760329131127",
@@ -6108,7 +6238,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952245-apogee-enterprises-inc-apog-q2-2027-earnings-call-transcript",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-740730003883961842",
@@ -6119,7 +6249,7 @@
       "tickers": [],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952269-palfinger-ag-plfrf-discusses-write-down-and-deconsolidation-preparations-for-russian-business",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8853672543487851795",
@@ -6134,7 +6264,7 @@
       ],
       "summary": null,
       "url": "https://247wallst.com/investing/2026/10/06/western-digital-sinks-6-as-toshibas-drive-expansion-hits-the-group-seagate-drops-8-micron-holds-flat",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-7571096187265310686",
@@ -6148,18 +6278,7 @@
       ],
       "summary": null,
       "url": "https://247wallst.com/investing/2026/10/06/nvidia-is-now-worth-more-than-meta-amzn-and-amd-combined",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-5034690768997775317",
-      "title": "Prediction: This Is Where the S&P 500 Will Finish 2026",
-      "published_at": "2026-10-06T15:50:02+00:00",
-      "source": "fool.com",
-      "category": "analysis",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.fool.com/investing/2026/10/06/prediction-this-is-where-the-s-and-p-500-will-finish-2026",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "4453300573139821884",
@@ -6172,29 +6291,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952264-micron-the-market-still-doesnt-get-it",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "3580208578390630076",
-      "title": "U.S. July Oil Production Just Short Of New High | $DBO $OILK $UNG $USL $USO",
-      "published_at": "2026-10-06T15:45:00+00:00",
-      "source": "seekingalpha.com",
-      "category": "analysis",
-      "tickers": [],
-      "summary": null,
-      "url": "https://seekingalpha.com/article/4952285-us-july-oil-production-just-short-of-new-high",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-6591018988629445696",
-      "title": "LNG Export Capacity Is Set to Grow 50% by 2030. Here's What It Means for U.S. Energy Stocks.",
-      "published_at": "2026-10-06T15:45:00+00:00",
-      "source": "fool.com",
-      "category": "analysis",
-      "tickers": [],
-      "summary": null,
-      "url": "https://www.fool.com/investing/2026/10/06/lng-export-capacity-is-set-to-grow-50-by-2030-here",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8809890513908799300",
@@ -6207,7 +6304,7 @@
       ],
       "summary": null,
       "url": "https://mixed-news.com/en/amd-sb-6033-rccl-cve-2026-43598-54974-instinct-rocm-7-14",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "2761577460974851756",
@@ -6220,7 +6317,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952263-amazon-q3-profit-could-explode",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "-8082856808732688795",
@@ -6233,7 +6330,7 @@
       ],
       "summary": null,
       "url": "https://seekingalpha.com/article/4952262-micron-q4-blowout-why-memory-supercycle-still-has-runway",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "5469579157460049689",
@@ -6246,7 +6343,7 @@
       ],
       "summary": null,
       "url": "https://www.bloomberg.com/news/audio/2026-10-06/s-p-500-adds-to-record-nvidia-near-6-trillion-club-more",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     },
     {
       "news_id": "8797934333180084577",
@@ -6260,20 +6357,7 @@
       ],
       "summary": null,
       "url": "https://blockonomi.com/tech-giants-pour-billions-into-ai-infrastructure-through-2032",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
-    },
-    {
-      "news_id": "-1699390486005184292",
-      "title": "Seagate and Toshiba both want to acquire TDK's disk read/write head business",
-      "published_at": "2026-10-06T15:32:08+00:00",
-      "source": "blocksandfiles.com",
-      "category": "watchlist",
-      "tickers": [
-        "STX"
-      ],
-      "summary": null,
-      "url": "https://www.blocksandfiles.com/disk/2026/10/06/seagate-and-toshiba-both-want-to-acquire-tdks-disk-read/write-head-business/5301393",
-      "fetched_at": "2026-10-06T22:55:55.179137+00:00"
+      "fetched_at": "2026-10-06T23:16:30.389375+00:00"
     }
   ]
 }
