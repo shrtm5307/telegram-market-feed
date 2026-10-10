@@ -1,44 +1,38 @@
 # telegram-market-feed
 
-Railway에서 24시간 실행되는 Telegram 뉴스 수집기입니다.
+GitHub Actions가 Telegram 공개 피드를 주기적으로 수집해 `snapshot-data` 브랜치에 저장합니다. Railway 상시 실행 서비스 없이도 6시간·24시간 공개 피드를 유지합니다.
 
-필수 Railway 환경변수:
-- TELEGRAM_API_ID
-- TELEGRAM_API_HASH
-- TELEGRAM_SESSION_STRING
-- FEED_TOKEN
+## GitHub Actions 설정
 
-선택 Railway 환경변수:
-- SNAPSHOT_MAX_ITEMS (기본값 500): /app/feed_snapshot.json 에 저장되는 최신 피드 아이템 수
+저장소 Settings → Secrets and variables → Actions에 아래 Repository secrets를 등록합니다.
 
-실행 명령:
-`uvicorn app:app --host 0.0.0.0 --port $PORT`
+- `TELEGRAM_API_ID`
+- `TELEGRAM_API_HASH`
+- `TELEGRAM_SESSION_STRING`
 
-공개 스냅샷:
-- `GET /snapshot`은 토큰 없이 현재 `/app/feed_snapshot.json`을 읽습니다.
-- 응답에는 `timestamp`, `count`, `status`, `items`만 포함합니다.
-- 아이템은 `message_id`, `channel_id`, `channel_name`, `channel_username`,
-  `date_utc`, `message`, `url`만 공개하며 count는 반환 아이템 수입니다.
-- 파일 누락, 읽기 오류, 잘못된 데이터 또는 설정된 인증정보 값이 포함된 경우
-  HTTP 503과 `{"timestamp":null,"count":0,"status":"unavailable","items":[]}`을 반환합니다.
-  내부 오류, 파일 경로, 환경변수는 응답에 포함하지 않습니다.
-- 모든 스냅샷 응답은 `Cache-Control: no-store`를 사용합니다.
-- 설정된 비밀값이 일반 메시지나 숫자와 우연히 일치해도 공개를 차단합니다.
-- 기존 `/feed?token=...` 인증과 조회 동작은 유지합니다.
+Telegram 세션 문자열은 코드나 공개 브랜치에 넣지 않습니다. 수집 workflow는 15분 간격으로 실행되며, GitHub Actions 스케줄 특성상 실행 시각이 지연될 수 있습니다. `workflow_dispatch`로 수동 실행할 수도 있습니다.
 
-경량 공개 피드:
-- GitHub Actions가 15분마다 `snapshot-data` 브랜치에 아래 파일을 갱신합니다.
+수집 workflow는 다음 파일을 `snapshot-data` 브랜치에 갱신합니다.
+
+- `latest_snapshot.json`
 - `data/telegram/latest_6h.json`
 - `data/telegram/latest_24h.json`
-- 각 파일은 `generated_utc`, `window_hours`, `freshness_status`,
-  `latest_message_at`, `count`, `items`를 포함합니다.
-- 각 아이템은 `channel_name`, `published_at`, `message`, `url`만 포함하며
-  최신 게시물부터 정렬됩니다.
-- `freshness_status`는 정상 실행 중이고 원본 스냅샷이 45분 이내면 `ok`,
-  더 오래됐으면 `stale`, 초기화 중이면 `unavailable`입니다.
 
-테스트 (실제 Telegram 접속이나 인증정보 불필요):
+공개 윈도우 파일은 `generated_utc`, `freshness_status`, `latest_message_at`, `count`, `items`를 포함합니다. 각 항목은 채널명, 게시시각, 메시지, Telegram URL만 공개합니다. 빈 메시지는 제외합니다.
+
+## 로컬 실행
+
+실제 Telegram 접속 없이 기존 테스트를 실행하려면:
+
 ```sh
 pip install -r requirements.txt httpx==0.28.1
 python -m unittest discover -v
 ```
+
+일회성 수집은 다음 환경변수와 함께 실행할 수 있습니다.
+
+```sh
+python telegram_snapshot.py output/latest_snapshot.json
+```
+
+기존 `app.py`의 FastAPI `/feed`·`/snapshot` 엔드포인트는 로컬 또는 별도 서버에서 사용할 수 있습니다. 해당 실행 방식에는 `TELEGRAM_API_ID`, `TELEGRAM_API_HASH`, `TELEGRAM_SESSION_STRING`, `FEED_TOKEN`이 필요합니다.
