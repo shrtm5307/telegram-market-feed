@@ -20,6 +20,12 @@ Telegram 세션 문자열은 코드나 공개 브랜치에 넣지 않습니다. 
 
 공개 윈도우 파일은 `generated_utc`, `freshness_status`, `latest_message_at`, `count`, `items`를 포함합니다. 각 항목은 채널명, 게시시각, 메시지, Telegram URL만 공개합니다. 빈 메시지는 제외합니다.
 
+## 사진과 PDF
+
+사진은 한국어·영어 OCR을 수행하고, PDF는 먼저 내장 텍스트를 추출합니다. 스캔 PDF는 내장 텍스트가 거의 없는 페이지에 OCR을 시도합니다. 첨부파일 원본은 실행 중 임시 디렉터리에서만 처리하고 공개 브랜치에 저장하지 않습니다.
+
+기본 제한은 파일당 20 MiB, PDF 앞 20페이지, 첨부 텍스트 12,000자입니다. OCR 결과는 메시지 본문에 `[이미지 OCR]` 또는 `[PDF 텍스트 추출]` 표시와 함께 들어갑니다. 지원하지 않는 미디어는 원본 파일을 게시하지 않습니다.
+
 ## 로컬 실행
 
 실제 Telegram 접속 없이 기존 테스트를 실행하려면:
@@ -29,7 +35,7 @@ pip install -r requirements.txt httpx==0.28.1
 python -m unittest discover -v
 ```
 
-일회성 수집은 다음 환경변수와 함께 실행할 수 있습니다.
+일회성 수집은 다음 환경변수와 함께 실행할 수 있습니다:
 
 ```sh
 python telegram_snapshot.py output/latest_snapshot.json
