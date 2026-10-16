@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import asyncio
 from collections import deque
 from datetime import datetime, timezone, timedelta
@@ -8,8 +9,37 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import JSONResponse
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
-from telethon.tl.types import Channel
+from telethon.tl.types import Channel, MessageMediaDocument, MessageMediaPhoto
 import uvicorn
+
+AD_PREFIX_RE = re.compile(r"^(?:광고|협찬|제휴|sponsored|advertisement|promoted)(?:\s|:|：|#|-)", re.IGNORECASE)
+AD_MARKERS = ("광고문의", "유료광고", "#광고", "#협찬", "#sponsored", "telegram ads")
+
+
+def is_advertisement(text):
+    normalized = " ".join((text or "").lower().split())
+    return bool(AD_PREFIX_RE.search(normalized)) or any(
+        marker in normalized for marker in AD_MARKERS
+    )
+
+
+def media_info(message):
+    media = getattr(message, "media", None)
+    if isinstance(media, MessageMediaPhoto):
+        return [{"type": "photo", "name": "", "mime_type": "image/jpeg"}]
+    if isinstance(media, MessageMediaDocument):
+        document = getattr(media, "document", None)
+        mime_type = getattr(document, "mime_type", "") or ""
+        name = ""
+        for attribute in getattr(document, "attributes", ()) or ():
+            candidate = getattr(attribute, "file_name", None)
+            if candidate:
+                name = candidate
+                break
+        kind = "pdf" if mime_type == "application/pdf" or name.lower().endswith(".pdf") else "document"
+        return [{"type": kind, "name": name, "mime_type": mime_type}]
+    return []
+
 
 API_ID = int(os.environ["TELEGRAM_API_ID"])
 API_HASH = os.environ["TELEGRAM_API_HASH"]
@@ -47,6 +77,7 @@ def write_snapshot(status: str):
                 "channel_username": item.get("channel_username") or "",
                 "date_utc": item.get("date_utc"),
                 "message": item.get("message") or "",
+                "attachments": item.get("attachments") or [],
                 "url": item.get("url") or "",
             })
 
@@ -70,13 +101,18 @@ def msg_to_dict(chat, msg):
     dt = msg.date
     if dt and dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
+    text = msg.message or ""
+    attachments = media_info(msg)
+    if (not text.strip() and not attachments) or is_advertisement(text):
+        return None
     return {
         "message_id": msg.id,
         "channel_id": chat.id,
         "channel_name": getattr(chat, "title", ""),
         "channel_username": username or "",
         "date_utc": dt.astimezone(timezone.utc).isoformat() if dt else "",
-        "message": msg.message or "",
+        "message": text,
+        "attachments": attachments,
         "url": url,
     }
 
@@ -87,8 +123,9 @@ async def backfill():
     for ch in channels:
         try:
             async for m in client.iter_messages(ch, limit=BACKFILL_PER_CHANNEL):
-                if m.message:
-                    items.append(msg_to_dict(ch, m))
+                item = msg_to_dict(ch, m)
+                if item:
+                    items.append(item)
         except Exception:
             pass
     items.sort(key=lambda x: x["date_utc"])
@@ -106,6 +143,8 @@ async def on_new_message(event):
         chat = await event.get_chat()
         if isinstance(chat, Channel):
             item = msg_to_dict(chat, event.message)
+            if not item:
+                return
             feed.append(item)
             message_count += 1
             last_message_id = item.get("message_id")
@@ -154,16 +193,26 @@ def get_snapshot():
             raise ValueError("Invalid items")
         items = []
         fields = ("message_id", "channel_id", "channel_name", "channel_username",
-                  "date_utc", "message", "url")
+                  "date_utc", "message", "attachments", "url")
         for item in data["items"]:
             if not isinstance(item, dict):
                 raise ValueError("Invalid item")
             public_item = {}
             for key in fields:
                 value = item.get(key)
-                allowed = (int, type(None)) if key.endswith("_id") else (str, type(None))
-                if type(value) not in allowed:
-                    raise ValueError("Invalid field")
+                if key == "attachments":
+                    if type(value) is not list:
+                        raise ValueError("Invalid attachments")
+                    for attachment in value:
+                        if not isinstance(attachment, dict):
+                            raise ValueError("Invalid attachment")
+                        for field in ("type", "name", "mime_type"):
+                            if type(attachment.get(field)) is not str:
+                                raise ValueError("Invalid attachment field")
+                else:
+                    allowed = (int, type(None)) if key.endswith("_id") else (str, type(None))
+                    if type(value) not in allowed:
+                        raise ValueError("Invalid field")
                 public_item[key] = value
             items.append(public_item)
         result = {"timestamp": timestamp, "count": len(items),
