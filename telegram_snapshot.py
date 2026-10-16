@@ -22,7 +22,7 @@ from telethon.tl.types import Channel, MessageMediaDocument, MessageMediaPhoto
 
 
 
-AD_PREFIX_RE = re.compile(r"^(?:광고|협찬|제휴|sponsored|advertisement|promoted)(?:\\s|:|：|#|-)", re.IGNORECASE)
+AD_PREFIX_RE = re.compile(r"^(?:광고|협찬|제휴|sponsored|advertisement|promoted)(?:\s|:|：|#|-)", re.IGNORECASE)
 AD_MARKERS = (
     "광고문의",
     "유료광고",
