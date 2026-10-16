@@ -11,13 +11,51 @@ import argparse
 import asyncio
 import json
 import os
+import re
 from collections.abc import Iterable
 from datetime import datetime, timezone
 from pathlib import Path
 
 from telethon import TelegramClient
 from telethon.sessions import StringSession
-from telethon.tl.types import Channel
+from telethon.tl.types import Channel, MessageMediaDocument, MessageMediaPhoto
+
+
+
+AD_PREFIX_RE = re.compile(r"^(?:광고|협찬|제휴|sponsored|advertisement|promoted)(?:\s|:|：|#|-)", re.IGNORECASE)
+AD_MARKERS = (
+    "광고문의",
+    "유료광고",
+    "#광고",
+    "#협찬",
+    "#sponsored",
+    "telegram ads",
+)
+
+
+def is_advertisement(text: str) -> bool:
+    normalized = " ".join(text.lower().split())
+    return bool(AD_PREFIX_RE.search(normalized)) or any(
+        marker in normalized for marker in AD_MARKERS
+    )
+
+
+def media_info(message) -> list[dict]:
+    media = getattr(message, "media", None)
+    if isinstance(media, MessageMediaPhoto):
+        return [{"type": "photo", "name": "", "mime_type": "image/jpeg"}]
+    if isinstance(media, MessageMediaDocument):
+        document = getattr(media, "document", None)
+        mime_type = getattr(document, "mime_type", "") or ""
+        name = ""
+        for attribute in getattr(document, "attributes", ()) or ():
+            candidate = getattr(attribute, "file_name", None)
+            if candidate:
+                name = candidate
+                break
+        kind = "pdf" if mime_type == "application/pdf" or name.lower().endswith(".pdf") else "document"
+        return [{"type": kind, "name": name, "mime_type": mime_type}]
+    return []
 
 
 def utc_iso(value: datetime) -> str:
@@ -64,6 +102,7 @@ async def collect(output: Path) -> None:
     successful_channels = 0
     channel_errors = 0
     unsafe_items = 0
+    advertisement_items = 0
 
     await client.connect()
     try:
@@ -78,7 +117,11 @@ async def collect(output: Path) -> None:
             try:
                 async for message in client.iter_messages(channel, limit=per_channel):
                     text = message.message or ""
-                    if not text.strip() or not message.date:
+                    attachments = media_info(message)
+                    if (not text.strip() and not attachments) or not message.date:
+                        continue
+                    if is_advertisement(text):
+                        advertisement_items += 1
                         continue
                     username = getattr(channel, "username", None) or ""
                     item = {
@@ -88,6 +131,7 @@ async def collect(output: Path) -> None:
                         "channel_username": username,
                         "date_utc": utc_iso(message.date),
                         "message": text,
+                        "attachments": attachments,
                         "url": (
                             f"https://t.me/{username}/{message.id}"
                             if username
@@ -131,6 +175,7 @@ async def collect(output: Path) -> None:
     print(
         f"Collected {len(ordered)} items from {successful_channels} channels; "
         f"channel_errors={channel_errors}; unsafe_skipped={unsafe_items}; "
+        f"advertisement_skipped={advertisement_items}; "
         f"latest_message_at={latest}"
     )
 

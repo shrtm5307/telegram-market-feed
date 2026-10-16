@@ -53,13 +53,23 @@ def build_window(snapshot: dict, hours: int, now: datetime | None = None) -> dic
             if not isinstance(item.get(field), (str, type(None))):
                 raise ValueError(f"invalid {field}")
         message = item.get("message") or ""
-        if not message.strip():
+        attachments = item.get("attachments") or []
+        if not isinstance(attachments, list):
+            raise ValueError("invalid attachments")
+        for attachment in attachments:
+            if not isinstance(attachment, dict):
+                raise ValueError("invalid attachment")
+            for field in ("type", "name", "mime_type"):
+                if not isinstance(attachment.get(field), str):
+                    raise ValueError("invalid attachment field")
+        if not message.strip() and not attachments:
             continue
         if cutoff <= published <= generated + FUTURE_TOLERANCE:
             selected.append((published, {
                 "channel_name": item.get("channel_name") or "",
                 "published_at": iso_utc(published),
                 "message": message,
+                "attachments": attachments,
                 "url": item.get("url") or "",
             }))
 
