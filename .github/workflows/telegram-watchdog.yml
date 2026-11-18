@@ -1,0 +1,53 @@
+name: Telegram watchdog
+
+# GitHub's own schedule is best effort. This job only checks the health file
+# and dispatches the collector when the last success is older than 40 minutes.
+on:
+  schedule:
+    - cron: "11,41 * * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: telegram-watchdog
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          path: code
+          persist-credentials: false
+
+      - name: Checkout health data
+        uses: actions/checkout@v4
+        with:
+          ref: snapshot-data
+          path: state
+          persist-credentials: false
+
+      - name: Check last success
+        id: health
+        run: python code/health.py state/data/health/telegram.json --max-age-minutes 40
+
+      - name: Dispatch collector if stale
+        if: steps.health.outputs.stale == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REASON: ${{ steps.health.outputs.reason }}
+        run: |
+          active=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow collect-telegram.yml \
+            --json status --jq '[.[] | select(.status=="queued" or .status=="in_progress")] | length')
+          if [ "$active" != "0" ]; then
+            echo "Collector already queued or running ($active); not dispatching."
+            exit 0
+          fi
+          echo "Collector stale ($REASON); dispatching."
+          gh workflow run collect-telegram.yml --repo "$GITHUB_REPOSITORY" --ref main -f trigger=watchdog
