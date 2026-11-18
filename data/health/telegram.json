@@ -4,24 +4,24 @@
   "error": null,
   "failed": 0,
   "limit_bytes": 16106127360,
-  "pending": 131,
-  "skipped": 4,
-  "uploaded_bytes": 1493660,
+  "pending": 111,
+  "skipped": 0,
+  "uploaded_bytes": 1640791,
   "uploaded_files": 20,
-  "usage_bytes": 24413258
+  "usage_bytes": 26145353
  },
  "error": null,
  "items_count": 500,
- "last_run_utc": "2026-11-18T11:25:45.344386+00:00",
- "last_success_utc": "2026-11-18T11:25:45.344386+00:00",
+ "last_run_utc": "2026-11-18T11:33:19.863973+00:00",
+ "last_success_utc": "2026-11-18T11:33:19.863973+00:00",
  "links": {
   "lookups_used": 37,
   "statuses": {
-   "blocked": 12,
-   "error": 10,
-   "ok": 76,
-   "pending": 212,
-   "timeout": 11
+   "blocked": 16,
+   "error": 15,
+   "ok": 103,
+   "pending": 175,
+   "timeout": 12
   }
  },
  "trigger": "manual"
