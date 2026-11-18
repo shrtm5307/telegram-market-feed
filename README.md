@@ -36,3 +36,27 @@ python telegram_snapshot.py output/latest_snapshot.json
 ```
 
 기존 `app.py`의 FastAPI `/feed`·`/snapshot` 엔드포인트는 로컬 또는 별도 서버에서 사용할 수 있습니다. 해당 실행 방식에는 `TELEGRAM_API_ID`, `TELEGRAM_API_HASH`, `TELEGRAM_SESSION_STRING`, `FEED_TOKEN`이 필요합니다.
+
+## Media archive, link expansion, health and watchdog
+
+* **Drive archive (optional).** Photos, PDFs and other documents up to 50 MB are
+  uploaded to Google Drive under `Telegram_Media_Archive/YYYY-MM/DD/<channel>/`
+  (dates in KST). PDFs also get a `.txt` from `pdftotext` in the same folder.
+  Video/audio are not archived. File bodies never enter this repository; the public
+  `data/telegram/media_index.json` holds only Drive file id, name, size, SHA-256 and
+  status. Feed attachments keep `type`/`name`/`mime_type` and gain `drive_file_id`,
+  `size`, `sha256`, `status`.
+* **Secrets** (GitHub Actions): `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`,
+  `GOOGLE_REFRESH_TOKEN` (OAuth user credential, scope `drive.file`). Create the
+  refresh token locally with `python make_drive_token.py`. Without them uploads are
+  skipped and the text feed is unchanged. Failed/pending files are retried on the
+  next run; per-run limits: `MEDIA_MAX_FILES_PER_RUN`, `MEDIA_MAX_MB_PER_RUN`,
+  `MEDIA_MAX_SECONDS_PER_RUN`.
+* **Links.** Each feed item has `links[]` with `url`, `final_url`, `status`
+  (`ok`, `blocked`, `not_found`, `timeout`, `error`, `invalid`, `pending`) and `title`.
+  5 s limit per link, results cached in `data/telegram/link_cache.json`; sites that
+  refuse automated clients are reported as `blocked`, never bypassed.
+* **Health.** `data/health/telegram.json`: `last_run_utc`, `last_success_utc`,
+  `trigger`, `error`, `items_count`, Drive usage.
+* **Watchdog.** `telegram-watchdog.yml` dispatches the collector when
+  `last_success_utc` is older than 40 minutes.

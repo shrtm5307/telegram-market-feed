@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt httpx
-      - run: python -m unittest test_snapshot test_market_hub -v
+      - run: python -m unittest test_snapshot test_feed_windows test_market_hub -v
       - name: Inspect real Telegram and TickerTick snapshots
         shell: bash
         run: |

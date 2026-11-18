@@ -25,6 +25,44 @@ def iso_utc(value: datetime) -> str:
     return value.astimezone(timezone.utc).isoformat()
 
 
+ATTACHMENT_STR_FIELDS = ("type", "name", "mime_type")
+ATTACHMENT_OPTIONAL_STR = ("drive_file_id", "sha256", "status")
+LINK_FIELDS = ("url", "final_url", "status", "title")
+
+
+def clean_attachment(attachment: dict) -> dict:
+    """Allow-list attachment fields; type/name/mime_type must stay strings."""
+    for field in ATTACHMENT_STR_FIELDS:
+        if not isinstance(attachment.get(field), str):
+            raise ValueError("invalid attachment field")
+    cleaned = {field: attachment[field] for field in ATTACHMENT_STR_FIELDS}
+    for field in ATTACHMENT_OPTIONAL_STR:
+        if field in attachment:
+            if not isinstance(attachment[field], str):
+                raise ValueError("invalid attachment field")
+            cleaned[field] = attachment[field]
+    if "size" in attachment:
+        size = attachment["size"]
+        if isinstance(size, bool) or not isinstance(size, int) or size < 0:
+            raise ValueError("invalid attachment size")
+        cleaned["size"] = size
+    return cleaned
+
+
+def clean_links(links) -> list[dict]:
+    if links is None:
+        return []
+    if not isinstance(links, list):
+        raise ValueError("invalid links")
+    cleaned = []
+    for link in links:
+        if not isinstance(link, dict) or not all(
+                isinstance(link.get(field), str) for field in LINK_FIELDS):
+            raise ValueError("invalid link")
+        cleaned.append({field: link[field] for field in LINK_FIELDS})
+    return cleaned
+
+
 def build_window(snapshot: dict, hours: int, now: datetime | None = None) -> dict:
     if hours <= 0:
         raise ValueError("hours must be positive")
@@ -59,9 +97,8 @@ def build_window(snapshot: dict, hours: int, now: datetime | None = None) -> dic
         for attachment in attachments:
             if not isinstance(attachment, dict):
                 raise ValueError("invalid attachment")
-            for field in ("type", "name", "mime_type"):
-                if not isinstance(attachment.get(field), str):
-                    raise ValueError("invalid attachment field")
+        attachments = [clean_attachment(attachment) for attachment in attachments]
+        links = clean_links(item.get("links"))
         if not message.strip() and not attachments:
             continue
         if cutoff <= published <= generated + FUTURE_TOLERANCE:
@@ -70,6 +107,7 @@ def build_window(snapshot: dict, hours: int, now: datetime | None = None) -> dic
                 "published_at": iso_utc(published),
                 "message": message,
                 "attachments": attachments,
+                "links": links,
                 "url": item.get("url") or "",
             }))
 
