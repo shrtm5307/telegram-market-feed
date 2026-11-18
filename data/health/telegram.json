@@ -1,0 +1,28 @@
+{
+ "drive": {
+  "configured": false,
+  "error": null,
+  "failed": 0,
+  "limit_bytes": null,
+  "pending": 0,
+  "skipped": 0,
+  "uploaded_bytes": 0,
+  "uploaded_files": 0,
+  "usage_bytes": null
+ },
+ "error": null,
+ "items_count": 500,
+ "last_run_utc": "2026-11-18T10:47:06.934149+00:00",
+ "last_success_utc": "2026-11-18T10:47:06.934149+00:00",
+ "links": {
+  "lookups_used": 31,
+  "statuses": {
+   "blocked": 2,
+   "error": 2,
+   "ok": 20,
+   "pending": 290,
+   "timeout": 7
+  }
+ },
+ "trigger": "manual"
+}
