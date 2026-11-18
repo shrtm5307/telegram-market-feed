@@ -1,27 +1,27 @@
 {
  "drive": {
-  "configured": false,
+  "configured": true,
   "error": null,
   "failed": 0,
-  "limit_bytes": null,
-  "pending": 0,
-  "skipped": 0,
-  "uploaded_bytes": 0,
-  "uploaded_files": 0,
-  "usage_bytes": null
+  "limit_bytes": 16106127360,
+  "pending": 131,
+  "skipped": 4,
+  "uploaded_bytes": 1493660,
+  "uploaded_files": 20,
+  "usage_bytes": 24413258
  },
  "error": null,
  "items_count": 500,
- "last_run_utc": "2026-11-18T11:02:06.757441+00:00",
- "last_success_utc": "2026-11-18T11:02:06.757441+00:00",
+ "last_run_utc": "2026-11-18T11:25:45.344386+00:00",
+ "last_success_utc": "2026-11-18T11:25:45.344386+00:00",
  "links": {
-  "lookups_used": 39,
+  "lookups_used": 37,
   "statuses": {
-   "blocked": 9,
-   "error": 4,
-   "ok": 48,
-   "pending": 250,
-   "timeout": 10
+   "blocked": 12,
+   "error": 10,
+   "ok": 76,
+   "pending": 212,
+   "timeout": 11
   }
  },
  "trigger": "manual"
