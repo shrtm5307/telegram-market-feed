@@ -6,16 +6,16 @@
   "limit_bytes": 16106127360,
   "pending": 0,
   "skipped": 0,
-  "uploaded_bytes": 431739,
-  "uploaded_files": 1,
-  "usage_bytes": 48396516
+  "uploaded_bytes": 0,
+  "uploaded_files": 0,
+  "usage_bytes": 48828255
  },
  "error": null,
  "items_count": 500,
- "last_run_utc": "2026-11-21T02:02:15.292332+00:00",
- "last_success_utc": "2026-11-21T02:02:15.292332+00:00",
+ "last_run_utc": "2026-11-21T02:07:04.215473+00:00",
+ "last_success_utc": "2026-11-21T02:07:04.215473+00:00",
  "links": {
-  "lookups_used": 11,
+  "lookups_used": 14,
   "statuses": {
    "blocked": 31,
    "error": 25,
@@ -23,5 +23,5 @@
    "ok": 184
   }
  },
- "trigger": "oracle"
+ "trigger": "schedule"
 }
