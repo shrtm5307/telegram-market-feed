@@ -5,22 +5,21 @@
   "failed": 0,
   "limit_bytes": 16106127360,
   "pending": 0,
-  "skipped": 0,
-  "uploaded_bytes": 17440,
-  "uploaded_files": 1,
-  "usage_bytes": 55731496
+  "skipped": 1,
+  "uploaded_bytes": 312667,
+  "uploaded_files": 3,
+  "usage_bytes": 55893298
  },
  "error": null,
  "items_count": 500,
- "last_run_utc": "2026-11-23T14:17:39.854000+00:00",
- "last_success_utc": "2026-11-23T14:17:39.854000+00:00",
+ "last_run_utc": "2026-11-23T14:32:55.353820+00:00",
+ "last_success_utc": "2026-11-23T14:32:55.353820+00:00",
  "links": {
-  "lookups_used": 13,
+  "lookups_used": 0,
   "statuses": {
-   "blocked": 26,
+   "blocked": 25,
    "error": 28,
-   "not_found": 1,
-   "ok": 176
+   "ok": 172
   }
  },
  "trigger": "oracle"
