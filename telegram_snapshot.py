@@ -11,7 +11,6 @@ import argparse
 import asyncio
 import json
 import os
-import re
 import time
 from collections.abc import Iterable
 from datetime import datetime, timezone
@@ -21,46 +20,12 @@ from drive_archive import DriveClient, credentials_from_env
 from health import scrub, write_health
 from link_resolver import LinkCache, extract_urls, resolve_links
 from media_archive import Budget, MediaIndex, MediaTask, archive_media
+from message_fields import (  # noqa: F401  (re-exported for callers/tests)
+    AD_MARKERS, AD_PREFIX_RE, DOWNLOADABLE_TYPES, classify, is_advertisement, media_info)
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 from telethon.tl.types import Channel, MessageMediaDocument, MessageMediaPhoto
 
-
-
-AD_PREFIX_RE = re.compile(r"^(?:광고|협찬|제휴|sponsored|advertisement|promoted)(?:\s|:|：|#|-)", re.IGNORECASE)
-AD_MARKERS = (
-    "광고문의",
-    "유료광고",
-    "#광고",
-    "#협찬",
-    "#sponsored",
-    "telegram ads",
-)
-
-
-def is_advertisement(text: str) -> bool:
-    normalized = " ".join(text.lower().split())
-    return bool(AD_PREFIX_RE.search(normalized)) or any(
-        marker in normalized for marker in AD_MARKERS
-    )
-
-
-def media_info(message) -> list[dict]:
-    media = getattr(message, "media", None)
-    if isinstance(media, MessageMediaPhoto):
-        return [{"type": "photo", "name": "", "mime_type": "image/jpeg"}]
-    if isinstance(media, MessageMediaDocument):
-        document = getattr(media, "document", None)
-        mime_type = getattr(document, "mime_type", "") or ""
-        name = ""
-        for attribute in getattr(document, "attributes", ()) or ():
-            candidate = getattr(attribute, "file_name", None)
-            if candidate:
-                name = candidate
-                break
-        kind = "pdf" if mime_type == "application/pdf" or name.lower().endswith(".pdf") else "document"
-        return [{"type": kind, "name": name, "mime_type": mime_type}]
-    return []
 
 
 def media_size(message) -> int | None:
@@ -107,9 +72,15 @@ def contains_secret(item: dict, secrets: Iterable[str]) -> bool:
         str(item.get(key) or "")
         for key in ("channel_name", "channel_username", "message", "url")
     )
+    for attachment in item.get("attachments") or ():
+        public_text += " " + str(attachment.get("name") or "")
     for link in item.get("links") or ():
         public_text += " " + " ".join(str(link.get(k) or "") for k in ("url", "final_url", "title"))
     return any(secret in public_text for secret in secrets)
+
+
+QUIET_SKIPS = frozenset({"advertisement", "service"})
+MAX_SKIPPED_POSTS = 50
 
 
 def env_int(name: str, default: int) -> int:
@@ -138,8 +109,9 @@ async def collect(output: Path, media_index_path: Path, link_cache_path: Path) -
     messages: dict[tuple[int, int], object] = {}
     successful_channels = 0
     channel_errors = 0
-    unsafe_items = 0
-    advertisement_items = 0
+    channel_error_names: list[str] = []
+    skip_counts: dict[str, int] = {}
+    skipped_posts: list[dict] = []
     media_stats = {"configured": False}
     index = MediaIndex(media_index_path)
 
@@ -155,36 +127,47 @@ async def collect(output: Path, media_index_path: Path, link_cache_path: Path) -
                 continue
             try:
                 async for message in client.iter_messages(channel, limit=per_channel):
-                    text = message.message or ""
-                    attachments = media_info(message)
-                    if (not text.strip() and not attachments) or not message.date:
-                        continue
-                    if is_advertisement(text):
-                        advertisement_items += 1
-                        continue
                     username = getattr(channel, "username", None) or ""
-                    item = {
-                        "message_id": message.id,
-                        "channel_id": channel.id,
-                        "channel_name": getattr(channel, "title", "") or "",
-                        "channel_username": username,
-                        "date_utc": utc_iso(message.date),
-                        "message": text,
-                        "attachments": attachments,
-                        "url": (
-                            f"https://t.me/{username}/{message.id}"
-                            if username
-                            else ""
-                        ),
-                    }
-                    if contains_secret(item, configured_secrets()):
-                        unsafe_items += 1
+                    try:
+                        reason, attachments = classify(message)
+                        if reason == "keep":
+                            item = {
+                                "message_id": message.id,
+                                "channel_id": channel.id,
+                                "channel_name": getattr(channel, "title", "") or "",
+                                "channel_username": username,
+                                "date_utc": utc_iso(message.date),
+                                "message": getattr(message, "message", None) or "",
+                                "attachments": attachments,
+                                "url": (
+                                    f"https://t.me/{username}/{message.id}"
+                                    if username
+                                    else ""
+                                ),
+                            }
+                            if contains_secret(item, configured_secrets()):
+                                reason = "secret"
+                    except Exception as exc:
+                        reason = f"error:{type(exc).__name__}"
+                    if reason == "keep":
+                        items[(channel.id, message.id)] = item
+                        messages[(channel.id, message.id)] = message
                         continue
-                    items[(channel.id, message.id)] = item
-                    messages[(channel.id, message.id)] = message
+                    skip_counts[reason] = skip_counts.get(reason, 0) + 1
+                    if reason not in QUIET_SKIPS:
+                        skipped_posts.append({
+                            "channel_username": username,
+                            "message_id": getattr(message, "id", None),
+                            "date_utc": (utc_iso(message.date)
+                                         if getattr(message, "date", None) else None),
+                            "reason": reason,
+                        })
                 successful_channels += 1
-            except Exception:
+            except Exception as exc:
                 channel_errors += 1
+                channel_error_names.append(scrub(
+                    f"{getattr(channel, 'username', None) or channel.id}: {type(exc).__name__}",
+                    configured_secrets()))
 
         if successful_channels == 0:
             raise RuntimeError("No Telegram channels could be read.")
@@ -212,7 +195,8 @@ async def collect(output: Path, media_index_path: Path, link_cache_path: Path) -
 
     # A secret that surfaced through links/titles must not be published.
     safe = [item for item in ordered if not contains_secret(item, configured_secrets())]
-    unsafe_items += len(ordered) - len(safe)
+    if len(safe) != len(ordered):
+        skip_counts["secret"] = skip_counts.get("secret", 0) + len(ordered) - len(safe)
     ordered = safe
 
     snapshot = {
@@ -233,11 +217,20 @@ async def collect(output: Path, media_index_path: Path, link_cache_path: Path) -
     latest = ordered[0]["date_utc"] if ordered else None
     print(
         f"Collected {len(ordered)} items from {successful_channels} channels; "
-        f"channel_errors={channel_errors}; unsafe_skipped={unsafe_items}; "
-        f"advertisement_skipped={advertisement_items}; "
+        f"channel_errors={channel_errors}; skipped={skip_counts}; "
         f"latest_message_at={latest}; media={media_stats}; links={link_stats}"
     )
-    return {"items_count": len(ordered), "drive": media_stats, "links": link_stats}
+    collect_stats = {
+        "channels_read": successful_channels,
+        "channel_errors": channel_errors,
+        "channel_error_names": channel_error_names[:20],
+        "skipped_counts": skip_counts,
+        # Newest first; advertisements and service events are only counted.
+        "skipped_posts": sorted(skipped_posts, key=lambda p: p["date_utc"] or "",
+                                reverse=True)[:MAX_SKIPPED_POSTS],
+    }
+    return {"items_count": len(ordered), "drive": media_stats, "links": link_stats,
+            "collect": collect_stats}
 
 
 async def archive_snapshot_media(ordered: list[dict], messages: dict, client,
@@ -246,6 +239,8 @@ async def archive_snapshot_media(ordered: list[dict], messages: dict, client,
     for item in ordered:
         message = messages.get((item["channel_id"], item["message_id"]))
         for n, attachment in enumerate(item["attachments"]):
+            if attachment.get("type") not in DOWNLOADABLE_TYPES:
+                continue  # polls, stories, web previews: nothing to download
             tasks.append(MediaTask(
                 key=f"{item['channel_id']}:{item['message_id']}:{n}",
                 attachment=attachment, channel_id=item["channel_id"],
@@ -324,7 +319,7 @@ def main() -> None:
         raise SystemExit(f"Collection failed: {message}")
     write_health(health_path, now=datetime.now(timezone.utc), trigger=trigger,
                  error=None, items_count=stats["items_count"],
-                 drive=stats["drive"], links=stats["links"])
+                 drive=stats["drive"], links=stats["links"], collect=stats["collect"])
 
 
 if __name__ == "__main__":

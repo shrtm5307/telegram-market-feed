@@ -56,7 +56,16 @@ python telegram_snapshot.py output/latest_snapshot.json
   (`ok`, `blocked`, `not_found`, `timeout`, `error`, `invalid`, `pending`) and `title`.
   5 s limit per link, results cached in `data/telegram/link_cache.json`; sites that
   refuse automated clients are reported as `blocked`, never bypassed.
+* **What is collected.** Every channel post except advertisements
+  (`message_fields.py`). Service events (pins, title changes) are not posts and are
+  skipped. A post with no text and no file is still kept: its attachment `type`
+  says what it was (`poll` and `todo` carry the question/items in `name`,
+  `webpage` the preview title, then `story`, `paid_media`, `giveaway`, `geo`,
+  `contact`, `unsupported`, `other` = unknown media class in `name`, `empty`).
+  Only `photo`, `pdf` and `document` are downloaded for the Drive archive.
 * **Health.** `data/health/telegram.json`: `last_run_utc`, `last_success_utc`,
-  `trigger`, `error`, `items_count`, Drive usage.
+  `trigger`, `error`, `items_count`, Drive usage, and `collect`: channels read,
+  channel errors, `skipped_counts` by reason, and `skipped_posts` (up to 50 ids and
+  reasons, never content) for anything dropped other than ads and service events.
 * **Watchdog.** `telegram-watchdog.yml` dispatches the collector when
   `last_success_utc` is older than 40 minutes.

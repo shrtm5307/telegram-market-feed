@@ -1,0 +1,648 @@
+From 50f8776ecadf453ed21be3cfd3b23a25ea85cfee Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 24 Nov 2026 00:28:27 +0000
+Subject: [PATCH] Collect every channel post except ads; report what was
+ skipped
+
+Posts with no text whose media was not a photo or document (polls, stories,
+paid media, previews, unknown types) were dropped without a trace, so some
+long research posts never reached the feed. The keep/skip rule now lives in
+message_fields.py and is shared by the Actions collector and app.py:
+
+- keep every post except advertisements; skip only service events
+- label non-file media by kind (poll question/answers, preview title, ...)
+- keep a post with nothing renderable as type "empty"
+- download only photo/pdf/document for the Drive archive
+- one bad message no longer aborts the rest of its channel
+- health file gains skipped counts by reason and the ids of dropped posts
+- attachment names are included in the secret check
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_017sm19HmKNPSD4tGtrNokTD
+---
+ README.md            |  11 +++-
+ app.py               |  38 ++----------
+ health.py            |   3 +-
+ message_fields.py    | 136 +++++++++++++++++++++++++++++++++++++++++++
+ telegram_snapshot.py | 135 +++++++++++++++++++++---------------------
+ test_feed_windows.py |   2 +-
+ test_snapshot.py     | 122 ++++++++++++++++++++++++++++++++++++++
+ 7 files changed, 342 insertions(+), 105 deletions(-)
+ create mode 100644 message_fields.py
+
+diff --git a/README.md b/README.md
+index bfdc0868..d373bf83 100644
+--- a/README.md
++++ b/README.md
+@@ -56,7 +56,16 @@ python telegram_snapshot.py output/latest_snapshot.json
+   (`ok`, `blocked`, `not_found`, `timeout`, `error`, `invalid`, `pending`) and `title`.
+   5 s limit per link, results cached in `data/telegram/link_cache.json`; sites that
+   refuse automated clients are reported as `blocked`, never bypassed.
++* **What is collected.** Every channel post except advertisements
++  (`message_fields.py`). Service events (pins, title changes) are not posts and are
++  skipped. A post with no text and no file is still kept: its attachment `type`
++  says what it was (`poll` and `todo` carry the question/items in `name`,
++  `webpage` the preview title, then `story`, `paid_media`, `giveaway`, `geo`,
++  `contact`, `unsupported`, `other` = unknown media class in `name`, `empty`).
++  Only `photo`, `pdf` and `document` are downloaded for the Drive archive.
+ * **Health.** `data/health/telegram.json`: `last_run_utc`, `last_success_utc`,
+-  `trigger`, `error`, `items_count`, Drive usage.
++  `trigger`, `error`, `items_count`, Drive usage, and `collect`: channels read,
++  channel errors, `skipped_counts` by reason, and `skipped_posts` (up to 50 ids and
++  reasons, never content) for anything dropped other than ads and service events.
+ * **Watchdog.** `telegram-watchdog.yml` dispatches the collector when
+   `last_success_utc` is older than 40 minutes.
+diff --git a/app.py b/app.py
+index 46b714d8..43da4f10 100644
+--- a/app.py
++++ b/app.py
+@@ -1,6 +1,5 @@
+ import os
+ import json
+-import re
+ import asyncio
+ from collections import deque
+ from datetime import datetime, timezone, timedelta
+@@ -9,36 +8,11 @@ from fastapi import FastAPI, HTTPException, Query
+ from fastapi.responses import JSONResponse
+ from telethon import TelegramClient, events
+ from telethon.sessions import StringSession
+-from telethon.tl.types import Channel, MessageMediaDocument, MessageMediaPhoto
++from telethon.tl.types import Channel
+ import uvicorn
+ 
+-AD_PREFIX_RE = re.compile(r"^(?:광고|협찬|제휴|sponsored|advertisement|promoted)(?:\s|:|：|#|-)", re.IGNORECASE)
+-AD_MARKERS = ("광고문의", "유료광고", "#광고", "#협찬", "#sponsored", "telegram ads")
+-
+-
+-def is_advertisement(text):
+-    normalized = " ".join((text or "").lower().split())
+-    return bool(AD_PREFIX_RE.search(normalized)) or any(
+-        marker in normalized for marker in AD_MARKERS
+-    )
+-
+-
+-def media_info(message):
+-    media = getattr(message, "media", None)
+-    if isinstance(media, MessageMediaPhoto):
+-        return [{"type": "photo", "name": "", "mime_type": "image/jpeg"}]
+-    if isinstance(media, MessageMediaDocument):
+-        document = getattr(media, "document", None)
+-        mime_type = getattr(document, "mime_type", "") or ""
+-        name = ""
+-        for attribute in getattr(document, "attributes", ()) or ():
+-            candidate = getattr(attribute, "file_name", None)
+-            if candidate:
+-                name = candidate
+-                break
+-        kind = "pdf" if mime_type == "application/pdf" or name.lower().endswith(".pdf") else "document"
+-        return [{"type": kind, "name": name, "mime_type": mime_type}]
+-    return []
++# Same keep/skip rule as the GitHub Actions collector (all posts except ads).
++from message_fields import classify, is_advertisement, media_info  # noqa: E402,F401
+ 
+ 
+ API_ID = int(os.environ["TELEGRAM_API_ID"])
+@@ -101,9 +75,9 @@ def msg_to_dict(chat, msg):
+     dt = msg.date
+     if dt and dt.tzinfo is None:
+         dt = dt.replace(tzinfo=timezone.utc)
+-    text = msg.message or ""
+-    attachments = media_info(msg)
+-    if (not text.strip() and not attachments) or is_advertisement(text):
++    text = getattr(msg, "message", None) or ""
++    reason, attachments = classify(msg)
++    if reason != "keep":
+         return None
+     return {
+         "message_id": msg.id,
+diff --git a/health.py b/health.py
+index 7f83b713..2961956e 100644
+--- a/health.py
++++ b/health.py
+@@ -40,7 +40,7 @@ def scrub(text: str, secrets) -> str:
+ 
+ def write_health(path: Path, *, now: datetime, trigger: str, error: str | None,
+                  items_count: int | None, drive: dict | None = None,
+-                 links: dict | None = None) -> dict:
++                 links: dict | None = None, collect: dict | None = None) -> dict:
+     previous = load(path)
+     health = {
+         "last_run_utc": now.astimezone(timezone.utc).isoformat(),
+@@ -51,6 +51,7 @@ def write_health(path: Path, *, now: datetime, trigger: str, error: str | None,
+         "items_count": items_count if items_count is not None else previous.get("items_count"),
+         "drive": drive or {"configured": False},
+         "links": links or {},
++        "collect": collect or {},
+     }
+     path = Path(path)
+     path.parent.mkdir(parents=True, exist_ok=True)
+diff --git a/message_fields.py b/message_fields.py
+new file mode 100644
+index 00000000..ca03995d
+--- /dev/null
++++ b/message_fields.py
+@@ -0,0 +1,136 @@
++"""Turn a Telegram channel message into public feed fields.
++
++Shared by the GitHub Actions snapshot collector (telegram_snapshot.py) and the
++live server (app.py) so both apply the same rule: keep every channel post
++except advertisements. Service events (pins, title changes) are not posts and
++are skipped. A post whose text is empty and whose media cannot be shown as
++text (poll, story, paid media, an unknown type) is still kept, with an
++attachment entry that says what kind of post it was.
++
++Media types are matched by class name so this module does not import
++telethon and works with the test stubs.
++"""
++
++from __future__ import annotations
++
++import re
++
++AD_PREFIX_RE = re.compile(r"^(?:광고|협찬|제휴|sponsored|advertisement|promoted)(?:\s|:|：|#|-)", re.IGNORECASE)
++AD_MARKERS = (
++    "광고문의",
++    "유료광고",
++    "#광고",
++    "#협찬",
++    "#sponsored",
++    "telegram ads",
++)
++
++# Attachment types whose bytes the media archiver may download.
++DOWNLOADABLE_TYPES = frozenset({"photo", "pdf", "document"})
++
++# Media that has no file to download; the value is the attachment "type".
++_NON_FILE_MEDIA = {
++    "MessageMediaGeo": "geo",
++    "MessageMediaGeoLive": "geo",
++    "MessageMediaVenue": "venue",
++    "MessageMediaContact": "contact",
++    "MessageMediaDice": "dice",
++    "MessageMediaGame": "game",
++    "MessageMediaInvoice": "invoice",
++    "MessageMediaStory": "story",
++    "MessageMediaPaidMedia": "paid_media",
++    "MessageMediaGiveaway": "giveaway",
++    "MessageMediaGiveawayResults": "giveaway",
++    "MessageMediaToDo": "todo",
++    "MessageMediaVideoStream": "video_stream",
++    "MessageMediaUnsupported": "unsupported",
++}
++
++MAX_NAME_CHARS = 1000
++
++
++def is_advertisement(text: str | None) -> bool:
++    normalized = " ".join((text or "").lower().split())
++    return bool(AD_PREFIX_RE.search(normalized)) or any(
++        marker in normalized for marker in AD_MARKERS
++    )
++
++
++def _plain(value) -> str:
++    """str for plain strings, .text for TextWithEntities, '' otherwise."""
++    if value is None:
++        return ""
++    if isinstance(value, str):
++        return value
++    text = getattr(value, "text", "")
++    return text if isinstance(text, str) else ""
++
++
++def _poll_summary(media) -> str:
++    poll = getattr(media, "poll", None)
++    lines = [_plain(getattr(poll, "question", None))]
++    for answer in getattr(poll, "answers", None) or ():
++        text = _plain(getattr(answer, "text", None))
++        if text:
++            lines.append(f"- {text}")
++    return "\n".join(line for line in lines if line)[:MAX_NAME_CHARS]
++
++
++def _todo_summary(media) -> str:
++    todo = getattr(media, "todo", None)
++    lines = [_plain(getattr(todo, "title", None))]
++    for entry in getattr(todo, "list", None) or ():
++        text = _plain(getattr(entry, "title", None))
++        if text:
++            lines.append(f"- {text}")
++    return "\n".join(line for line in lines if line)[:MAX_NAME_CHARS]
++
++
++def media_info(message) -> list[dict]:
++    media = getattr(message, "media", None)
++    if media is None:
++        return []
++    kind = type(media).__name__
++    if kind == "MessageMediaEmpty":
++        return []
++    if kind == "MessageMediaPhoto":
++        return [{"type": "photo", "name": "", "mime_type": "image/jpeg"}]
++    if kind == "MessageMediaDocument":
++        document = getattr(media, "document", None)
++        mime_type = getattr(document, "mime_type", "") or ""
++        name = ""
++        for attribute in getattr(document, "attributes", ()) or ():
++            candidate = getattr(attribute, "file_name", None)
++            if candidate:
++                name = candidate
++                break
++        pdf = mime_type == "application/pdf" or name.lower().endswith(".pdf")
++        return [{"type": "pdf" if pdf else "document", "name": name, "mime_type": mime_type}]
++    if kind == "MessageMediaWebPage":
++        page = getattr(media, "webpage", None)
++        title = _plain(getattr(page, "title", None))
++        return [{"type": "webpage", "name": title[:MAX_NAME_CHARS], "mime_type": ""}]
++    if kind == "MessageMediaPoll":
++        return [{"type": "poll", "name": _poll_summary(media), "mime_type": ""}]
++    if kind == "MessageMediaToDo":
++        return [{"type": "todo", "name": _todo_summary(media), "mime_type": ""}]
++    if kind in _NON_FILE_MEDIA:
++        # Contact/geo details stay out of the public feed; only the kind is kept.
++        return [{"type": _NON_FILE_MEDIA[kind], "name": "", "mime_type": ""}]
++    return [{"type": "other", "name": kind[:100], "mime_type": ""}]
++
++
++def classify(message) -> tuple[str, list[dict]]:
++    """Return (reason, attachments). reason is "keep" or why it is dropped."""
++    if getattr(message, "action", None) is not None:
++        return "service", []
++    if not getattr(message, "date", None):
++        return "no_date", []
++    text = getattr(message, "message", None) or ""
++    if is_advertisement(text):
++        return "advertisement", []
++    attachments = media_info(message)
++    if not text.strip() and not attachments:
++        # Nothing we can render, but the post exists: keep it visibly.
++        attachments = [{"type": "empty", "name": "", "mime_type": ""}]
++    return "keep", attachments
+diff --git a/telegram_snapshot.py b/telegram_snapshot.py
+index 0cd03d18..a8773ad6 100644
+--- a/telegram_snapshot.py
++++ b/telegram_snapshot.py
+@@ -11,7 +11,6 @@ import argparse
+ import asyncio
+ import json
+ import os
+-import re
+ import time
+ from collections.abc import Iterable
+ from datetime import datetime, timezone
+@@ -21,48 +20,14 @@ from drive_archive import DriveClient, credentials_from_env
+ from health import scrub, write_health
+ from link_resolver import LinkCache, extract_urls, resolve_links
+ from media_archive import Budget, MediaIndex, MediaTask, archive_media
++from message_fields import (  # noqa: F401  (re-exported for callers/tests)
++    AD_MARKERS, AD_PREFIX_RE, DOWNLOADABLE_TYPES, classify, is_advertisement, media_info)
+ from telethon import TelegramClient
+ from telethon.sessions import StringSession
+ from telethon.tl.types import Channel, MessageMediaDocument, MessageMediaPhoto
+ 
+ 
+ 
+-AD_PREFIX_RE = re.compile(r"^(?:광고|협찬|제휴|sponsored|advertisement|promoted)(?:\s|:|：|#|-)", re.IGNORECASE)
+-AD_MARKERS = (
+-    "광고문의",
+-    "유료광고",
+-    "#광고",
+-    "#협찬",
+-    "#sponsored",
+-    "telegram ads",
+-)
+-
+-
+-def is_advertisement(text: str) -> bool:
+-    normalized = " ".join(text.lower().split())
+-    return bool(AD_PREFIX_RE.search(normalized)) or any(
+-        marker in normalized for marker in AD_MARKERS
+-    )
+-
+-
+-def media_info(message) -> list[dict]:
+-    media = getattr(message, "media", None)
+-    if isinstance(media, MessageMediaPhoto):
+-        return [{"type": "photo", "name": "", "mime_type": "image/jpeg"}]
+-    if isinstance(media, MessageMediaDocument):
+-        document = getattr(media, "document", None)
+-        mime_type = getattr(document, "mime_type", "") or ""
+-        name = ""
+-        for attribute in getattr(document, "attributes", ()) or ():
+-            candidate = getattr(attribute, "file_name", None)
+-            if candidate:
+-                name = candidate
+-                break
+-        kind = "pdf" if mime_type == "application/pdf" or name.lower().endswith(".pdf") else "document"
+-        return [{"type": kind, "name": name, "mime_type": mime_type}]
+-    return []
+-
+-
+ def media_size(message) -> int | None:
+     """Best-effort size in bytes before downloading (None if unknown)."""
+     media = getattr(message, "media", None)
+@@ -107,11 +72,17 @@ def contains_secret(item: dict, secrets: Iterable[str]) -> bool:
+         str(item.get(key) or "")
+         for key in ("channel_name", "channel_username", "message", "url")
+     )
++    for attachment in item.get("attachments") or ():
++        public_text += " " + str(attachment.get("name") or "")
+     for link in item.get("links") or ():
+         public_text += " " + " ".join(str(link.get(k) or "") for k in ("url", "final_url", "title"))
+     return any(secret in public_text for secret in secrets)
+ 
+ 
++QUIET_SKIPS = frozenset({"advertisement", "service"})
++MAX_SKIPPED_POSTS = 50
++
++
+ def env_int(name: str, default: int) -> int:
+     try:
+         return int(os.getenv(name, "") or default)
+@@ -138,8 +109,9 @@ async def collect(output: Path, media_index_path: Path, link_cache_path: Path) -
+     messages: dict[tuple[int, int], object] = {}
+     successful_channels = 0
+     channel_errors = 0
+-    unsafe_items = 0
+-    advertisement_items = 0
++    channel_error_names: list[str] = []
++    skip_counts: dict[str, int] = {}
++    skipped_posts: list[dict] = []
+     media_stats = {"configured": False}
+     index = MediaIndex(media_index_path)
+ 
+@@ -155,36 +127,47 @@ async def collect(output: Path, media_index_path: Path, link_cache_path: Path) -
+                 continue
+             try:
+                 async for message in client.iter_messages(channel, limit=per_channel):
+-                    text = message.message or ""
+-                    attachments = media_info(message)
+-                    if (not text.strip() and not attachments) or not message.date:
+-                        continue
+-                    if is_advertisement(text):
+-                        advertisement_items += 1
+-                        continue
+                     username = getattr(channel, "username", None) or ""
+-                    item = {
+-                        "message_id": message.id,
+-                        "channel_id": channel.id,
+-                        "channel_name": getattr(channel, "title", "") or "",
+-                        "channel_username": username,
+-                        "date_utc": utc_iso(message.date),
+-                        "message": text,
+-                        "attachments": attachments,
+-                        "url": (
+-                            f"https://t.me/{username}/{message.id}"
+-                            if username
+-                            else ""
+-                        ),
+-                    }
+-                    if contains_secret(item, configured_secrets()):
+-                        unsafe_items += 1
++                    try:
++                        reason, attachments = classify(message)
++                        if reason == "keep":
++                            item = {
++                                "message_id": message.id,
++                                "channel_id": channel.id,
++                                "channel_name": getattr(channel, "title", "") or "",
++                                "channel_username": username,
++                                "date_utc": utc_iso(message.date),
++                                "message": getattr(message, "message", None) or "",
++                                "attachments": attachments,
++                                "url": (
++                                    f"https://t.me/{username}/{message.id}"
++                                    if username
++                                    else ""
++                                ),
++                            }
++                            if contains_secret(item, configured_secrets()):
++                                reason = "secret"
++                    except Exception as exc:
++                        reason = f"error:{type(exc).__name__}"
++                    if reason == "keep":
++                        items[(channel.id, message.id)] = item
++                        messages[(channel.id, message.id)] = message
+                         continue
+-                    items[(channel.id, message.id)] = item
+-                    messages[(channel.id, message.id)] = message
++                    skip_counts[reason] = skip_counts.get(reason, 0) + 1
++                    if reason not in QUIET_SKIPS:
++                        skipped_posts.append({
++                            "channel_username": username,
++                            "message_id": getattr(message, "id", None),
++                            "date_utc": (utc_iso(message.date)
++                                         if getattr(message, "date", None) else None),
++                            "reason": reason,
++                        })
+                 successful_channels += 1
+-            except Exception:
++            except Exception as exc:
+                 channel_errors += 1
++                channel_error_names.append(scrub(
++                    f"{getattr(channel, 'username', None) or channel.id}: {type(exc).__name__}",
++                    configured_secrets()))
+ 
+         if successful_channels == 0:
+             raise RuntimeError("No Telegram channels could be read.")
+@@ -212,7 +195,8 @@ async def collect(output: Path, media_index_path: Path, link_cache_path: Path) -
+ 
+     # A secret that surfaced through links/titles must not be published.
+     safe = [item for item in ordered if not contains_secret(item, configured_secrets())]
+-    unsafe_items += len(ordered) - len(safe)
++    if len(safe) != len(ordered):
++        skip_counts["secret"] = skip_counts.get("secret", 0) + len(ordered) - len(safe)
+     ordered = safe
+ 
+     snapshot = {
+@@ -233,11 +217,20 @@ async def collect(output: Path, media_index_path: Path, link_cache_path: Path) -
+     latest = ordered[0]["date_utc"] if ordered else None
+     print(
+         f"Collected {len(ordered)} items from {successful_channels} channels; "
+-        f"channel_errors={channel_errors}; unsafe_skipped={unsafe_items}; "
+-        f"advertisement_skipped={advertisement_items}; "
++        f"channel_errors={channel_errors}; skipped={skip_counts}; "
+         f"latest_message_at={latest}; media={media_stats}; links={link_stats}"
+     )
+-    return {"items_count": len(ordered), "drive": media_stats, "links": link_stats}
++    collect_stats = {
++        "channels_read": successful_channels,
++        "channel_errors": channel_errors,
++        "channel_error_names": channel_error_names[:20],
++        "skipped_counts": skip_counts,
++        # Newest first; advertisements and service events are only counted.
++        "skipped_posts": sorted(skipped_posts, key=lambda p: p["date_utc"] or "",
++                                reverse=True)[:MAX_SKIPPED_POSTS],
++    }
++    return {"items_count": len(ordered), "drive": media_stats, "links": link_stats,
++            "collect": collect_stats}
+ 
+ 
+ async def archive_snapshot_media(ordered: list[dict], messages: dict, client,
+@@ -246,6 +239,8 @@ async def archive_snapshot_media(ordered: list[dict], messages: dict, client,
+     for item in ordered:
+         message = messages.get((item["channel_id"], item["message_id"]))
+         for n, attachment in enumerate(item["attachments"]):
++            if attachment.get("type") not in DOWNLOADABLE_TYPES:
++                continue  # polls, stories, web previews: nothing to download
+             tasks.append(MediaTask(
+                 key=f"{item['channel_id']}:{item['message_id']}:{n}",
+                 attachment=attachment, channel_id=item["channel_id"],
+@@ -324,7 +319,7 @@ def main() -> None:
+         raise SystemExit(f"Collection failed: {message}")
+     write_health(health_path, now=datetime.now(timezone.utc), trigger=trigger,
+                  error=None, items_count=stats["items_count"],
+-                 drive=stats["drive"], links=stats["links"])
++                 drive=stats["drive"], links=stats["links"], collect=stats["collect"])
+ 
+ 
+ if __name__ == "__main__":
+diff --git a/test_feed_windows.py b/test_feed_windows.py
+index 874930e2..813b7ff8 100644
+--- a/test_feed_windows.py
++++ b/test_feed_windows.py
+@@ -122,7 +122,7 @@ class HealthTests(unittest.TestCase):
+                      drive={"configured": True, "usage_bytes": 5, "limit_bytes": 10})
+         health = load(self.path)
+         self.assertEqual(set(health), {"last_run_utc", "last_success_utc", "trigger",
+-                                       "error", "items_count", "drive", "links"})
++                                       "error", "items_count", "drive", "links", "collect"})
+         self.assertEqual(health["last_success_utc"], NOW.isoformat())
+         later = NOW + timedelta(minutes=15)
+         write_health(self.path, now=later, trigger="watchdog", error="RuntimeError: boom",
+diff --git a/test_snapshot.py b/test_snapshot.py
+index 383a323e..0122ade8 100644
+--- a/test_snapshot.py
++++ b/test_snapshot.py
+@@ -521,5 +521,127 @@ class CollectorHelperTests(unittest.TestCase):
+         self.assertEqual(stats["statuses"], {})
+ 
+ 
++class MessageFieldsTests(unittest.TestCase):
++    """Every channel post except ads must be kept (message_fields.classify)."""
++
++    @classmethod
++    def setUpClass(cls):
++        cls.mf = importlib.import_module("message_fields")
++
++    @staticmethod
++    def media(kind, **fields):
++        return type(kind, (), {})() if not fields else type(kind, (), fields)()
++
++    def msg(self, text="", media=None, action=None, date=NOW):
++        return types.SimpleNamespace(id=7, message=text, media=media, action=action, date=date)
++
++    def test_text_post_kept_without_attachments(self):
++        self.assertEqual(self.mf.classify(self.msg("hello")), ("keep", []))
++
++    def test_advertisement_and_service_are_dropped(self):
++        self.assertEqual(self.mf.classify(self.msg("광고: 신규 채널"))[0], "advertisement")
++        self.assertEqual(self.mf.classify(self.msg(action=object()))[0], "service")
++        self.assertEqual(self.mf.classify(self.msg("x", date=None))[0], "no_date")
++
++    def test_empty_text_with_unknown_media_is_kept_and_labelled(self):
++        for kind, label in (("MessageMediaStory", "story"),
++                            ("MessageMediaPaidMedia", "paid_media"),
++                            ("MessageMediaUnsupported", "unsupported")):
++            reason, attachments = self.mf.classify(self.msg("", self.media(kind)))
++            self.assertEqual(reason, "keep")
++            self.assertEqual(attachments, [{"type": label, "name": "", "mime_type": ""}])
++        reason, attachments = self.mf.classify(self.msg("", self.media("MessageMediaBrandNew")))
++        self.assertEqual(attachments[0]["type"], "other")
++        self.assertEqual(attachments[0]["name"], "MessageMediaBrandNew")
++
++    def test_completely_empty_post_is_kept_as_empty(self):
++        reason, attachments = self.mf.classify(self.msg("", None))
++        self.assertEqual(reason, "keep")
++        self.assertEqual(attachments, [{"type": "empty", "name": "", "mime_type": ""}])
++
++    def test_poll_question_and_answers_become_the_name(self):
++        text = lambda t: types.SimpleNamespace(text=t)  # TextWithEntities
++        poll = types.SimpleNamespace(question=text("Huang returns?"),
++                                     answers=[types.SimpleNamespace(text=text("Yes")),
++                                              types.SimpleNamespace(text="No")])
++        media = type("MessageMediaPoll", (), {"poll": poll})()
++        _, attachments = self.mf.classify(self.msg("", media))
++        self.assertEqual(attachments, [{"type": "poll", "name": "Huang returns?\n- Yes\n- No",
++                                        "mime_type": ""}])
++
++    def test_webpage_title_and_contact_privacy(self):
++        page = types.SimpleNamespace(title="JPM note", url="https://example.com")
++        media = type("MessageMediaWebPage", (), {"webpage": page})()
++        self.assertEqual(self.mf.media_info(self.msg("", media)),
++                         [{"type": "webpage", "name": "JPM note", "mime_type": ""}])
++        contact = type("MessageMediaContact", (), {"phone_number": "+82 10"})()
++        self.assertEqual(self.mf.media_info(self.msg("", contact)),
++                         [{"type": "contact", "name": "", "mime_type": ""}])
++
++    def test_new_types_pass_the_public_feed_schema(self):
++        build_feed_windows = importlib.import_module("build_feed_windows")
++        for attachment in ({"type": "poll", "name": "q", "mime_type": ""},
++                           {"type": "empty", "name": "", "mime_type": ""}):
++            self.assertEqual(build_feed_windows.clean_attachment(attachment), attachment)
++
++    def test_only_files_are_downloadable(self):
++        self.assertEqual(self.mf.DOWNLOADABLE_TYPES, {"photo", "pdf", "document"})
++
++    def test_collect_keeps_all_but_ads_and_reports_skips(self):
++        collector = import_collector()
++
++        class FakeChannel:
++            id, username, title = 1, "chan", "Chan"
++
++        def m(i, text="", media=None, action=None):
++            return types.SimpleNamespace(id=i, message=text, media=media, action=action,
++                                         date=NOW, entities=None)
++
++        posts = [m(5, "plain text"), m(4, "", self.media("MessageMediaStory")),
++                 m(3, "광고: buy"), m(2, action=object()), m(1, "", None)]
++
++        class FakeClient:
++            def __init__(self, *a, **k):
++                pass
++
++            async def connect(self):
++                pass
++
++            async def disconnect(self):
++                pass
++
++            async def is_user_authorized(self):
++                return True
++
++            async def get_dialogs(self):
++                return [types.SimpleNamespace(entity=FakeChannel())]
++
++            async def iter_messages(self, channel, limit):
++                for post in posts:
++                    yield post
++
++        env = {"TELEGRAM_API_ID": "1", "TELEGRAM_API_HASH": "hash-0f9e8d",
++               "TELEGRAM_SESSION_STRING": "session-1a2b3c"}
++        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ, env), \
++                patch.object(collector, "TelegramClient", FakeClient), \
++                patch.object(collector, "StringSession", lambda s: s), \
++                patch.object(collector, "Channel", FakeChannel):
++            out = Path(tmp) / "snap.json"
++            stats = asyncio.run(collector.collect(out, Path(tmp) / "mi.json", Path(tmp) / "lc.json"))
++            snap = json.loads(out.read_text(encoding="utf-8"))
++        kept = {item["message_id"]: item["attachments"] for item in snap["items"]}
++        self.assertEqual(set(kept), {5, 4, 1})
++        self.assertEqual(kept[4][0]["type"], "story")
++        self.assertEqual(kept[1][0]["type"], "empty")
++        self.assertEqual(stats["collect"]["skipped_counts"], {"advertisement": 1, "service": 1})
++        self.assertEqual(stats["collect"]["skipped_posts"], [])
++
++    def test_secret_in_attachment_name_fails_closed(self):
++        collector = import_collector()
++        item = {"message": "", "attachments": [{"type": "poll", "name": "tok-SECRET-1",
++                                                "mime_type": ""}]}
++        self.assertTrue(collector.contains_secret(item, ("tok-SECRET-1",)))
++
++
+ if __name__ == "__main__":
+     unittest.main()
+-- 
+2.43.0
+

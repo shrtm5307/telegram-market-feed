@@ -521,5 +521,127 @@ class CollectorHelperTests(unittest.TestCase):
         self.assertEqual(stats["statuses"], {})
 
 
+class MessageFieldsTests(unittest.TestCase):
+    """Every channel post except ads must be kept (message_fields.classify)."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.mf = importlib.import_module("message_fields")
+
+    @staticmethod
+    def media(kind, **fields):
+        return type(kind, (), {})() if not fields else type(kind, (), fields)()
+
+    def msg(self, text="", media=None, action=None, date=NOW):
+        return types.SimpleNamespace(id=7, message=text, media=media, action=action, date=date)
+
+    def test_text_post_kept_without_attachments(self):
+        self.assertEqual(self.mf.classify(self.msg("hello")), ("keep", []))
+
+    def test_advertisement_and_service_are_dropped(self):
+        self.assertEqual(self.mf.classify(self.msg("광고: 신규 채널"))[0], "advertisement")
+        self.assertEqual(self.mf.classify(self.msg(action=object()))[0], "service")
+        self.assertEqual(self.mf.classify(self.msg("x", date=None))[0], "no_date")
+
+    def test_empty_text_with_unknown_media_is_kept_and_labelled(self):
+        for kind, label in (("MessageMediaStory", "story"),
+                            ("MessageMediaPaidMedia", "paid_media"),
+                            ("MessageMediaUnsupported", "unsupported")):
+            reason, attachments = self.mf.classify(self.msg("", self.media(kind)))
+            self.assertEqual(reason, "keep")
+            self.assertEqual(attachments, [{"type": label, "name": "", "mime_type": ""}])
+        reason, attachments = self.mf.classify(self.msg("", self.media("MessageMediaBrandNew")))
+        self.assertEqual(attachments[0]["type"], "other")
+        self.assertEqual(attachments[0]["name"], "MessageMediaBrandNew")
+
+    def test_completely_empty_post_is_kept_as_empty(self):
+        reason, attachments = self.mf.classify(self.msg("", None))
+        self.assertEqual(reason, "keep")
+        self.assertEqual(attachments, [{"type": "empty", "name": "", "mime_type": ""}])
+
+    def test_poll_question_and_answers_become_the_name(self):
+        text = lambda t: types.SimpleNamespace(text=t)  # TextWithEntities
+        poll = types.SimpleNamespace(question=text("Huang returns?"),
+                                     answers=[types.SimpleNamespace(text=text("Yes")),
+                                              types.SimpleNamespace(text="No")])
+        media = type("MessageMediaPoll", (), {"poll": poll})()
+        _, attachments = self.mf.classify(self.msg("", media))
+        self.assertEqual(attachments, [{"type": "poll", "name": "Huang returns?\n- Yes\n- No",
+                                        "mime_type": ""}])
+
+    def test_webpage_title_and_contact_privacy(self):
+        page = types.SimpleNamespace(title="JPM note", url="https://example.com")
+        media = type("MessageMediaWebPage", (), {"webpage": page})()
+        self.assertEqual(self.mf.media_info(self.msg("", media)),
+                         [{"type": "webpage", "name": "JPM note", "mime_type": ""}])
+        contact = type("MessageMediaContact", (), {"phone_number": "+82 10"})()
+        self.assertEqual(self.mf.media_info(self.msg("", contact)),
+                         [{"type": "contact", "name": "", "mime_type": ""}])
+
+    def test_new_types_pass_the_public_feed_schema(self):
+        build_feed_windows = importlib.import_module("build_feed_windows")
+        for attachment in ({"type": "poll", "name": "q", "mime_type": ""},
+                           {"type": "empty", "name": "", "mime_type": ""}):
+            self.assertEqual(build_feed_windows.clean_attachment(attachment), attachment)
+
+    def test_only_files_are_downloadable(self):
+        self.assertEqual(self.mf.DOWNLOADABLE_TYPES, {"photo", "pdf", "document"})
+
+    def test_collect_keeps_all_but_ads_and_reports_skips(self):
+        collector = import_collector()
+
+        class FakeChannel:
+            id, username, title = 1, "chan", "Chan"
+
+        def m(i, text="", media=None, action=None):
+            return types.SimpleNamespace(id=i, message=text, media=media, action=action,
+                                         date=NOW, entities=None)
+
+        posts = [m(5, "plain text"), m(4, "", self.media("MessageMediaStory")),
+                 m(3, "광고: buy"), m(2, action=object()), m(1, "", None)]
+
+        class FakeClient:
+            def __init__(self, *a, **k):
+                pass
+
+            async def connect(self):
+                pass
+
+            async def disconnect(self):
+                pass
+
+            async def is_user_authorized(self):
+                return True
+
+            async def get_dialogs(self):
+                return [types.SimpleNamespace(entity=FakeChannel())]
+
+            async def iter_messages(self, channel, limit):
+                for post in posts:
+                    yield post
+
+        env = {"TELEGRAM_API_ID": "1", "TELEGRAM_API_HASH": "hash-0f9e8d",
+               "TELEGRAM_SESSION_STRING": "session-1a2b3c"}
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ, env), \
+                patch.object(collector, "TelegramClient", FakeClient), \
+                patch.object(collector, "StringSession", lambda s: s), \
+                patch.object(collector, "Channel", FakeChannel):
+            out = Path(tmp) / "snap.json"
+            stats = asyncio.run(collector.collect(out, Path(tmp) / "mi.json", Path(tmp) / "lc.json"))
+            snap = json.loads(out.read_text(encoding="utf-8"))
+        kept = {item["message_id"]: item["attachments"] for item in snap["items"]}
+        self.assertEqual(set(kept), {5, 4, 1})
+        self.assertEqual(kept[4][0]["type"], "story")
+        self.assertEqual(kept[1][0]["type"], "empty")
+        self.assertEqual(stats["collect"]["skipped_counts"], {"advertisement": 1, "service": 1})
+        self.assertEqual(stats["collect"]["skipped_posts"], [])
+
+    def test_secret_in_attachment_name_fails_closed(self):
+        collector = import_collector()
+        item = {"message": "", "attachments": [{"type": "poll", "name": "tok-SECRET-1",
+                                                "mime_type": ""}]}
+        self.assertTrue(collector.contains_secret(item, ("tok-SECRET-1",)))
+
+
 if __name__ == "__main__":
     unittest.main()

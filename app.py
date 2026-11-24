@@ -1,6 +1,5 @@
 import os
 import json
-import re
 import asyncio
 from collections import deque
 from datetime import datetime, timezone, timedelta
@@ -9,36 +8,11 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import JSONResponse
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
-from telethon.tl.types import Channel, MessageMediaDocument, MessageMediaPhoto
+from telethon.tl.types import Channel
 import uvicorn
 
-AD_PREFIX_RE = re.compile(r"^(?:광고|협찬|제휴|sponsored|advertisement|promoted)(?:\s|:|：|#|-)", re.IGNORECASE)
-AD_MARKERS = ("광고문의", "유료광고", "#광고", "#협찬", "#sponsored", "telegram ads")
-
-
-def is_advertisement(text):
-    normalized = " ".join((text or "").lower().split())
-    return bool(AD_PREFIX_RE.search(normalized)) or any(
-        marker in normalized for marker in AD_MARKERS
-    )
-
-
-def media_info(message):
-    media = getattr(message, "media", None)
-    if isinstance(media, MessageMediaPhoto):
-        return [{"type": "photo", "name": "", "mime_type": "image/jpeg"}]
-    if isinstance(media, MessageMediaDocument):
-        document = getattr(media, "document", None)
-        mime_type = getattr(document, "mime_type", "") or ""
-        name = ""
-        for attribute in getattr(document, "attributes", ()) or ():
-            candidate = getattr(attribute, "file_name", None)
-            if candidate:
-                name = candidate
-                break
-        kind = "pdf" if mime_type == "application/pdf" or name.lower().endswith(".pdf") else "document"
-        return [{"type": kind, "name": name, "mime_type": mime_type}]
-    return []
+# Same keep/skip rule as the GitHub Actions collector (all posts except ads).
+from message_fields import classify, is_advertisement, media_info  # noqa: E402,F401
 
 
 API_ID = int(os.environ["TELEGRAM_API_ID"])
@@ -101,9 +75,9 @@ def msg_to_dict(chat, msg):
     dt = msg.date
     if dt and dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
-    text = msg.message or ""
-    attachments = media_info(msg)
-    if (not text.strip() and not attachments) or is_advertisement(text):
+    text = getattr(msg, "message", None) or ""
+    reason, attachments = classify(msg)
+    if reason != "keep":
         return None
     return {
         "message_id": msg.id,

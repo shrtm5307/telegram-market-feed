@@ -40,7 +40,7 @@ def scrub(text: str, secrets) -> str:
 
 def write_health(path: Path, *, now: datetime, trigger: str, error: str | None,
                  items_count: int | None, drive: dict | None = None,
-                 links: dict | None = None) -> dict:
+                 links: dict | None = None, collect: dict | None = None) -> dict:
     previous = load(path)
     health = {
         "last_run_utc": now.astimezone(timezone.utc).isoformat(),
@@ -51,6 +51,7 @@ def write_health(path: Path, *, now: datetime, trigger: str, error: str | None,
         "items_count": items_count if items_count is not None else previous.get("items_count"),
         "drive": drive or {"configured": False},
         "links": links or {},
+        "collect": collect or {},
     }
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)

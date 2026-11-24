@@ -122,7 +122,7 @@ class HealthTests(unittest.TestCase):
                      drive={"configured": True, "usage_bytes": 5, "limit_bytes": 10})
         health = load(self.path)
         self.assertEqual(set(health), {"last_run_utc", "last_success_utc", "trigger",
-                                       "error", "items_count", "drive", "links"})
+                                       "error", "items_count", "drive", "links", "collect"})
         self.assertEqual(health["last_success_utc"], NOW.isoformat())
         later = NOW + timedelta(minutes=15)
         write_health(self.path, now=later, trigger="watchdog", error="RuntimeError: boom",
