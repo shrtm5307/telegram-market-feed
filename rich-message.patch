@@ -1,0 +1,270 @@
+From 39029e3c6fde4f0d6284f314821bf4ed1449ff84 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 24 Nov 2026 07:28:07 +0000
+Subject: [PATCH] Read "rich" channel posts; upgrade Telethon to 1.45.0
+
+Long research posts with inline photos are sent as message.rich_message
+(TL layer 229). Telethon 1.44 (layer 227) does not know the field, so these
+posts arrived with empty text and showed up as type "empty" after the
+previous change (e.g. aethersemiconductor 27176/27178/27179/27191/27192).
+
+- pin telethon==1.45.0 in the workflow and requirements.txt
+- message_fields.message_text(): message text, else the rich blocks
+  flattened to plain text (paragraphs, headings, lists, tables, captions)
+- rich_photo/rich_document attachments count embedded files (not downloaded)
+- collector and app.py use message_text() for the feed text
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_017sm19HmKNPSD4tGtrNokTD
+---
+ .github/workflows/collect-telegram.yml |  2 +-
+ README.md                              |  4 ++
+ app.py                                 |  4 +-
+ message_fields.py                      | 92 +++++++++++++++++++++++++-
+ requirements.txt                       |  2 +-
+ telegram_snapshot.py                   |  5 +-
+ test_snapshot.py                       | 28 ++++++++
+ 7 files changed, 129 insertions(+), 8 deletions(-)
+
+diff --git a/.github/workflows/collect-telegram.yml b/.github/workflows/collect-telegram.yml
+index 9b5c6134..836b56e7 100644
+--- a/.github/workflows/collect-telegram.yml
++++ b/.github/workflows/collect-telegram.yml
+@@ -42,7 +42,7 @@ jobs:
+           python-version: "3.12"
+ 
+       - name: Install Telegram client
+-        run: python -m pip install --disable-pip-version-check telethon==1.44.0
++        run: python -m pip install --disable-pip-version-check telethon==1.45.0
+ 
+       - name: Ensure pdftotext is available
+         run: command -v pdftotext >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils)
+diff --git a/README.md b/README.md
+index d373bf83..e7e3bbd3 100644
+--- a/README.md
++++ b/README.md
+@@ -63,6 +63,10 @@ python telegram_snapshot.py output/latest_snapshot.json
+   `webpage` the preview title, then `story`, `paid_media`, `giveaway`, `geo`,
+   `contact`, `unsupported`, `other` = unknown media class in `name`, `empty`).
+   Only `photo`, `pdf` and `document` are downloaded for the Drive archive.
++  "Rich" posts (long text with inline photos, headings, lists, tables) are read from
++  `rich_message` and flattened to plain text, with `rich_photo`/`rich_document`
++  attachments that only count the embedded files (they are not downloaded). This
++  needs Telethon 1.45+ (TL layer 229); with 1.44 such posts arrived as empty text.
+ * **Health.** `data/health/telegram.json`: `last_run_utc`, `last_success_utc`,
+   `trigger`, `error`, `items_count`, Drive usage, and `collect`: channels read,
+   channel errors, `skipped_counts` by reason, and `skipped_posts` (up to 50 ids and
+diff --git a/app.py b/app.py
+index 43da4f10..215199a7 100644
+--- a/app.py
++++ b/app.py
+@@ -12,7 +12,7 @@ from telethon.tl.types import Channel
+ import uvicorn
+ 
+ # Same keep/skip rule as the GitHub Actions collector (all posts except ads).
+-from message_fields import classify, is_advertisement, media_info  # noqa: E402,F401
++from message_fields import classify, is_advertisement, media_info, message_text  # noqa: E402,F401
+ 
+ 
+ API_ID = int(os.environ["TELEGRAM_API_ID"])
+@@ -75,7 +75,7 @@ def msg_to_dict(chat, msg):
+     dt = msg.date
+     if dt and dt.tzinfo is None:
+         dt = dt.replace(tzinfo=timezone.utc)
+-    text = getattr(msg, "message", None) or ""
++    text = message_text(msg)
+     reason, attachments = classify(msg)
+     if reason != "keep":
+         return None
+diff --git a/message_fields.py b/message_fields.py
+index ca03995d..d722811f 100644
+--- a/message_fields.py
++++ b/message_fields.py
+@@ -9,6 +9,12 @@ attachment entry that says what kind of post it was.
+ 
+ Media types are matched by class name so this module does not import
+ telethon and works with the test stubs.
++
++"Rich" channel posts (long text with inline photos, headings, lists and
++tables) carry their content in message.rich_message instead of
++message.message. Telethon releases older than 1.45 (TL layer < 229) do not
++know that field, so such posts arrive with empty text; message_text() turns
++the rich blocks into plain text.
+ """
+ 
+ from __future__ import annotations
+@@ -120,16 +126,98 @@ def media_info(message) -> list[dict]:
+     return [{"type": "other", "name": kind[:100], "mime_type": ""}]
+ 
+ 
++MAX_TEXT_CHARS = 20000
++_PHOTO_BLOCKS = ("PageBlockPhoto", "PageBlockVideo", "PageBlockCollage", "PageBlockSlideshow")
++
++
++def _rich_plain(value) -> str:
++    """Flatten a RichText tree (TextPlain/TextBold/TextConcat/TextUrl...)."""
++    if value is None or isinstance(value, (bool, int, float)):
++        return ""
++    if isinstance(value, str):
++        return value
++    if isinstance(value, (list, tuple)):
++        return "".join(_rich_plain(item) for item in value)
++    texts = getattr(value, "texts", None)
++    if texts is not None:
++        return "".join(_rich_plain(item) for item in texts)
++    return _rich_plain(getattr(value, "text", None))
++
++
++def _rich_item(item) -> str:
++    if getattr(item, "text", None) is not None:
++        return _rich_plain(item.text)
++    if getattr(item, "blocks", None) is not None:
++        return _rich_blocks(item.blocks)
++    return _rich_block(item)
++
++
++def _rich_block(block) -> str:
++    parts = []
++    kind = type(block).__name__
++    if kind in _PHOTO_BLOCKS:
++        parts.append("[사진]" if kind != "PageBlockVideo" else "[영상]")
++    for attr in ("title", "text"):
++        text = _rich_plain(getattr(block, attr, None))
++        if text:
++            parts.append(text)
++    for item in getattr(block, "items", None) or ():
++        text = _rich_item(item)
++        if text:
++            parts.append(text if type(item).__name__.startswith("PageBlock") else f"- {text}")
++    for row in getattr(block, "rows", None) or ():
++        cells = [_rich_plain(getattr(cell, "text", None)) for cell in getattr(row, "cells", None) or ()]
++        if any(cells):
++            parts.append(" | ".join(cells))
++    if getattr(block, "blocks", None):
++        parts.append(_rich_blocks(block.blocks))
++    caption = getattr(block, "caption", None)
++    if caption is not None:
++        text = _rich_plain(getattr(caption, "text", None))
++        if text:
++            parts.append(text)
++    return "\n".join(part for part in parts if part)
++
++
++def _rich_blocks(blocks) -> str:
++    return "\n".join(text for text in (_rich_block(b) for b in blocks or ()) if text)
++
++
++def message_text(message) -> str:
++    """Plain text of a post: message.message, else the rich-message blocks."""
++    text = getattr(message, "message", None) or ""
++    if not text.strip():
++        rich = getattr(message, "rich_message", None)
++        if rich is not None:
++            text = _rich_blocks(getattr(rich, "blocks", None))
++    return text[:MAX_TEXT_CHARS]
++
++
++def rich_attachments(message) -> list[dict]:
++    """Summarize photos/documents embedded in a rich post (not downloaded)."""
++    rich = getattr(message, "rich_message", None)
++    if rich is None:
++        return []
++    out = []
++    photos = len(getattr(rich, "photos", None) or ())
++    documents = len(getattr(rich, "documents", None) or ())
++    if photos:
++        out.append({"type": "rich_photo", "name": f"{photos} photo(s)", "mime_type": ""})
++    if documents:
++        out.append({"type": "rich_document", "name": f"{documents} document(s)", "mime_type": ""})
++    return out
++
++
+ def classify(message) -> tuple[str, list[dict]]:
+     """Return (reason, attachments). reason is "keep" or why it is dropped."""
+     if getattr(message, "action", None) is not None:
+         return "service", []
+     if not getattr(message, "date", None):
+         return "no_date", []
+-    text = getattr(message, "message", None) or ""
++    text = message_text(message)
+     if is_advertisement(text):
+         return "advertisement", []
+-    attachments = media_info(message)
++    attachments = media_info(message) + rich_attachments(message)
+     if not text.strip() and not attachments:
+         # Nothing we can render, but the post exists: keep it visibly.
+         attachments = [{"type": "empty", "name": "", "mime_type": ""}]
+diff --git a/requirements.txt b/requirements.txt
+index addb0698..83aa1294 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -1,3 +1,3 @@
+-telethon==1.44.0
++telethon==1.45.0
+ fastapi==0.116.1
+ uvicorn[standard]==0.35.0
+diff --git a/telegram_snapshot.py b/telegram_snapshot.py
+index a8773ad6..64705de3 100644
+--- a/telegram_snapshot.py
++++ b/telegram_snapshot.py
+@@ -21,7 +21,8 @@ from health import scrub, write_health
+ from link_resolver import LinkCache, extract_urls, resolve_links
+ from media_archive import Budget, MediaIndex, MediaTask, archive_media
+ from message_fields import (  # noqa: F401  (re-exported for callers/tests)
+-    AD_MARKERS, AD_PREFIX_RE, DOWNLOADABLE_TYPES, classify, is_advertisement, media_info)
++    AD_MARKERS, AD_PREFIX_RE, DOWNLOADABLE_TYPES, classify, is_advertisement, media_info,
++    message_text)
+ from telethon import TelegramClient
+ from telethon.sessions import StringSession
+ from telethon.tl.types import Channel, MessageMediaDocument, MessageMediaPhoto
+@@ -137,7 +138,7 @@ async def collect(output: Path, media_index_path: Path, link_cache_path: Path) -
+                                 "channel_name": getattr(channel, "title", "") or "",
+                                 "channel_username": username,
+                                 "date_utc": utc_iso(message.date),
+-                                "message": getattr(message, "message", None) or "",
++                                "message": message_text(message),
+                                 "attachments": attachments,
+                                 "url": (
+                                     f"https://t.me/{username}/{message.id}"
+diff --git a/test_snapshot.py b/test_snapshot.py
+index 0122ade8..18170738 100644
+--- a/test_snapshot.py
++++ b/test_snapshot.py
+@@ -636,6 +636,34 @@ class MessageFieldsTests(unittest.TestCase):
+         self.assertEqual(stats["collect"]["skipped_counts"], {"advertisement": 1, "service": 1})
+         self.assertEqual(stats["collect"]["skipped_posts"], [])
+ 
++    def test_rich_message_text_is_flattened(self):
++        def _mk(kind, fields):
++            o = type(kind, (), {})()
++            o.__dict__.update(fields)
++            return o
++
++        plain = lambda t: _mk("TextPlain", {"text": t})
++        rich = _mk("RichMessage", {
++            "blocks": [
++                _mk("PageBlockParagraph", {"text": _mk("TextConcat", {"texts": [
++                    _mk("TextBold", {"text": plain("JPM:")}), plain(" capex up")]})}),
++                _mk("PageBlockPhoto", {"photo_id": 1, "caption": _mk("PageCaption", {
++                    "text": plain("chart"), "credit": plain("")})}),
++                _mk("PageBlockList", {"items": [_mk("PageListItemText", {"text": plain("2026 +105%")})]}),
++                _mk("PageBlockTable", {"title": plain("T"), "rows": [_mk("PageTableRow", {"cells": [
++                    _mk("PageTableCell", {"text": plain("a")}), _mk("PageTableCell", {"text": plain("b")})]})]}),
++            ],
++            "photos": [object(), object()], "documents": []})
++        msg = types.SimpleNamespace(id=9, message="", media=None, action=None, date=NOW, rich_message=rich)
++        self.assertEqual(self.mf.message_text(msg),
++                         "JPM: capex up\n[사진]\nchart\n- 2026 +105%\nT\na | b")
++        reason, attachments = self.mf.classify(msg)
++        self.assertEqual(reason, "keep")
++        self.assertEqual(attachments, [{"type": "rich_photo", "name": "2 photo(s)", "mime_type": ""}])
++        # Plain text still wins when present; missing field is harmless.
++        self.assertEqual(self.mf.message_text(types.SimpleNamespace(message="hi", rich_message=rich)), "hi")
++        self.assertEqual(self.mf.message_text(types.SimpleNamespace(message=None)), "")
++
+     def test_secret_in_attachment_name_fails_closed(self):
+         collector = import_collector()
+         item = {"message": "", "attachments": [{"type": "poll", "name": "tok-SECRET-1",
+-- 
+2.43.0
+

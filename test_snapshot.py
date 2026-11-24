@@ -636,6 +636,34 @@ class MessageFieldsTests(unittest.TestCase):
         self.assertEqual(stats["collect"]["skipped_counts"], {"advertisement": 1, "service": 1})
         self.assertEqual(stats["collect"]["skipped_posts"], [])
 
+    def test_rich_message_text_is_flattened(self):
+        def _mk(kind, fields):
+            o = type(kind, (), {})()
+            o.__dict__.update(fields)
+            return o
+
+        plain = lambda t: _mk("TextPlain", {"text": t})
+        rich = _mk("RichMessage", {
+            "blocks": [
+                _mk("PageBlockParagraph", {"text": _mk("TextConcat", {"texts": [
+                    _mk("TextBold", {"text": plain("JPM:")}), plain(" capex up")]})}),
+                _mk("PageBlockPhoto", {"photo_id": 1, "caption": _mk("PageCaption", {
+                    "text": plain("chart"), "credit": plain("")})}),
+                _mk("PageBlockList", {"items": [_mk("PageListItemText", {"text": plain("2026 +105%")})]}),
+                _mk("PageBlockTable", {"title": plain("T"), "rows": [_mk("PageTableRow", {"cells": [
+                    _mk("PageTableCell", {"text": plain("a")}), _mk("PageTableCell", {"text": plain("b")})]})]}),
+            ],
+            "photos": [object(), object()], "documents": []})
+        msg = types.SimpleNamespace(id=9, message="", media=None, action=None, date=NOW, rich_message=rich)
+        self.assertEqual(self.mf.message_text(msg),
+                         "JPM: capex up\n[사진]\nchart\n- 2026 +105%\nT\na | b")
+        reason, attachments = self.mf.classify(msg)
+        self.assertEqual(reason, "keep")
+        self.assertEqual(attachments, [{"type": "rich_photo", "name": "2 photo(s)", "mime_type": ""}])
+        # Plain text still wins when present; missing field is harmless.
+        self.assertEqual(self.mf.message_text(types.SimpleNamespace(message="hi", rich_message=rich)), "hi")
+        self.assertEqual(self.mf.message_text(types.SimpleNamespace(message=None)), "")
+
     def test_secret_in_attachment_name_fails_closed(self):
         collector = import_collector()
         item = {"message": "", "attachments": [{"type": "poll", "name": "tok-SECRET-1",

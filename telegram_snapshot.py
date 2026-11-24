@@ -21,7 +21,8 @@ from health import scrub, write_health
 from link_resolver import LinkCache, extract_urls, resolve_links
 from media_archive import Budget, MediaIndex, MediaTask, archive_media
 from message_fields import (  # noqa: F401  (re-exported for callers/tests)
-    AD_MARKERS, AD_PREFIX_RE, DOWNLOADABLE_TYPES, classify, is_advertisement, media_info)
+    AD_MARKERS, AD_PREFIX_RE, DOWNLOADABLE_TYPES, classify, is_advertisement, media_info,
+    message_text)
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 from telethon.tl.types import Channel, MessageMediaDocument, MessageMediaPhoto
@@ -137,7 +138,7 @@ async def collect(output: Path, media_index_path: Path, link_cache_path: Path) -
                                 "channel_name": getattr(channel, "title", "") or "",
                                 "channel_username": username,
                                 "date_utc": utc_iso(message.date),
-                                "message": getattr(message, "message", None) or "",
+                                "message": message_text(message),
                                 "attachments": attachments,
                                 "url": (
                                     f"https://t.me/{username}/{message.id}"

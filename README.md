@@ -63,6 +63,10 @@ python telegram_snapshot.py output/latest_snapshot.json
   `webpage` the preview title, then `story`, `paid_media`, `giveaway`, `geo`,
   `contact`, `unsupported`, `other` = unknown media class in `name`, `empty`).
   Only `photo`, `pdf` and `document` are downloaded for the Drive archive.
+  "Rich" posts (long text with inline photos, headings, lists, tables) are read from
+  `rich_message` and flattened to plain text, with `rich_photo`/`rich_document`
+  attachments that only count the embedded files (they are not downloaded). This
+  needs Telethon 1.45+ (TL layer 229); with 1.44 such posts arrived as empty text.
 * **Health.** `data/health/telegram.json`: `last_run_utc`, `last_success_utc`,
   `trigger`, `error`, `items_count`, Drive usage, and `collect`: channels read,
   channel errors, `skipped_counts` by reason, and `skipped_posts` (up to 50 ids and

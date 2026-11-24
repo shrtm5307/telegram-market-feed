@@ -9,6 +9,12 @@ attachment entry that says what kind of post it was.
 
 Media types are matched by class name so this module does not import
 telethon and works with the test stubs.
+
+"Rich" channel posts (long text with inline photos, headings, lists and
+tables) carry their content in message.rich_message instead of
+message.message. Telethon releases older than 1.45 (TL layer < 229) do not
+know that field, so such posts arrive with empty text; message_text() turns
+the rich blocks into plain text.
 """
 
 from __future__ import annotations
@@ -120,16 +126,98 @@ def media_info(message) -> list[dict]:
     return [{"type": "other", "name": kind[:100], "mime_type": ""}]
 
 
+MAX_TEXT_CHARS = 20000
+_PHOTO_BLOCKS = ("PageBlockPhoto", "PageBlockVideo", "PageBlockCollage", "PageBlockSlideshow")
+
+
+def _rich_plain(value) -> str:
+    """Flatten a RichText tree (TextPlain/TextBold/TextConcat/TextUrl...)."""
+    if value is None or isinstance(value, (bool, int, float)):
+        return ""
+    if isinstance(value, str):
+        return value
+    if isinstance(value, (list, tuple)):
+        return "".join(_rich_plain(item) for item in value)
+    texts = getattr(value, "texts", None)
+    if texts is not None:
+        return "".join(_rich_plain(item) for item in texts)
+    return _rich_plain(getattr(value, "text", None))
+
+
+def _rich_item(item) -> str:
+    if getattr(item, "text", None) is not None:
+        return _rich_plain(item.text)
+    if getattr(item, "blocks", None) is not None:
+        return _rich_blocks(item.blocks)
+    return _rich_block(item)
+
+
+def _rich_block(block) -> str:
+    parts = []
+    kind = type(block).__name__
+    if kind in _PHOTO_BLOCKS:
+        parts.append("[사진]" if kind != "PageBlockVideo" else "[영상]")
+    for attr in ("title", "text"):
+        text = _rich_plain(getattr(block, attr, None))
+        if text:
+            parts.append(text)
+    for item in getattr(block, "items", None) or ():
+        text = _rich_item(item)
+        if text:
+            parts.append(text if type(item).__name__.startswith("PageBlock") else f"- {text}")
+    for row in getattr(block, "rows", None) or ():
+        cells = [_rich_plain(getattr(cell, "text", None)) for cell in getattr(row, "cells", None) or ()]
+        if any(cells):
+            parts.append(" | ".join(cells))
+    if getattr(block, "blocks", None):
+        parts.append(_rich_blocks(block.blocks))
+    caption = getattr(block, "caption", None)
+    if caption is not None:
+        text = _rich_plain(getattr(caption, "text", None))
+        if text:
+            parts.append(text)
+    return "\n".join(part for part in parts if part)
+
+
+def _rich_blocks(blocks) -> str:
+    return "\n".join(text for text in (_rich_block(b) for b in blocks or ()) if text)
+
+
+def message_text(message) -> str:
+    """Plain text of a post: message.message, else the rich-message blocks."""
+    text = getattr(message, "message", None) or ""
+    if not text.strip():
+        rich = getattr(message, "rich_message", None)
+        if rich is not None:
+            text = _rich_blocks(getattr(rich, "blocks", None))
+    return text[:MAX_TEXT_CHARS]
+
+
+def rich_attachments(message) -> list[dict]:
+    """Summarize photos/documents embedded in a rich post (not downloaded)."""
+    rich = getattr(message, "rich_message", None)
+    if rich is None:
+        return []
+    out = []
+    photos = len(getattr(rich, "photos", None) or ())
+    documents = len(getattr(rich, "documents", None) or ())
+    if photos:
+        out.append({"type": "rich_photo", "name": f"{photos} photo(s)", "mime_type": ""})
+    if documents:
+        out.append({"type": "rich_document", "name": f"{documents} document(s)", "mime_type": ""})
+    return out
+
+
 def classify(message) -> tuple[str, list[dict]]:
     """Return (reason, attachments). reason is "keep" or why it is dropped."""
     if getattr(message, "action", None) is not None:
         return "service", []
     if not getattr(message, "date", None):
         return "no_date", []
-    text = getattr(message, "message", None) or ""
+    text = message_text(message)
     if is_advertisement(text):
         return "advertisement", []
-    attachments = media_info(message)
+    attachments = media_info(message) + rich_attachments(message)
     if not text.strip() and not attachments:
         # Nothing we can render, but the post exists: keep it visibly.
         attachments = [{"type": "empty", "name": "", "mime_type": ""}]

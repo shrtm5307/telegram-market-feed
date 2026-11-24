@@ -12,7 +12,7 @@ from telethon.tl.types import Channel
 import uvicorn
 
 # Same keep/skip rule as the GitHub Actions collector (all posts except ads).
-from message_fields import classify, is_advertisement, media_info  # noqa: E402,F401
+from message_fields import classify, is_advertisement, media_info, message_text  # noqa: E402,F401
 
 
 API_ID = int(os.environ["TELEGRAM_API_ID"])
@@ -75,7 +75,7 @@ def msg_to_dict(chat, msg):
     dt = msg.date
     if dt and dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
-    text = getattr(msg, "message", None) or ""
+    text = message_text(msg)
     reason, attachments = classify(msg)
     if reason != "keep":
         return None
