@@ -1,4 +1,13 @@
 {
+ "collect": {
+  "channel_error_names": [],
+  "channel_errors": 0,
+  "channels_read": 17,
+  "skipped_counts": {
+   "service": 24
+  },
+  "skipped_posts": []
+ },
  "drive": {
   "configured": true,
   "error": null,
@@ -12,16 +21,16 @@
  },
  "error": null,
  "items_count": 500,
- "last_run_utc": "2026-11-24T07:01:12.775471+00:00",
- "last_success_utc": "2026-11-24T07:01:12.775471+00:00",
+ "last_run_utc": "2026-11-24T07:05:14.200893+00:00",
+ "last_success_utc": "2026-11-24T07:05:14.200893+00:00",
  "links": {
   "lookups_used": 0,
   "statuses": {
-   "blocked": 23,
+   "blocked": 22,
    "error": 27,
-   "ok": 171,
+   "ok": 162,
    "timeout": 3
   }
  },
- "trigger": "oracle"
+ "trigger": "manual"
 }
