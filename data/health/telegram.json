@@ -21,15 +21,14 @@
  },
  "error": null,
  "items_count": 500,
- "last_run_utc": "2026-11-26T15:17:14.847138+00:00",
- "last_success_utc": "2026-11-26T15:17:14.847138+00:00",
+ "last_run_utc": "2026-11-26T15:31:32.423735+00:00",
+ "last_success_utc": "2026-11-26T15:31:32.423735+00:00",
  "links": {
-  "lookups_used": 11,
+  "lookups_used": 5,
   "statuses": {
    "blocked": 27,
-   "error": 28,
-   "ok": 179,
-   "pending": 1
+   "error": 29,
+   "ok": 179
   }
  },
  "trigger": "oracle"
