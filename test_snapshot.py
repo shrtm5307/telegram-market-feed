@@ -316,10 +316,12 @@ class MediaArchiveTests(unittest.TestCase):
     def test_large_and_unsupported_documents_are_skipped_not_downloaded(self):
         big = make_task(1, "document", "x.zip", "application/zip", size=51 * 1024 * 1024)
         video = make_task(2, "document", "v.mp4", "video/mp4", size=1000)
-        index, report, downloads = self.run_archive([big, video])
+        audio = make_task(4, "rich_document", "a.ogg", "audio/ogg", size=1000)
+        index, report, downloads = self.run_archive([big, video, audio])
         self.assertEqual(downloads, [])
         self.assertEqual(index.files["5:1:0"]["status"], "skipped_too_large")
         self.assertEqual(index.files["5:2:0"]["status"], "skipped_type")
+        self.assertEqual(index.files["5:4:0"]["status"], "skipped_type")
         ok = make_task(3, "document", "x.xlsx", "application/vnd.ms-excel", size=1000)
         index, _, downloads = self.run_archive([ok])
         self.assertEqual(downloads, ["5:3:0"])
@@ -359,6 +361,15 @@ class MediaArchiveTests(unittest.TestCase):
         self.assertNotRegex(name, r"[/\\:*]")
         self.assertTrue(name.startswith("9_"))
         self.assertEqual(media_archive.drive_name(9, {"type": "photo", "name": "", "mime_type": "image/jpeg"})[:8], "9_photo.")
+
+
+    def test_rich_photo_archived_and_rich_pdf_gets_text(self):
+        photo = make_task(7, "rich_photo", "photo_1.jpg", "image/jpeg", size=1000)
+        pdf = make_task(8, "rich_document", "note.pdf", "application/pdf", size=1000)
+        index, report, downloads = self.run_archive([photo, pdf])
+        self.assertEqual(sorted(downloads), ["5:7:0", "5:8:0"])
+        self.assertEqual(index.files["5:7:0"]["status"], "uploaded")
+        self.assertEqual(index.files["5:8:0:text"]["status"], "uploaded")
 
 
 class LinkResolverTests(unittest.TestCase):
@@ -585,7 +596,8 @@ class MessageFieldsTests(unittest.TestCase):
             self.assertEqual(build_feed_windows.clean_attachment(attachment), attachment)
 
     def test_only_files_are_downloadable(self):
-        self.assertEqual(self.mf.DOWNLOADABLE_TYPES, {"photo", "pdf", "document"})
+        self.assertEqual(self.mf.DOWNLOADABLE_TYPES,
+                         {"photo", "pdf", "document", "rich_photo", "rich_document"})
 
     def test_collect_keeps_all_but_ads_and_reports_skips(self):
         collector = import_collector()
@@ -659,10 +671,50 @@ class MessageFieldsTests(unittest.TestCase):
                          "JPM: capex up\n[사진]\nchart\n- 2026 +105%\nT\na | b")
         reason, attachments = self.mf.classify(msg)
         self.assertEqual(reason, "keep")
-        self.assertEqual(attachments, [{"type": "rich_photo", "name": "2 photo(s)", "mime_type": ""}])
+        self.assertEqual(attachments, [
+            {"type": "rich_photo", "name": "photo_1.jpg", "mime_type": "image/jpeg"},
+            {"type": "rich_photo", "name": "photo_2.jpg", "mime_type": "image/jpeg"}])
         # Plain text still wins when present; missing field is harmless.
         self.assertEqual(self.mf.message_text(types.SimpleNamespace(message="hi", rich_message=rich)), "hi")
         self.assertEqual(self.mf.message_text(types.SimpleNamespace(message=None)), "")
+
+    def test_rich_text_is_full_and_photo_markers_numbered(self):
+        def _mk(kind, fields):
+            o = type(kind, (), {})()
+            o.__dict__.update(fields)
+            return o
+        plain = lambda t: _mk("TextPlain", {"text": t})
+        long_para = "가" * 30000
+        rich = _mk("RichMessage", {
+            "blocks": [_mk("PageBlockParagraph", {"text": plain(long_para)}),
+                       _mk("PageBlockPhoto", {"photo_id": 22, "caption": None}),
+                       _mk("PageBlockPhoto", {"photo_id": 11, "caption": None})],
+            "photos": [types.SimpleNamespace(id=11), types.SimpleNamespace(id=22)],
+            "documents": []})
+        msg = types.SimpleNamespace(id=1, message="", media=None, action=None, date=NOW, rich_message=rich)
+        text = self.mf.message_text(msg)
+        self.assertTrue(text.startswith(long_para))          # not cut at 20,000
+        self.assertTrue(text.endswith("[사진 2]\n[사진 1]"))  # matches photo_2.jpg / photo_1.jpg
+
+    def test_download_targets_map_rich_files_in_order(self):
+        collector = import_collector()
+        p1, p2, doc = object(), object(), types.SimpleNamespace(size=42, mime_type="application/pdf",
+                                                                attributes=())
+        rich = types.SimpleNamespace(photos=[p1, p2], documents=[doc])
+        msg = types.SimpleNamespace(media=None, rich_message=rich)
+        attachments = [{"type": "webpage", "name": "x", "mime_type": ""},
+                       {"type": "rich_photo", "name": "photo_1.jpg", "mime_type": "image/jpeg"},
+                       {"type": "rich_photo", "name": "photo_2.jpg", "mime_type": "image/jpeg"},
+                       {"type": "rich_document", "name": "document_1", "mime_type": "application/pdf"}]
+        targets = collector.download_targets(msg, attachments)
+        self.assertEqual(sorted(targets), [1, 2, 3])
+        self.assertIs(targets[1][0], p1)
+        self.assertIs(targets[2][0], p2)
+        self.assertEqual(targets[3], (doc, 42))
+        # Normal media still downloads the message itself.
+        plain = types.SimpleNamespace(media=None)
+        self.assertEqual(collector.download_targets(plain, [{"type": "photo", "name": "", "mime_type": "image/jpeg"}]),
+                         {0: (plain, None)})
 
     def test_secret_in_attachment_name_fails_closed(self):
         collector = import_collector()

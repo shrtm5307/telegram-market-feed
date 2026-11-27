@@ -62,11 +62,15 @@ python telegram_snapshot.py output/latest_snapshot.json
   says what it was (`poll` and `todo` carry the question/items in `name`,
   `webpage` the preview title, then `story`, `paid_media`, `giveaway`, `geo`,
   `contact`, `unsupported`, `other` = unknown media class in `name`, `empty`).
-  Only `photo`, `pdf` and `document` are downloaded for the Drive archive.
-  "Rich" posts (long text with inline photos, headings, lists, tables) are read from
-  `rich_message` and flattened to plain text, with `rich_photo`/`rich_document`
-  attachments that only count the embedded files (they are not downloaded). This
-  needs Telethon 1.45+ (TL layer 229); with 1.44 such posts arrived as empty text.
+  `photo`, `pdf`, `document`, `rich_photo` and `rich_document` are downloaded for
+  the Drive archive; video and audio files are never archived, and files over
+  50 MB are skipped. "Rich" posts (long text with inline photos, headings, lists,
+  tables) are read from `rich_message` and kept as full plain text (up to 200,000
+  chars); each embedded photo/document becomes its own `rich_photo`/`rich_document`
+  attachment (`photo_1.jpg`, ...) in `rich_message.photos`/`.documents` order, the
+  text marks each photo as `[사진 N]` matching `photo_N.jpg`, and every file is
+  archived (PDFs also get a `.txt`). This needs Telethon 1.45+ (TL
+  layer 229); with 1.44 such posts arrived as empty text.
 * **Health.** `data/health/telegram.json`: `last_run_utc`, `last_success_utc`,
   `trigger`, `error`, `items_count`, Drive usage, and `collect`: channels read,
   channel errors, `skipped_counts` by reason, and `skipped_posts` (up to 50 ids and

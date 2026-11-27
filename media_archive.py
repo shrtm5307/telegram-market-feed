@@ -22,6 +22,7 @@ from typing import Awaitable, Callable
 from drive_archive import DriveAuthError, DriveClient
 
 MAX_DOCUMENT_BYTES = 50 * 1024 * 1024
+# Videos and audio are never archived (2026-11-27 decision).
 SKIPPED_MIME_PREFIXES = ("video/", "audio/")
 KST = timezone(timedelta(hours=9))
 # Statuses that are final: not retried on later runs.
@@ -90,11 +91,18 @@ def folder_parts(date: datetime, channel_name: str, channel_id: int) -> list[str
 def is_archivable(attachment: dict) -> str | None:
     """Return None if archivable, otherwise the skip reason status."""
     mime = (attachment.get("mime_type") or "").lower()
-    if attachment.get("type") in ("photo", "pdf"):
+    if attachment.get("type") in ("photo", "pdf", "rich_photo"):
         return None
     if mime.startswith(SKIPPED_MIME_PREFIXES):
         return "skipped_type"
     return None
+
+
+def is_pdf(attachment: dict) -> bool:
+    name = (attachment.get("name") or "").lower()
+    return (attachment.get("type") == "pdf"
+            or (attachment.get("mime_type") or "").lower() == "application/pdf"
+            or (attachment.get("type") == "rich_document" and name.endswith(".pdf")))
 
 
 def pdf_text(data: bytes, timeout: float = 30.0) -> str:
@@ -170,7 +178,7 @@ def _complete(index: MediaIndex, task: MediaTask) -> bool:
     entry = index.files.get(task.key)
     if not entry or entry.get("status") not in FINAL:
         return False
-    if task.attachment.get("type") == "pdf" and entry["status"] == "uploaded":
+    if is_pdf(task.attachment) and entry["status"] == "uploaded":
         text = index.files.get(task.key + ":text")
         return bool(text and text.get("status") in TEXT_FINAL)
     return True
@@ -250,7 +258,7 @@ async def _archive_one(task, index, drive, budget, download, extract_text, repor
         budget.bytes += len(data)
     index.set(task.key, "uploaded", file_id, name, len(data), sha)
 
-    if attachment.get("type") == "pdf":
+    if is_pdf(attachment):
         text_key = task.key + ":text"
         text_entry = index.files.get(text_key)
         if text_entry and text_entry.get("status") in TEXT_FINAL:

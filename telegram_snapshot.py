@@ -29,17 +29,53 @@ from telethon.tl.types import Channel, MessageMediaDocument, MessageMediaPhoto
 
 
 
+def photo_size(photo) -> int | None:
+    sizes = [getattr(s, "size", None) for s in getattr(photo, "sizes", ()) or ()]
+    sizes = [s for s in sizes if isinstance(s, int)]
+    return max(sizes) if sizes else None
+
+
+def document_size(document) -> int | None:
+    size = getattr(document, "size", None)
+    return int(size) if isinstance(size, int) else None
+
+
 def media_size(message) -> int | None:
     """Best-effort size in bytes before downloading (None if unknown)."""
     media = getattr(message, "media", None)
     if isinstance(media, MessageMediaDocument):
-        size = getattr(getattr(media, "document", None), "size", None)
-        return int(size) if isinstance(size, int) else None
+        return document_size(getattr(media, "document", None))
     if isinstance(media, MessageMediaPhoto):
-        sizes = [getattr(s, "size", None) for s in getattr(getattr(media, "photo", None), "sizes", ()) or ()]
-        sizes = [s for s in sizes if isinstance(s, int)]
-        return max(sizes) if sizes else None
+        return photo_size(getattr(media, "photo", None))
     return None
+
+
+def download_targets(message, attachments: list[dict]) -> dict[int, tuple[object, int | None]]:
+    """Map attachment index -> (object to download, size hint).
+
+    Normal media downloads the message itself; rich-post photos/documents download
+    the n-th object of ``rich_message.photos`` / ``.documents``.
+    """
+    rich = getattr(message, "rich_message", None) if message is not None else None
+    photos = list(getattr(rich, "photos", None) or ())
+    documents = list(getattr(rich, "documents", None) or ())
+    targets: dict[int, tuple[object, int | None]] = {}
+    p = d = 0
+    for n, attachment in enumerate(attachments):
+        kind = attachment.get("type")
+        if kind not in DOWNLOADABLE_TYPES:
+            continue
+        if kind == "rich_photo":
+            if p < len(photos):
+                targets[n] = (photos[p], photo_size(photos[p]))
+            p += 1
+        elif kind == "rich_document":
+            if d < len(documents):
+                targets[n] = (documents[d], document_size(documents[d]))
+            d += 1
+        elif message is not None:
+            targets[n] = (message, media_size(message))
+    return targets
 
 
 def entity_urls(message) -> list[str]:
@@ -239,15 +275,15 @@ async def archive_snapshot_media(ordered: list[dict], messages: dict, client,
     tasks: list[MediaTask] = []
     for item in ordered:
         message = messages.get((item["channel_id"], item["message_id"]))
-        for n, attachment in enumerate(item["attachments"]):
-            if attachment.get("type") not in DOWNLOADABLE_TYPES:
-                continue  # polls, stories, web previews: nothing to download
+        # polls, stories, web previews: nothing to download (not in the map)
+        for n, (target, size) in download_targets(message, item["attachments"]).items():
+            attachment = item["attachments"][n]
             tasks.append(MediaTask(
                 key=f"{item['channel_id']}:{item['message_id']}:{n}",
                 attachment=attachment, channel_id=item["channel_id"],
                 channel_name=item["channel_name"], message_id=item["message_id"],
                 date=datetime.fromisoformat(item["date_utc"]),
-                size_hint=media_size(message), message=message))
+                size_hint=size, message=target))
     index.prune({t.key for t in tasks})
 
     creds = credentials_from_env()

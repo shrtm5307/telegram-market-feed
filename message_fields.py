@@ -32,7 +32,7 @@ AD_MARKERS = (
 )
 
 # Attachment types whose bytes the media archiver may download.
-DOWNLOADABLE_TYPES = frozenset({"photo", "pdf", "document"})
+DOWNLOADABLE_TYPES = frozenset({"photo", "pdf", "document", "rich_photo", "rich_document"})
 
 # Media that has no file to download; the value is the attachment "type".
 _NON_FILE_MEDIA = {
@@ -127,6 +127,7 @@ def media_info(message) -> list[dict]:
 
 
 MAX_TEXT_CHARS = 20000
+MAX_RICH_TEXT_CHARS = 200000  # rich research posts: keep the whole text
 _PHOTO_BLOCKS = ("PageBlockPhoto", "PageBlockVideo", "PageBlockCollage", "PageBlockSlideshow")
 
 
@@ -144,25 +145,31 @@ def _rich_plain(value) -> str:
     return _rich_plain(getattr(value, "text", None))
 
 
-def _rich_item(item) -> str:
+def _rich_item(item, photo_no=None) -> str:
     if getattr(item, "text", None) is not None:
         return _rich_plain(item.text)
     if getattr(item, "blocks", None) is not None:
-        return _rich_blocks(item.blocks)
-    return _rich_block(item)
+        return _rich_blocks(item.blocks, photo_no)
+    return _rich_block(item, photo_no)
 
 
-def _rich_block(block) -> str:
+def _photo_marker(block, photo_no) -> str:
+    """'[사진 N]' where N matches the photo_N.jpg attachment, else '[사진]'."""
+    number = (photo_no or {}).get(getattr(block, "photo_id", None))
+    return f"[사진 {number}]" if number else "[사진]"
+
+
+def _rich_block(block, photo_no=None) -> str:
     parts = []
     kind = type(block).__name__
     if kind in _PHOTO_BLOCKS:
-        parts.append("[사진]" if kind != "PageBlockVideo" else "[영상]")
+        parts.append(_photo_marker(block, photo_no) if kind != "PageBlockVideo" else "[영상]")
     for attr in ("title", "text"):
         text = _rich_plain(getattr(block, attr, None))
         if text:
             parts.append(text)
     for item in getattr(block, "items", None) or ():
-        text = _rich_item(item)
+        text = _rich_item(item, photo_no)
         if text:
             parts.append(text if type(item).__name__.startswith("PageBlock") else f"- {text}")
     for row in getattr(block, "rows", None) or ():
@@ -170,7 +177,7 @@ def _rich_block(block) -> str:
         if any(cells):
             parts.append(" | ".join(cells))
     if getattr(block, "blocks", None):
-        parts.append(_rich_blocks(block.blocks))
+        parts.append(_rich_blocks(block.blocks, photo_no))
     caption = getattr(block, "caption", None)
     if caption is not None:
         text = _rich_plain(getattr(caption, "text", None))
@@ -179,32 +186,51 @@ def _rich_block(block) -> str:
     return "\n".join(part for part in parts if part)
 
 
-def _rich_blocks(blocks) -> str:
-    return "\n".join(text for text in (_rich_block(b) for b in blocks or ()) if text)
+def _rich_blocks(blocks, photo_no=None) -> str:
+    return "\n".join(text for text in (_rich_block(b, photo_no) for b in blocks or ()) if text)
 
 
 def message_text(message) -> str:
-    """Plain text of a post: message.message, else the rich-message blocks."""
+    """Plain text of a post: message.message, else the full rich-message blocks.
+
+    Rich posts keep their full text (up to MAX_RICH_TEXT_CHARS); each inline photo
+    is marked '[사진 N]' matching the photo_N.jpg attachment.
+    """
     text = getattr(message, "message", None) or ""
     if not text.strip():
         rich = getattr(message, "rich_message", None)
         if rich is not None:
-            text = _rich_blocks(getattr(rich, "blocks", None))
+            photo_no = {getattr(p, "id", None): i
+                        for i, p in enumerate(getattr(rich, "photos", None) or (), start=1)
+                        if getattr(p, "id", None) is not None}
+            return _rich_blocks(getattr(rich, "blocks", None), photo_no)[:MAX_RICH_TEXT_CHARS]
     return text[:MAX_TEXT_CHARS]
 
 
+def _document_name(document) -> str:
+    for attribute in getattr(document, "attributes", ()) or ():
+        candidate = getattr(attribute, "file_name", None)
+        if candidate:
+            return candidate
+    return ""
+
+
 def rich_attachments(message) -> list[dict]:
-    """Summarize photos/documents embedded in a rich post (not downloaded)."""
+    """One attachment per photo/document embedded in a rich post.
+
+    The order matches ``rich_message.photos`` / ``rich_message.documents`` so the
+    collector can download the n-th file for the n-th attachment.
+    """
     rich = getattr(message, "rich_message", None)
     if rich is None:
         return []
     out = []
-    photos = len(getattr(rich, "photos", None) or ())
-    documents = len(getattr(rich, "documents", None) or ())
-    if photos:
-        out.append({"type": "rich_photo", "name": f"{photos} photo(s)", "mime_type": ""})
-    if documents:
-        out.append({"type": "rich_document", "name": f"{documents} document(s)", "mime_type": ""})
+    for i, _photo in enumerate(getattr(rich, "photos", None) or (), start=1):
+        out.append({"type": "rich_photo", "name": f"photo_{i}.jpg", "mime_type": "image/jpeg"})
+    for i, document in enumerate(getattr(rich, "documents", None) or (), start=1):
+        mime_type = getattr(document, "mime_type", "") or ""
+        name = _document_name(document) or f"document_{i}"
+        out.append({"type": "rich_document", "name": name[:MAX_NAME_CHARS], "mime_type": mime_type})
     return out
 
 
